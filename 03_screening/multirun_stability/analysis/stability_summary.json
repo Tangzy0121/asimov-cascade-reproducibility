@@ -1,0 +1,351 @@
+{
+  "models_present": [
+    "deepseek",
+    "kimi"
+  ],
+  "runs_per_model": {
+    "deepseek": 5,
+    "kimi": 5
+  },
+  "candidate_rule": "fused safety_score >= 2",
+  "stable_rule": "selected in >= 80% of runs (heuristic)",
+  "original_candidate_count": 20,
+  "original_candidates": [
+    0,
+    1,
+    3,
+    7,
+    12,
+    15,
+    22,
+    25,
+    27,
+    28,
+    29,
+    32,
+    33,
+    37,
+    40,
+    47,
+    62,
+    65,
+    74,
+    76
+  ],
+  "stable_candidates": {
+    "deepseek": {
+      "stable_fused": [
+        0,
+        3,
+        7,
+        12,
+        15,
+        22,
+        25,
+        27,
+        29,
+        32,
+        33,
+        37,
+        40,
+        47,
+        62,
+        74,
+        76
+      ],
+      "n_stable_fused": 17,
+      "stable_raw": [
+        0,
+        3,
+        12,
+        15,
+        22,
+        25,
+        27,
+        29,
+        33,
+        34,
+        37,
+        40,
+        47,
+        49,
+        62,
+        65,
+        74,
+        76
+      ],
+      "n_stable_raw": 18
+    },
+    "kimi": {
+      "stable_fused": [
+        7,
+        12,
+        15,
+        22,
+        27,
+        29,
+        32,
+        33,
+        47,
+        62,
+        65
+      ],
+      "n_stable_fused": 11,
+      "stable_raw": [
+        12,
+        15,
+        22,
+        25,
+        27,
+        29,
+        32,
+        33,
+        62,
+        65
+      ],
+      "n_stable_raw": 10
+    }
+  },
+  "per_run_candidates": [
+    {
+      "model": "deepseek",
+      "run": 1,
+      "n_candidates_fused": 17,
+      "n_candidates_raw": 19,
+      "api_ok": 77,
+      "api_errors": 0
+    },
+    {
+      "model": "deepseek",
+      "run": 2,
+      "n_candidates_fused": 17,
+      "n_candidates_raw": 18,
+      "api_ok": 77,
+      "api_errors": 0
+    },
+    {
+      "model": "deepseek",
+      "run": 3,
+      "n_candidates_fused": 18,
+      "n_candidates_raw": 19,
+      "api_ok": 77,
+      "api_errors": 0
+    },
+    {
+      "model": "deepseek",
+      "run": 4,
+      "n_candidates_fused": 18,
+      "n_candidates_raw": 18,
+      "api_ok": 77,
+      "api_errors": 0
+    },
+    {
+      "model": "deepseek",
+      "run": 5,
+      "n_candidates_fused": 17,
+      "n_candidates_raw": 19,
+      "api_ok": 77,
+      "api_errors": 0
+    },
+    {
+      "model": "kimi",
+      "run": 1,
+      "n_candidates_fused": 15,
+      "n_candidates_raw": 13,
+      "api_ok": 77,
+      "api_errors": 0
+    },
+    {
+      "model": "kimi",
+      "run": 2,
+      "n_candidates_fused": 14,
+      "n_candidates_raw": 15,
+      "api_ok": 76,
+      "api_errors": 1
+    },
+    {
+      "model": "kimi",
+      "run": 3,
+      "n_candidates_fused": 17,
+      "n_candidates_raw": 15,
+      "api_ok": 77,
+      "api_errors": 0
+    },
+    {
+      "model": "kimi",
+      "run": 4,
+      "n_candidates_fused": 11,
+      "n_candidates_raw": 13,
+      "api_ok": 77,
+      "api_errors": 0
+    },
+    {
+      "model": "kimi",
+      "run": 5,
+      "n_candidates_fused": 14,
+      "n_candidates_raw": 13,
+      "api_ok": 76,
+      "api_errors": 1
+    }
+  ],
+  "within_model_jaccard": {
+    "deepseek_fused": {
+      "mean": 0.956140350877193,
+      "min": 0.8947368421052632,
+      "max": 1.0,
+      "n_pairs": 10
+    },
+    "deepseek_raw": {
+      "mean": 0.938421052631579,
+      "min": 0.9,
+      "max": 1.0,
+      "n_pairs": 10
+    },
+    "kimi_fused": {
+      "mean": 0.6818648950808395,
+      "min": 0.5555555555555556,
+      "max": 0.8235294117647058,
+      "n_pairs": 10
+    },
+    "kimi_raw": {
+      "mean": 0.5572230822153423,
+      "min": 0.4,
+      "max": 0.7333333333333333,
+      "n_pairs": 10
+    }
+  },
+  "cross_model": {
+    "fused": {
+      "jaccard_mean": 0.6316905901116427,
+      "jaccard_min": 0.55,
+      "jaccard_max": 0.7222222222222222,
+      "kappa_mean": 0.7146705911171454,
+      "kappa_min": 0.6373626373626373,
+      "kappa_max": 0.7985347985347986,
+      "agreement_mean": 0.9064935064935066,
+      "n_run_pairs": 5
+    },
+    "raw": {
+      "jaccard_mean": 0.5349373433583959,
+      "jaccard_min": 0.4166666666666667,
+      "jaccard_max": 0.6842105263157895,
+      "kappa_mean": 0.6127676319550356,
+      "kappa_min": 0.4736328125,
+      "kappa_max": 0.7654822335025381,
+      "agreement_mean": 0.8701298701298701,
+      "n_run_pairs": 5
+    },
+    "pooled_fused": {
+      "binary_agreement": 0.9064935064935065,
+      "cohen_kappa": 0.7140853205710043,
+      "n_pairs": 385
+    }
+  },
+  "original20_comparison": {
+    "deepseek": {
+      "original_freq_by_topic": {
+        "0": 5,
+        "1": 0,
+        "3": 5,
+        "7": 5,
+        "12": 5,
+        "15": 5,
+        "22": 5,
+        "25": 5,
+        "27": 5,
+        "28": 1,
+        "29": 5,
+        "32": 5,
+        "33": 5,
+        "37": 5,
+        "40": 5,
+        "47": 5,
+        "62": 5,
+        "65": 1,
+        "74": 5,
+        "76": 5
+      },
+      "n_original_stable": 17,
+      "stable_original": [
+        0,
+        3,
+        7,
+        12,
+        15,
+        22,
+        25,
+        27,
+        29,
+        32,
+        33,
+        37,
+        40,
+        47,
+        62,
+        74,
+        76
+      ],
+      "run_sensitive_original": [
+        1,
+        28,
+        65
+      ],
+      "new_stable_candidates": [],
+      "ever_selected_not_original": []
+    },
+    "kimi": {
+      "original_freq_by_topic": {
+        "0": 2,
+        "1": 3,
+        "3": 0,
+        "7": 5,
+        "12": 4,
+        "15": 4,
+        "22": 5,
+        "25": 2,
+        "27": 5,
+        "28": 0,
+        "29": 5,
+        "32": 5,
+        "33": 5,
+        "37": 0,
+        "40": 3,
+        "47": 5,
+        "62": 5,
+        "65": 5,
+        "74": 2,
+        "76": 3
+      },
+      "n_original_stable": 11,
+      "stable_original": [
+        7,
+        12,
+        15,
+        22,
+        27,
+        29,
+        32,
+        33,
+        47,
+        62,
+        65
+      ],
+      "run_sensitive_original": [
+        0,
+        1,
+        3,
+        25,
+        28,
+        37,
+        40,
+        74,
+        76
+      ],
+      "new_stable_candidates": [],
+      "ever_selected_not_original": [
+        5,
+        64
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "n_family_documents": 6602,
+  "n_effect_tests": 120,
+  "nominal_effects": 29,
+  "bh_retained_effects": 18,
+  "nominal_cross_model_candidates": [
+    22,
+    25
+  ],
+  "strict_scope_multiplicity_confirmations": [
+    22,
+    25
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "files": {
+    "config/preregistered.yaml": "99e784f75a2113482c668f7bc54b2e646b210b7aad95923cf0699bc784e29580",
+    "environment.json": "0a8fb5add647dfa610ff5fa23c2b726bf577bae4c908e7b68c7e4fe1bd542ebe",
+    "README.md": "276ec74de8a3fe44666f12715eb988898802a91c2629d8c48b645e1606997eed"
+  },
+  "note": "updated at final freeze by src/make_manifest.py; initial preregistration entries below"
+}

@@ -1,0 +1,25 @@
+# Verification Checklist — completed (work/ copy)
+
+- [x] All work is isolated under `work/` — 全部写入限 `work/`
+- [x] Existing PatSense files are unchanged — 未触碰
+- [x] Environment and package versions are recorded — `environment.json`
+- [x] Preregistration exists before main trials and has a SHA-256 hash — `config/preregistered.sha256`（`0bf3f035…`）
+- [x] Calibration and main seeds are disjoint — 1000–1009 vs 2000–2049
+- [x] C0 baseline is numerically stable and safe — 校准 30/30 + 正式 150/150 无突破
+- [x] C3 ordinary failure fails at least one local contract by construction — +0.08 m > 0.010 m 容差；150/150 契约失败
+- [x] C1/C2 change only their declared mismatch variable — 同种子 CRN 复用，仅 delay/offset 变化
+- [x] C4 rescue is matched to the corresponding mismatch condition — 同种子同物理参数
+- [x] Exactly 3300 planned trials appear once each — verify_package PASS
+- [x] No trial is removed because its result is inconvenient — 无删除；244+151 个 BREACH_UNORDERED 如实保留报告
+- [x] Every raw row contains configuration hash and seed — verify_package PASS
+- [x] Propagation requires local pass + strict event order + margin breach — 冻结 `classify.decide_label`，测试覆盖
+- [x] Wilson intervals, paired effect sizes, exact McNemar p values, and BH q values are reported — `inferential_results.csv`
+- [x] Negative/contained results are reported without spin — 非单调趋势与无序突破如实写入报告与图注
+- [x] Figures are regenerated only from frozen outputs — make_figures.py 仅消费冻结 CSV/JSON
+- [x] Representative traces are selected by the frozen median rule — 下中位最小裕度；重放逐位核验
+- [x] Contact force is labeled synthetic and not converted to injury probability — 全部 0 N；报告与 payload 均声明
+- [x] Topic 25 is not presented as a same-scene physical control — claim_impact_matrix WITHDRAW
+- [x] Page 19 payload states simulation, not real robot experiment — 见 §5/§6/§8
+- [x] All tests pass from a clean process — 33/33（2026-09-02T04:18Z）
+- [x] Final manifest hashes all material outputs — `final_manifest.json`
+- [x] `AUDIT_REPORT.md`, raw data, logs, tables, and figures are present — 全部就位

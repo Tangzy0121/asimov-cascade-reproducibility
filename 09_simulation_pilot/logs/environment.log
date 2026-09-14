@@ -1,0 +1,12 @@
+=== environment.log ===
+timestamp_utc: 2026-09-02T03:18:09Z
+timestamp_local: 2026-09-02T11:18:09+0800
+command: mkdir -p work/{config,src,tests,outputs/calibration,figures,logs}
+exit_code: 0
+command: write config/preregistered.yaml (values verbatim from PREREGISTERED_PARAMETERS.md)
+exit_code: 0
+command: sha256sum config/preregistered.yaml > config/preregistered.sha256
+exit_code: 0
+preregistered.yaml sha256: 99e784f75a2113482c668f7bc54b2e646b210b7aad95923cf0699bc784e29580
+command: wrote environment.json, README.md, source_manifest.json
+exit_code: 0

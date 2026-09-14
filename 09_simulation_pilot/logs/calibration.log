@@ -1,0 +1,108 @@
+=== calibration run 1 (C0 only, seeds 1000-1009, config as preregistered) ===
+timestamp_utc: 2026-09-02T03:55:22Z
+command: python src/calibrate.py
+Traceback (most recent call last):
+  File "<python>/envs/<env>/Lib\site-packages\pandas\core\indexes\base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'numeric_unstable'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\calibrate.py", line 70, in <module>
+    main()
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\calibrate.py", line 41, in main
+    "no_numeric_unstable": bool((~df["numeric_unstable"]).all()),
+                                  ~~^^^^^^^^^^^^^^^^^^^^
+  File "<python>/envs/<env>/Lib\site-packages\pandas\core\frame.py", line 4378, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python>/envs/<env>/Lib\site-packages\pandas\core\indexes\base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'numeric_unstable'
+exit_code: 1
+
+=== regression after row-schema fix + calibration run 2 ===
+timestamp_utc: 2026-09-02T03:55:59Z
+command: python -m pytest tests/ -q
+.................................                                        [100%]
+33 passed in 0.73s
+exit_code: 0
+command: python src/calibrate.py
+{
+  "n_trials": 30,
+  "all_local_contracts_pass": true,
+  "no_numeric_unstable": true,
+  "no_nan": true,
+  "no_baseline_breach": true,
+  "min_margin_overall_m": 0.009194109962171626,
+  "trigger_fired_all_trials": false,
+  "full_approach_observed": false,
+  "per_speed": {
+    "0.15": {
+      "min_margin_m": 0.015702997498447308,
+      "breaches": 0,
+      "max_t_final_s": 3.999999999999781,
+      "trigger_missing": 2
+    },
+    "0.3": {
+      "min_margin_m": 0.009194109962171626,
+      "breaches": 0,
+      "max_t_final_s": 2.291999999999969,
+      "trigger_missing": 0
+    },
+    "0.45": {
+      "min_margin_m": 0.011890018482132086,
+      "breaches": 0,
+      "max_t_final_s": 1.7660000000000013,
+      "trigger_missing": 0
+    }
+  },
+  "config_sha256": "99e784f75a2113482c668f7bc54b2e646b210b7aad95923cf0699bc784e29580",
+  "baseline_valid": false
+}
+exit_code: 0
+
+=== calibration-change rule: trial_duration_s 4.0 -> 8.0 (written reason in outputs/calibration/calibration_decision.md) ===
+timestamp_utc: 2026-09-02T03:56:39Z
+command: rehash config/preregistered.yaml -> config/preregistered.sha256
+new sha256: 0bf3f0351d8e1622160b94b835b555fc6ffc44b79a077c2a4b6276e96c8d55e9
+command: python src/calibrate.py  (full calibration restart)
+{
+  "n_trials": 30,
+  "all_local_contracts_pass": true,
+  "no_numeric_unstable": true,
+  "no_nan": true,
+  "no_baseline_breach": true,
+  "min_margin_overall_m": 0.009194109962171626,
+  "trigger_fired_all_trials": true,
+  "full_approach_observed": true,
+  "per_speed": {
+    "0.15": {
+      "min_margin_m": 0.015478997498447306,
+      "breaches": 0,
+      "max_t_final_s": 4.115999999999769,
+      "trigger_missing": 0
+    },
+    "0.3": {
+      "min_margin_m": 0.009194109962171626,
+      "breaches": 0,
+      "max_t_final_s": 2.291999999999969,
+      "trigger_missing": 0
+    },
+    "0.45": {
+      "min_margin_m": 0.011890018482132086,
+      "breaches": 0,
+      "max_t_final_s": 1.7660000000000013,
+      "trigger_missing": 0
+    }
+  },
+  "config_sha256": "0bf3f0351d8e1622160b94b835b555fc6ffc44b79a077c2a4b6276e96c8d55e9",
+  "baseline_valid": true
+}
+exit_code: 0

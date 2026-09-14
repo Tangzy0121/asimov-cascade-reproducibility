@@ -1,0 +1,1458 @@
+[
+  {
+    "model": "DeepSeek",
+    "corpus_unit": "publication",
+    "role_scope": "all_reviewed_roles",
+    "k": 25,
+    "formula": "error ~ z_safety_barrier_k25 + z_propagation_node_k25 + z_other_k25 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k25": {
+        "mean": 0.06933881249414642,
+        "sd": 0.07819506084180931
+      },
+      "propagation_node_k25": {
+        "mean": 0.0009447537240937961,
+        "sd": 0.00033403999103921337
+      },
+      "other_k25": {
+        "mean": 0.00032999820209324857,
+        "sd": 0.0033882511276485355
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k25": 1.0524152598995613,
+      "z_propagation_node_k25": 1.024300296344538,
+      "z_other_k25": 1.0550813322690693
+    },
+    "correlation": {
+      "z_safety_barrier_k25": {
+        "z_safety_barrier_k25": 1.0,
+        "z_propagation_node_k25": -0.11413438201027216,
+        "z_other_k25": 0.2045011114534064
+      },
+      "z_propagation_node_k25": {
+        "z_safety_barrier_k25": -0.11413438201027216,
+        "z_propagation_node_k25": 1.0,
+        "z_other_k25": -0.12458181353800173
+      },
+      "z_other_k25": {
+        "z_safety_barrier_k25": 0.2045011114534064,
+        "z_propagation_node_k25": -0.12458181353800173,
+        "z_other_k25": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k25": {
+        "min": 0.008811605304512193,
+        "max": 0.46914261084264774,
+        "mean": 0.06933881249414642,
+        "sd": 0.07828721769269759,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k25": {
+        "min": 0.0,
+        "max": 0.0015622643711873804,
+        "mean": 0.0009447537240937961,
+        "sd": 0.0003344336741352237,
+        "zero_fraction": 0.0438871473354232
+      },
+      "other_k25": {
+        "min": 0.0,
+        "max": 0.035436888937096615,
+        "mean": 0.00032999820209324857,
+        "sd": 0.0033922443536986368,
+        "zero_fraction": 0.9905956112852664
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k25": {
+        "min": 0.6420425176620483,
+        "max": 1.0,
+        "mean": 0.8865599632263184,
+        "sd": 0.048268336802721024,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k25": {
+        "min": 0.0,
+        "max": 0.35795748233795166,
+        "mean": 0.11307714879512787,
+        "sd": 0.04858548939228058,
+        "zero_fraction": 0.03134796238244514
+      },
+      "other_mass_k25": {
+        "min": 0.0,
+        "max": 0.03898058831691742,
+        "mean": 0.00036299810744822025,
+        "sd": 0.0037314696237444878,
+        "zero_fraction": 0.9905956112852664
+      }
+    },
+    "event_rate": 0.31191222570532917,
+    "n_events": 398
+  },
+  {
+    "model": "DeepSeek",
+    "corpus_unit": "publication",
+    "role_scope": "all_reviewed_roles",
+    "k": 50,
+    "formula": "error ~ z_safety_barrier_k50 + z_propagation_node_k50 + z_other_k50 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k50": {
+        "mean": 0.10701999256442724,
+        "sd": 0.06882073573710752
+      },
+      "propagation_node_k50": {
+        "mean": 0.0007269270310951683,
+        "sd": 0.0002155484901257407
+      },
+      "other_k50": {
+        "mean": 0.0024720998663409826,
+        "sd": 0.012271496277030938
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k50": 1.0846745132248685,
+      "z_propagation_node_k50": 1.0453128098641495,
+      "z_other_k50": 1.1198512026045315
+    },
+    "correlation": {
+      "z_safety_barrier_k50": {
+        "z_safety_barrier_k50": 1.0,
+        "z_propagation_node_k50": -0.1005209142828568,
+        "z_other_k50": 0.2756680452332811
+      },
+      "z_propagation_node_k50": {
+        "z_safety_barrier_k50": -0.1005209142828568,
+        "z_propagation_node_k50": 1.0,
+        "z_other_k50": -0.20297533196164652
+      },
+      "z_other_k50": {
+        "z_safety_barrier_k50": 0.2756680452332811,
+        "z_propagation_node_k50": -0.20297533196164652,
+        "z_other_k50": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k50": {
+        "min": 0.019521093682081676,
+        "max": 0.42857961357921204,
+        "mean": 0.10701999256442724,
+        "sd": 0.06890184446971886,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k50": {
+        "min": 0.00020025550632793586,
+        "max": 0.001972268680111176,
+        "mean": 0.0007269270310951683,
+        "sd": 0.0002158025249695001,
+        "zero_fraction": 0.0
+      },
+      "other_k50": {
+        "min": 0.0,
+        "max": 0.10564561621843035,
+        "mean": 0.0024720998663409826,
+        "sd": 0.012285958858687678,
+        "zero_fraction": 0.9435736677115988
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k50": {
+        "min": 0.7180748581886292,
+        "max": 0.9411666393280029,
+        "mean": 0.8820888996124268,
+        "sd": 0.039297204464673996,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k50": {
+        "min": 0.03964455425739288,
+        "max": 0.28192517161369324,
+        "mean": 0.11519178003072739,
+        "sd": 0.03995223343372345,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k50": {
+        "min": 0.0,
+        "max": 0.1162101998925209,
+        "mean": 0.0027193103451281786,
+        "sd": 0.013514557853341103,
+        "zero_fraction": 0.9435736677115988
+      }
+    },
+    "event_rate": 0.31191222570532917,
+    "n_events": 398
+  },
+  {
+    "model": "DeepSeek",
+    "corpus_unit": "publication",
+    "role_scope": "all_reviewed_roles",
+    "k": 100,
+    "formula": "error ~ z_safety_barrier_k100 + z_propagation_node_k100 + z_other_k100 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k100": {
+        "mean": 0.11737308828970239,
+        "sd": 0.0487815710177513
+      },
+      "propagation_node_k100": {
+        "mean": 0.00087984886200906,
+        "sd": 0.00030576847990477926
+      },
+      "other_k100": {
+        "mean": 0.013394454283896915,
+        "sd": 0.02363998956545913
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k100": 1.1185929059217308,
+      "z_propagation_node_k100": 1.0557555518836597,
+      "z_other_k100": 1.0646067354816078
+    },
+    "correlation": {
+      "z_safety_barrier_k100": {
+        "z_safety_barrier_k100": 1.0,
+        "z_propagation_node_k100": -0.22949628629979144,
+        "z_other_k100": 0.24605832149947152
+      },
+      "z_propagation_node_k100": {
+        "z_safety_barrier_k100": -0.22949628629979144,
+        "z_propagation_node_k100": 1.0,
+        "z_other_k100": -0.0680396971731538
+      },
+      "z_other_k100": {
+        "z_safety_barrier_k100": 0.24605832149947152,
+        "z_propagation_node_k100": -0.0680396971731538,
+        "z_other_k100": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k100": {
+        "min": 0.040303332018378955,
+        "max": 0.35154176851153995,
+        "mean": 0.11737308828970239,
+        "sd": 0.04883906257691095,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k100": {
+        "min": 0.0002057014122964057,
+        "max": 0.0018580696025173925,
+        "mean": 0.00087984886200906,
+        "sd": 0.00030612884358895007,
+        "zero_fraction": 0.0
+      },
+      "other_k100": {
+        "min": 0.0,
+        "max": 0.1679593922067051,
+        "mean": 0.013394454283896913,
+        "sd": 0.023667850493885183,
+        "zero_fraction": 0.5642633228840125
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k100": {
+        "min": 0.6693524122238159,
+        "max": 0.9393594264984131,
+        "mean": 0.8382067084312439,
+        "sd": 0.04129784181714058,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k100": {
+        "min": 0.050932642072439194,
+        "max": 0.33064761757850647,
+        "mean": 0.14705942571163177,
+        "sd": 0.042159780859947205,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k100": {
+        "min": 0.0,
+        "max": 0.1847553700208664,
+        "mean": 0.014733903110027313,
+        "sd": 0.0260346420109272,
+        "zero_fraction": 0.5642633228840125
+      }
+    },
+    "event_rate": 0.31191222570532917,
+    "n_events": 398
+  },
+  {
+    "model": "KimiMV",
+    "corpus_unit": "publication",
+    "role_scope": "all_reviewed_roles",
+    "k": 25,
+    "formula": "error ~ z_safety_barrier_k25 + z_propagation_node_k25 + z_other_k25 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k25": {
+        "mean": 0.06997353097079359,
+        "sd": 0.07918422584491025
+      },
+      "propagation_node_k25": {
+        "mean": 0.0009458188555114185,
+        "sd": 0.0003351890707139867
+      },
+      "other_k25": {
+        "mean": 0.0003417838521680074,
+        "sd": 0.0034476885201098224
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k25": 1.0533927150245506,
+      "z_propagation_node_k25": 1.025688849139205,
+      "z_other_k25": 1.0554732726409528
+    },
+    "correlation": {
+      "z_safety_barrier_k25": {
+        "z_safety_barrier_k25": 1.0,
+        "z_propagation_node_k25": -0.11877355762794219,
+        "z_other_k25": 0.2047634972120554
+      },
+      "z_propagation_node_k25": {
+        "z_safety_barrier_k25": -0.11877355762794219,
+        "z_propagation_node_k25": 1.0,
+        "z_other_k25": -0.12669079717766762
+      },
+      "z_other_k25": {
+        "z_safety_barrier_k25": 0.2047634972120554,
+        "z_propagation_node_k25": -0.12669079717766762,
+        "z_other_k25": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k25": {
+        "min": 0.008811605304512193,
+        "max": 0.46914261084264774,
+        "mean": 0.06997353097079359,
+        "sd": 0.07928089024612421,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k25": {
+        "min": 0.0,
+        "max": 0.0015622643711873804,
+        "mean": 0.0009458188555114185,
+        "sd": 0.0003355982538621239,
+        "zero_fraction": 0.045454545454545456
+      },
+      "other_k25": {
+        "min": 0.0,
+        "max": 0.035436888937096615,
+        "mean": 0.0003417838521680074,
+        "sd": 0.0034518972970829197,
+        "zero_fraction": 0.9902597402597403
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k25": {
+        "min": 0.6420425176620483,
+        "max": 1.0,
+        "mean": 0.8859046697616577,
+        "sd": 0.04876416176557541,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k25": {
+        "min": 0.0,
+        "max": 0.35795748233795166,
+        "mean": 0.1137194111943245,
+        "sd": 0.049094308167696,
+        "zero_fraction": 0.032467532467532464
+      },
+      "other_mass_k25": {
+        "min": 0.0,
+        "max": 0.03898058831691742,
+        "mean": 0.0003759623214136809,
+        "sd": 0.003797088051214814,
+        "zero_fraction": 0.9902597402597403
+      }
+    },
+    "event_rate": 0.23133116883116883,
+    "n_events": 285
+  },
+  {
+    "model": "KimiMV",
+    "corpus_unit": "publication",
+    "role_scope": "all_reviewed_roles",
+    "k": 50,
+    "formula": "error ~ z_safety_barrier_k50 + z_propagation_node_k50 + z_other_k50 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k50": {
+        "mean": 0.10741933562792194,
+        "sd": 0.0694168596388108
+      },
+      "propagation_node_k50": {
+        "mean": 0.0007283610748340594,
+        "sd": 0.00021687239836435277
+      },
+      "other_k50": {
+        "mean": 0.002560389147281732,
+        "sd": 0.0124798217951937
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k50": 1.0862690963611097,
+      "z_propagation_node_k50": 1.047633289957612,
+      "z_other_k50": 1.1217684904814693
+    },
+    "correlation": {
+      "z_safety_barrier_k50": {
+        "z_safety_barrier_k50": 1.0,
+        "z_propagation_node_k50": -0.1071955524344041,
+        "z_other_k50": 0.2771628929982924
+      },
+      "z_propagation_node_k50": {
+        "z_safety_barrier_k50": -0.1071955524344041,
+        "z_propagation_node_k50": 1.0,
+        "z_other_k50": -0.2068167430661233
+      },
+      "z_other_k50": {
+        "z_safety_barrier_k50": 0.2771628929982924,
+        "z_propagation_node_k50": -0.2068167430661233,
+        "z_other_k50": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k50": {
+        "min": 0.019521093682081676,
+        "max": 0.42857961357921204,
+        "mean": 0.10741933562792194,
+        "sd": 0.06950160049596435,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k50": {
+        "min": 0.00020025550632793586,
+        "max": 0.001972268680111176,
+        "mean": 0.0007283610748340594,
+        "sd": 0.00021713714604994338,
+        "zero_fraction": 0.0
+      },
+      "other_k50": {
+        "min": 0.0,
+        "max": 0.10564561621843035,
+        "mean": 0.002560389147281732,
+        "sd": 0.012495056578235613,
+        "zero_fraction": 0.9415584415584416
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k50": {
+        "min": 0.7180748581886292,
+        "max": 0.9411666393280029,
+        "mean": 0.8816254138946533,
+        "sd": 0.03929072991013527,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k50": {
+        "min": 0.03964455425739288,
+        "max": 0.28192517161369324,
+        "mean": 0.11555816233158112,
+        "sd": 0.03999846428632736,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k50": {
+        "min": 0.0,
+        "max": 0.1162101998925209,
+        "mean": 0.0028164286632090807,
+        "sd": 0.013744565658271313,
+        "zero_fraction": 0.9415584415584416
+      }
+    },
+    "event_rate": 0.23133116883116883,
+    "n_events": 285
+  },
+  {
+    "model": "KimiMV",
+    "corpus_unit": "publication",
+    "role_scope": "all_reviewed_roles",
+    "k": 100,
+    "formula": "error ~ z_safety_barrier_k100 + z_propagation_node_k100 + z_other_k100 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k100": {
+        "mean": 0.11723421209781205,
+        "sd": 0.04898949930276736
+      },
+      "propagation_node_k100": {
+        "mean": 0.0008806208259668478,
+        "sd": 0.00030661755547377984
+      },
+      "other_k100": {
+        "mean": 0.01348569529495793,
+        "sd": 0.0239361226037377
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k100": 1.1207085130778196,
+      "z_propagation_node_k100": 1.0531349278986608,
+      "z_other_k100": 1.0697572303591136
+    },
+    "correlation": {
+      "z_safety_barrier_k100": {
+        "z_safety_barrier_k100": 1.0,
+        "z_propagation_node_k100": -0.22417361026627042,
+        "z_other_k100": 0.2549731985516701
+      },
+      "z_propagation_node_k100": {
+        "z_safety_barrier_k100": -0.22417361026627042,
+        "z_propagation_node_k100": 1.0,
+        "z_other_k100": -0.07084144166761015
+      },
+      "z_other_k100": {
+        "z_safety_barrier_k100": 0.2549731985516701,
+        "z_propagation_node_k100": -0.07084144166761015,
+        "z_other_k100": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k100": {
+        "min": 0.040303332018378955,
+        "max": 0.35154176851153995,
+        "mean": 0.11723421209781205,
+        "sd": 0.04904930339335919,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k100": {
+        "min": 0.0002057014122964057,
+        "max": 0.0018580696025173925,
+        "mean": 0.0008806208259668478,
+        "sd": 0.0003069918598517706,
+        "zero_fraction": 0.0
+      },
+      "other_k100": {
+        "min": 0.0,
+        "max": 0.1679593922067051,
+        "mean": 0.01348569529495793,
+        "sd": 0.0239653427032485,
+        "zero_fraction": 0.5681818181818182
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k100": {
+        "min": 0.6693524122238159,
+        "max": 0.9393594264984131,
+        "mean": 0.837679386138916,
+        "sd": 0.0408734567463398,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k100": {
+        "min": 0.050932642072439194,
+        "max": 0.33064761757850647,
+        "mean": 0.1474863588809967,
+        "sd": 0.04180324822664261,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k100": {
+        "min": 0.0,
+        "max": 0.1847553700208664,
+        "mean": 0.014834268018603325,
+        "sd": 0.02636188268661499,
+        "zero_fraction": 0.5681818181818182
+      }
+    },
+    "event_rate": 0.23133116883116883,
+    "n_events": 285
+  },
+  {
+    "model": "DeepSeek",
+    "corpus_unit": "family",
+    "role_scope": "all_reviewed_roles",
+    "k": 25,
+    "formula": "error ~ z_safety_barrier_k25 + z_propagation_node_k25 + z_other_k25 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k25": {
+        "mean": 0.07628546327224073,
+        "sd": 0.06636286577923539
+      },
+      "propagation_node_k25": {
+        "mean": 0.000786364339742135,
+        "sd": 0.00018532053228813303
+      },
+      "other_k25": {
+        "mean": 0.0014412527588003223,
+        "sd": 0.011950523574042698
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k25": 1.1359887684345418,
+      "z_propagation_node_k25": 1.1533400111923293,
+      "z_other_k25": 1.0980118832931047
+    },
+    "correlation": {
+      "z_safety_barrier_k25": {
+        "z_safety_barrier_k25": 1.0,
+        "z_propagation_node_k25": -0.31095317900760544,
+        "z_other_k25": 0.22621837178164947
+      },
+      "z_propagation_node_k25": {
+        "z_safety_barrier_k25": -0.31095317900760544,
+        "z_propagation_node_k25": 1.0,
+        "z_other_k25": -0.255830420867704
+      },
+      "z_other_k25": {
+        "z_safety_barrier_k25": 0.22621837178164947,
+        "z_propagation_node_k25": -0.255830420867704,
+        "z_other_k25": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k25": {
+        "min": 0.007232017720183079,
+        "max": 0.3581930818023296,
+        "mean": 0.07628546327224073,
+        "sd": 0.06644107778726116,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k25": {
+        "min": 1.92219277440493e-16,
+        "max": 0.0012148348250079124,
+        "mean": 0.0007863643397421347,
+        "sd": 0.00018553894194824137,
+        "zero_fraction": 0.003134796238244514
+      },
+      "other_k25": {
+        "min": 0.0,
+        "max": 0.1412139336655155,
+        "mean": 0.0014412527588003223,
+        "sd": 0.01196460787306611,
+        "zero_fraction": 0.9843260188087775
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k25": {
+        "min": 0.5605168342590332,
+        "max": 0.9619992971420288,
+        "mean": 0.8841372728347778,
+        "sd": 0.051992692053318024,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k25": {
+        "min": 0.03800076246261597,
+        "max": 0.439483106136322,
+        "mean": 0.11427737772464752,
+        "sd": 0.05188615247607231,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k25": {
+        "min": 0.0,
+        "max": 0.15533524751663208,
+        "mean": 0.001585377031005919,
+        "sd": 0.013161061331629753,
+        "zero_fraction": 0.9843260188087775
+      }
+    },
+    "event_rate": 0.31191222570532917,
+    "n_events": 398
+  },
+  {
+    "model": "DeepSeek",
+    "corpus_unit": "family",
+    "role_scope": "all_reviewed_roles",
+    "k": 50,
+    "formula": "error ~ z_safety_barrier_k50 + z_propagation_node_k50 + z_other_k50 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k50": {
+        "mean": 0.0948319706342881,
+        "sd": 0.04548553210301975
+      },
+      "propagation_node_k50": {
+        "mean": 0.0007227938666310408,
+        "sd": 0.0002903145937764742
+      },
+      "other_k50": {
+        "mean": 0.008166708458504139,
+        "sd": 0.022484239882142064
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k50": 1.1576436373744163,
+      "z_propagation_node_k50": 1.008022721049705,
+      "z_other_k50": 1.152025578368209
+    },
+    "correlation": {
+      "z_safety_barrier_k50": {
+        "z_safety_barrier_k50": 1.0,
+        "z_propagation_node_k50": -0.08656309078472345,
+        "z_other_k50": 0.36270680955688517
+      },
+      "z_propagation_node_k50": {
+        "z_safety_barrier_k50": -0.08656309078472345,
+        "z_propagation_node_k50": 1.0,
+        "z_other_k50": -0.05150758596819717
+      },
+      "z_other_k50": {
+        "z_safety_barrier_k50": 0.36270680955688517,
+        "z_propagation_node_k50": -0.05150758596819717,
+        "z_other_k50": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k50": {
+        "min": 0.00806505546117853,
+        "max": 0.2795218987023921,
+        "mean": 0.0948319706342881,
+        "sd": 0.04553913911290585,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k50": {
+        "min": 0.0002014888722623524,
+        "max": 0.0017616915827154565,
+        "mean": 0.0007227938666310408,
+        "sd": 0.0002906567442709085,
+        "zero_fraction": 0.0
+      },
+      "other_k50": {
+        "min": 0.0,
+        "max": 0.1941581662377747,
+        "mean": 0.008166708458504137,
+        "sd": 0.022510738700863453,
+        "zero_fraction": 0.7962382445141066
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k50": {
+        "min": 0.6574897170066833,
+        "max": 0.9223222732543945,
+        "mean": 0.8467518091201782,
+        "sd": 0.04495719075202942,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k50": {
+        "min": 0.05926062539219856,
+        "max": 0.34251031279563904,
+        "mean": 0.1442648470401764,
+        "sd": 0.046208810061216354,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k50": {
+        "min": 0.0,
+        "max": 0.2135738730430603,
+        "mean": 0.008983374573290348,
+        "sd": 0.024761797860264778,
+        "zero_fraction": 0.7962382445141066
+      }
+    },
+    "event_rate": 0.31191222570532917,
+    "n_events": 398
+  },
+  {
+    "model": "DeepSeek",
+    "corpus_unit": "family",
+    "role_scope": "all_reviewed_roles",
+    "k": 100,
+    "formula": "error ~ z_safety_barrier_k100 + z_propagation_node_k100 + z_other_k100 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k100": {
+        "mean": 0.08925649034424937,
+        "sd": 0.030994610709959774
+      },
+      "propagation_node_k100": {
+        "mean": 0.001137366753393397,
+        "sd": 0.00035366573492136576
+      },
+      "other_k100": {
+        "mean": 0.02491394589785754,
+        "sd": 0.029724824151136083
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k100": 1.2104891129473783,
+      "z_propagation_node_k100": 1.0329730671810817,
+      "z_other_k100": 1.1848122649264157
+    },
+    "correlation": {
+      "z_safety_barrier_k100": {
+        "z_safety_barrier_k100": 1.0,
+        "z_propagation_node_k100": -0.14930782006440657,
+        "z_other_k100": 0.3841751464360902
+      },
+      "z_propagation_node_k100": {
+        "z_safety_barrier_k100": -0.14930782006440657,
+        "z_propagation_node_k100": 1.0,
+        "z_other_k100": 0.03323083073885231
+      },
+      "z_other_k100": {
+        "z_safety_barrier_k100": 0.3841751464360902,
+        "z_propagation_node_k100": 0.03323083073885231,
+        "z_other_k100": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k100": {
+        "min": 0.029572669204164143,
+        "max": 0.2020937711341682,
+        "mean": 0.08925649034424937,
+        "sd": 0.031031139432960788,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k100": {
+        "min": 0.00020197270731301404,
+        "max": 0.002334721489726926,
+        "mean": 0.001137366753393397,
+        "sd": 0.00035408254795337265,
+        "zero_fraction": 0.0
+      },
+      "other_k100": {
+        "min": 0.0,
+        "max": 0.18847133783348297,
+        "mean": 0.02491394589785754,
+        "sd": 0.02975985636618248,
+        "zero_fraction": 0.32601880877742945
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k100": {
+        "min": 0.620806097984314,
+        "max": 0.8816792964935303,
+        "mean": 0.7682195901870728,
+        "sd": 0.04032609984278679,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k100": {
+        "min": 0.09783060103654861,
+        "max": 0.37919390201568604,
+        "mean": 0.20437507331371307,
+        "sd": 0.04365925490856171,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k100": {
+        "min": 0.0,
+        "max": 0.20731835067272186,
+        "mean": 0.027405323460698128,
+        "sd": 0.03273582458496094,
+        "zero_fraction": 0.32601880877742945
+      }
+    },
+    "event_rate": 0.31191222570532917,
+    "n_events": 398
+  },
+  {
+    "model": "KimiMV",
+    "corpus_unit": "family",
+    "role_scope": "all_reviewed_roles",
+    "k": 25,
+    "formula": "error ~ z_safety_barrier_k25 + z_propagation_node_k25 + z_other_k25 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k25": {
+        "mean": 0.07698175449278112,
+        "sd": 0.06700202494199324
+      },
+      "propagation_node_k25": {
+        "mean": 0.000786384602700384,
+        "sd": 0.00018859427229066472
+      },
+      "other_k25": {
+        "mean": 0.0014927260716146194,
+        "sd": 0.012159062271929453
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k25": 1.1384648844641665,
+      "z_propagation_node_k25": 1.1555846480944392,
+      "z_other_k25": 1.0980339632738882
+    },
+    "correlation": {
+      "z_safety_barrier_k25": {
+        "z_safety_barrier_k25": 1.0,
+        "z_propagation_node_k25": -0.3141399415418257,
+        "z_other_k25": 0.2268120137416524
+      },
+      "z_propagation_node_k25": {
+        "z_safety_barrier_k25": -0.3141399415418257,
+        "z_propagation_node_k25": 1.0,
+        "z_other_k25": -0.25592258267759443
+      },
+      "z_other_k25": {
+        "z_safety_barrier_k25": 0.2268120137416524,
+        "z_propagation_node_k25": -0.25592258267759443,
+        "z_other_k25": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k25": {
+        "min": 0.007232017720183079,
+        "max": 0.3581930818023296,
+        "mean": 0.07698175449278112,
+        "sd": 0.06708381788183741,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k25": {
+        "min": 1.92219277440493e-16,
+        "max": 0.0012148348250079124,
+        "mean": 0.000786384602700384,
+        "sd": 0.000188824499361888,
+        "zero_fraction": 0.003246753246753247
+      },
+      "other_k25": {
+        "min": 0.0,
+        "max": 0.1412139336655155,
+        "mean": 0.0014927260716146194,
+        "sd": 0.012173905486740206,
+        "zero_fraction": 0.9837662337662337
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k25": {
+        "min": 0.5605168342590332,
+        "max": 0.9619992971420288,
+        "mean": 0.8831876516342163,
+        "sd": 0.05247374624013901,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k25": {
+        "min": 0.03800076246261597,
+        "max": 0.439483106136322,
+        "mean": 0.1151704266667366,
+        "sd": 0.05239337682723999,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k25": {
+        "min": 0.0,
+        "max": 0.15533524751663208,
+        "mean": 0.0016419976018369198,
+        "sd": 0.013391288928687572,
+        "zero_fraction": 0.9837662337662337
+      }
+    },
+    "event_rate": 0.23133116883116883,
+    "n_events": 285
+  },
+  {
+    "model": "KimiMV",
+    "corpus_unit": "family",
+    "role_scope": "all_reviewed_roles",
+    "k": 50,
+    "formula": "error ~ z_safety_barrier_k50 + z_propagation_node_k50 + z_other_k50 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k50": {
+        "mean": 0.09497077952309604,
+        "sd": 0.045841474054094805
+      },
+      "propagation_node_k50": {
+        "mean": 0.0007223335077341705,
+        "sd": 0.0002878819648362827
+      },
+      "other_k50": {
+        "mean": 0.008403777428197609,
+        "sd": 0.02282858287350462
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k50": 1.1621779241020311,
+      "z_propagation_node_k50": 1.0081861283229345,
+      "z_other_k50": 1.1565497730642664
+    },
+    "correlation": {
+      "z_safety_barrier_k50": {
+        "z_safety_barrier_k50": 1.0,
+        "z_propagation_node_k50": -0.08729814787287059,
+        "z_other_k50": 0.367320819572199
+      },
+      "z_propagation_node_k50": {
+        "z_safety_barrier_k50": -0.08729814787287059,
+        "z_propagation_node_k50": 1.0,
+        "z_other_k50": -0.05283677054539396
+      },
+      "z_other_k50": {
+        "z_safety_barrier_k50": 0.367320819572199,
+        "z_propagation_node_k50": -0.05283677054539396,
+        "z_other_k50": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k50": {
+        "min": 0.00806505546117853,
+        "max": 0.2795218987023921,
+        "mean": 0.09497077952309604,
+        "sd": 0.04589743518262668,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k50": {
+        "min": 0.0002014888722623524,
+        "max": 0.0017616915827154565,
+        "mean": 0.0007223335077341705,
+        "sd": 0.00028823339768107296,
+        "zero_fraction": 0.0
+      },
+      "other_k50": {
+        "min": 0.0,
+        "max": 0.1941581662377747,
+        "mean": 0.008403777428197609,
+        "sd": 0.022856450940287928,
+        "zero_fraction": 0.7922077922077922
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k50": {
+        "min": 0.6574897170066833,
+        "max": 0.9223222732543945,
+        "mean": 0.8460842967033386,
+        "sd": 0.04473750665783882,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k50": {
+        "min": 0.05926062539219856,
+        "max": 0.34251031279563904,
+        "mean": 0.14467152953147888,
+        "sd": 0.04614090919494629,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k50": {
+        "min": 0.0,
+        "max": 0.2135738730430603,
+        "mean": 0.009244149550795555,
+        "sd": 0.025142081081867218,
+        "zero_fraction": 0.7922077922077922
+      }
+    },
+    "event_rate": 0.23133116883116883,
+    "n_events": 285
+  },
+  {
+    "model": "KimiMV",
+    "corpus_unit": "family",
+    "role_scope": "all_reviewed_roles",
+    "k": 100,
+    "formula": "error ~ z_safety_barrier_k100 + z_propagation_node_k100 + z_other_k100 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k100": {
+        "mean": 0.0893056877120792,
+        "sd": 0.03129445023752383
+      },
+      "propagation_node_k100": {
+        "mean": 0.001136217598226977,
+        "sd": 0.0003568504398347805
+      },
+      "other_k100": {
+        "mean": 0.024799569493313144,
+        "sd": 0.030045313850809077
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k100": 1.2247671625059386,
+      "z_propagation_node_k100": 1.0340719996734902,
+      "z_other_k100": 1.1960995710764046
+    },
+    "correlation": {
+      "z_safety_barrier_k100": {
+        "z_safety_barrier_k100": 1.0,
+        "z_propagation_node_k100": -0.15504189119781217,
+        "z_other_k100": 0.39527838742710675
+      },
+      "z_propagation_node_k100": {
+        "z_safety_barrier_k100": -0.15504189119781217,
+        "z_propagation_node_k100": 1.0,
+        "z_other_k100": 0.025427491824983245
+      },
+      "z_other_k100": {
+        "z_safety_barrier_k100": 0.39527838742710675,
+        "z_propagation_node_k100": 0.025427491824983245,
+        "z_other_k100": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k100": {
+        "min": 0.029572669204164143,
+        "max": 0.2020937711341682,
+        "mean": 0.0893056877120792,
+        "sd": 0.03133265303942348,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k100": {
+        "min": 0.00020197270731301404,
+        "max": 0.002334721489726926,
+        "mean": 0.001136217598226977,
+        "sd": 0.00035728606616971647,
+        "zero_fraction": 0.0
+      },
+      "other_k100": {
+        "min": 0.0,
+        "max": 0.18847133783348297,
+        "mean": 0.024799569493313144,
+        "sd": 0.030081991765402345,
+        "zero_fraction": 0.33116883116883117
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k100": {
+        "min": 0.620806097984314,
+        "max": 0.8816792964935303,
+        "mean": 0.7681832313537598,
+        "sd": 0.04047390818595886,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k100": {
+        "min": 0.09783060103654861,
+        "max": 0.37919390201568604,
+        "mean": 0.20453721284866333,
+        "sd": 0.043710581958293915,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k100": {
+        "min": 0.0,
+        "max": 0.20731835067272186,
+        "mean": 0.027279509231448174,
+        "sd": 0.033090170472860336,
+        "zero_fraction": 0.33116883116883117
+      }
+    },
+    "event_rate": 0.23133116883116883,
+    "n_events": 285
+  },
+  {
+    "model": "DeepSeek",
+    "corpus_unit": "publication",
+    "role_scope": "direct_partial_only",
+    "k": 50,
+    "formula": "error ~ z_safety_barrier_k50 + z_propagation_node_k50 + z_other_k50 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k50": {
+        "mean": 0.08960073140285169,
+        "sd": 0.06365088407011596
+      },
+      "propagation_node_k50": {
+        "mean": 0.0007269270310951679,
+        "sd": 0.00021554849012574072
+      },
+      "other_k50": {
+        "mean": 0.019891361027916523,
+        "sd": 0.01733149713877843
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k50": 1.2637585837376422,
+      "z_propagation_node_k50": 1.0207321392214945,
+      "z_other_k50": 1.2687558884623058
+    },
+    "correlation": {
+      "z_safety_barrier_k50": {
+        "z_safety_barrier_k50": 1.0,
+        "z_propagation_node_k50": -0.11273738989216725,
+        "z_other_k50": 0.45355368063069007
+      },
+      "z_propagation_node_k50": {
+        "z_safety_barrier_k50": -0.11273738989216725,
+        "z_propagation_node_k50": 1.0,
+        "z_other_k50": -0.1288347888319212
+      },
+      "z_other_k50": {
+        "z_safety_barrier_k50": 0.45355368063069007,
+        "z_propagation_node_k50": -0.1288347888319212,
+        "z_other_k50": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k50": {
+        "min": 0.01698972243575819,
+        "max": 0.3996173969863031,
+        "mean": 0.08960073140285167,
+        "sd": 0.06372589986995046,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k50": {
+        "min": 0.00020025550632793445,
+        "max": 0.001972268680111176,
+        "mean": 0.0007269270310951679,
+        "sd": 0.00021580252496950018,
+        "zero_fraction": 0.0
+      },
+      "other_k50": {
+        "min": 0.0,
+        "max": 0.11941555582126924,
+        "mean": 0.01989136102791652,
+        "sd": 0.017351923188458473,
+        "zero_fraction": 0.09717868338557993
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k50": {
+        "min": 0.6985435485839844,
+        "max": 0.9225279092788696,
+        "mean": 0.8572037816047668,
+        "sd": 0.040330979973077774,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k50": {
+        "min": 0.020025551319122314,
+        "max": 0.197226881980896,
+        "mean": 0.07269270718097687,
+        "sd": 0.021580252796411514,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k50": {
+        "min": 0.0,
+        "max": 0.24030178785324097,
+        "mean": 0.07010352611541748,
+        "sd": 0.03990550339221954,
+        "zero_fraction": 0.006269592476489028
+      }
+    },
+    "event_rate": 0.31191222570532917,
+    "n_events": 398
+  },
+  {
+    "model": "KimiMV",
+    "corpus_unit": "publication",
+    "role_scope": "direct_partial_only",
+    "k": 50,
+    "formula": "error ~ z_safety_barrier_k50 + z_propagation_node_k50 + z_other_k50 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k50": {
+        "mean": 0.08999660233396253,
+        "sd": 0.06419762873742672
+      },
+      "propagation_node_k50": {
+        "mean": 0.0007283610748340592,
+        "sd": 0.00021687239836435282
+      },
+      "other_k50": {
+        "mean": 0.019983122441241136,
+        "sd": 0.01752244477925946
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k50": 1.2675356518666026,
+      "z_propagation_node_k50": 1.023849670937005,
+      "z_other_k50": 1.2749200055955692
+    },
+    "correlation": {
+      "z_safety_barrier_k50": {
+        "z_safety_barrier_k50": 1.0,
+        "z_propagation_node_k50": -0.11789273020355082,
+        "z_other_k50": 0.4561708967705735
+      },
+      "z_propagation_node_k50": {
+        "z_safety_barrier_k50": -0.11789273020355082,
+        "z_propagation_node_k50": 1.0,
+        "z_other_k50": -0.14003645161585185
+      },
+      "z_other_k50": {
+        "z_safety_barrier_k50": 0.4561708967705735,
+        "z_propagation_node_k50": -0.14003645161585185,
+        "z_other_k50": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k50": {
+        "min": 0.01698972243575819,
+        "max": 0.3996173969863031,
+        "mean": 0.08999660233396253,
+        "sd": 0.06427599820148404,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k50": {
+        "min": 0.00020025550632793445,
+        "max": 0.001972268680111176,
+        "mean": 0.0007283610748340592,
+        "sd": 0.0002171371460499434,
+        "zero_fraction": 0.0
+      },
+      "other_k50": {
+        "min": 0.0,
+        "max": 0.11941555582126924,
+        "mean": 0.019983122441241136,
+        "sd": 0.017543835360708207,
+        "zero_fraction": 0.09740259740259741
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k50": {
+        "min": 0.6985435485839844,
+        "max": 0.9225279092788696,
+        "mean": 0.856735348701477,
+        "sd": 0.040440455079078674,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k50": {
+        "min": 0.020025551319122314,
+        "max": 0.197226881980896,
+        "mean": 0.07283610850572586,
+        "sd": 0.02171371504664421,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k50": {
+        "min": 0.0,
+        "max": 0.24030178785324097,
+        "mean": 0.07042858749628067,
+        "sd": 0.04004593566060066,
+        "zero_fraction": 0.006493506493506494
+      }
+    },
+    "event_rate": 0.23133116883116883,
+    "n_events": 285
+  },
+  {
+    "model": "DeepSeek",
+    "corpus_unit": "family",
+    "role_scope": "direct_partial_only",
+    "k": 50,
+    "formula": "error ~ z_safety_barrier_k50 + z_propagation_node_k50 + z_other_k50 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k50": {
+        "mean": 0.0948319706342881,
+        "sd": 0.04548553210301975
+      },
+      "propagation_node_k50": {
+        "mean": 0.0007227938666306879,
+        "sd": 0.00029031459377653853
+      },
+      "other_k50": {
+        "mean": 0.008166708458504493,
+        "sd": 0.022484239882141998
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k50": 1.1576436373743677,
+      "z_propagation_node_k50": 1.0080227210496406,
+      "z_other_k50": 1.1520255783682
+    },
+    "correlation": {
+      "z_safety_barrier_k50": {
+        "z_safety_barrier_k50": 1.0,
+        "z_propagation_node_k50": -0.08656309078438891,
+        "z_other_k50": 0.36270680955688245
+      },
+      "z_propagation_node_k50": {
+        "z_safety_barrier_k50": -0.08656309078438891,
+        "z_propagation_node_k50": 1.0,
+        "z_other_k50": -0.051507585967963676
+      },
+      "z_other_k50": {
+        "z_safety_barrier_k50": 0.36270680955688245,
+        "z_propagation_node_k50": -0.051507585967963676,
+        "z_other_k50": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k50": {
+        "min": 0.00806505546117853,
+        "max": 0.2795218987023921,
+        "mean": 0.0948319706342881,
+        "sd": 0.04553913911290585,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k50": {
+        "min": 0.0002014888722616552,
+        "max": 0.0017616915827154565,
+        "mean": 0.0007227938666306879,
+        "sd": 0.00029065674427097295,
+        "zero_fraction": 0.0
+      },
+      "other_k50": {
+        "min": 4.557625231644704e-31,
+        "max": 0.19415816623777477,
+        "mean": 0.008166708458504493,
+        "sd": 0.022510738700863384,
+        "zero_fraction": 0.7899686520376176
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k50": {
+        "min": 0.6186328530311584,
+        "max": 0.9008410573005676,
+        "mean": 0.811708927154541,
+        "sd": 0.04585542902350426,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k50": {
+        "min": 0.020148886367678642,
+        "max": 0.17616915702819824,
+        "mean": 0.07227938622236252,
+        "sd": 0.029065674170851707,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k50": {
+        "min": 0.019038716331124306,
+        "max": 0.28154295682907104,
+        "mean": 0.11601167917251587,
+        "sd": 0.04378274828195572,
+        "zero_fraction": 0.0
+      }
+    },
+    "event_rate": 0.31191222570532917,
+    "n_events": 398
+  },
+  {
+    "model": "KimiMV",
+    "corpus_unit": "family",
+    "role_scope": "direct_partial_only",
+    "k": 50,
+    "formula": "error ~ z_safety_barrier_k50 + z_propagation_node_k50 + z_other_k50 + C(subq) + log_len",
+    "scaling": {
+      "safety_barrier_k50": {
+        "mean": 0.09497077952309604,
+        "sd": 0.045841474054094805
+      },
+      "propagation_node_k50": {
+        "mean": 0.0007223335077338158,
+        "sd": 0.00028788196483634746
+      },
+      "other_k50": {
+        "mean": 0.008403777428197963,
+        "sd": 0.022828582873504557
+      }
+    },
+    "vif": {
+      "z_safety_barrier_k50": 1.162177924101983,
+      "z_propagation_node_k50": 1.0081861283228688,
+      "z_other_k50": 1.1565497730642573
+    },
+    "correlation": {
+      "z_safety_barrier_k50": {
+        "z_safety_barrier_k50": 1.0,
+        "z_propagation_node_k50": -0.08729814787253533,
+        "z_other_k50": 0.36732081957219614
+      },
+      "z_propagation_node_k50": {
+        "z_safety_barrier_k50": -0.08729814787253533,
+        "z_propagation_node_k50": 1.0,
+        "z_other_k50": -0.05283677054515165
+      },
+      "z_other_k50": {
+        "z_safety_barrier_k50": 0.36732081957219614,
+        "z_propagation_node_k50": -0.05283677054515165,
+        "z_other_k50": 1.0
+      }
+    },
+    "raw_exposure_distribution": {
+      "safety_barrier_k50": {
+        "min": 0.00806505546117853,
+        "max": 0.2795218987023921,
+        "mean": 0.09497077952309604,
+        "sd": 0.04589743518262668,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_k50": {
+        "min": 0.0002014888722616552,
+        "max": 0.0017616915827154565,
+        "mean": 0.0007223335077338158,
+        "sd": 0.00028823339768113785,
+        "zero_fraction": 0.0
+      },
+      "other_k50": {
+        "min": 4.557625231644704e-31,
+        "max": 0.19415816623777477,
+        "mean": 0.008403777428197964,
+        "sd": 0.022856450940287862,
+        "zero_fraction": 0.7857142857142857
+      }
+    },
+    "neighbor_role_mass_distribution": {
+      "safety_barrier_mass_k50": {
+        "min": 0.6186328530311584,
+        "max": 0.9008410573005676,
+        "mean": 0.8110588192939758,
+        "sd": 0.04576420411467552,
+        "zero_fraction": 0.0
+      },
+      "propagation_node_mass_k50": {
+        "min": 0.020148886367678642,
+        "max": 0.17616915702819824,
+        "mean": 0.07223334908485413,
+        "sd": 0.02882334031164646,
+        "zero_fraction": 0.0
+      },
+      "other_mass_k50": {
+        "min": 0.019038716331124306,
+        "max": 0.28154295682907104,
+        "mean": 0.11670781672000885,
+        "sd": 0.043859004974365234,
+        "zero_fraction": 0.0
+      }
+    },
+    "event_rate": 0.23133116883116883,
+    "n_events": 285
+  }
+]

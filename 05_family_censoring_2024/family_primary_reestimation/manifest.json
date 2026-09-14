@@ -1,0 +1,57 @@
+{
+  "source_hashes": {
+    "<project>/PatSense\\Cascade\\data\\humanoid_safety_patents_v5_clean.xlsx": "721ebbc30a8915bc64ffce2cefe6cf645ee109379a97c9cc41d96fb3331131ca",
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\time_analysis\\04_bertopic_time\\document_topic_assignment.csv": "50236752c45f88bc6cdc260bf6a0d901c5228af8beb9c1f16b378c9f25904699",
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\time_analysis\\04_stm\\stm_input.csv": "c3f01e3979426a7ee3be3a9717b4eff03dff63a85d94beff74ae87aca2b182ed",
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\time_analysis\\10_cascade\\llm_safety_labels.csv": "cfc22b9e53fef74efb1384aeac6939a393ff8323be575be4220f1323e9042e2e"
+  },
+  "representative_stats": {
+    "n_publications": 8928,
+    "n_family_ids_raw_excel": 6703,
+    "n_simple_families": 6602,
+    "rows_removed": 2326,
+    "representative_row_changed": 159,
+    "representative_topic_changed": 16,
+    "representative_year_changed": 131
+  },
+  "full_reproduction": {
+    "hmm_direction_mismatches": 0,
+    "hmm_decay_max_abs_diff": 1.1102230246251565e-16,
+    "lifecycle_stage_mismatches": 0,
+    "score_max_abs_diff": 2.220446049250313e-16,
+    "risk_level_mismatches": 0
+  },
+  "comparison": {
+    "full_high_topics": [
+      7,
+      22,
+      25,
+      29,
+      40
+    ],
+    "family_high_topics": [
+      7,
+      22,
+      25
+    ],
+    "high_retained": [
+      7,
+      22,
+      25
+    ],
+    "high_lost": [
+      29,
+      40
+    ],
+    "high_gained": [],
+    "safety_score_rank_spearman_rho": 0.5538880771003858,
+    "safety_score_rank_spearman_p": 0.011280233716903539,
+    "risk_level_changes_all_topics": 4,
+    "risk_level_changes_safety_topics": 4,
+    "trend_direction_changes_all_topics": 19,
+    "lifecycle_changes_all_topics": 7
+  },
+  "hmm_seed": 42,
+  "stm_seed": 12345,
+  "stm_k": 12
+}

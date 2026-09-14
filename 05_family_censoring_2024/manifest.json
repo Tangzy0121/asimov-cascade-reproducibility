@@ -1,0 +1,62 @@
+{
+  "censor_year": 2024,
+  "n_families": {
+    "full_2026_raw": 6602,
+    "cut_2025": 6100,
+    "cut_2024": 4729,
+    "annualized_2026": 6602
+  },
+  "n_annual_points": {
+    "full_2026_raw": 21,
+    "cut_2025": 20,
+    "cut_2024": 19,
+    "annualized_2026": 21
+  },
+  "baseline_reproduction": {
+    "score_max_abs_diff": 8.881784197001252e-16,
+    "risk_level_mismatches": 0,
+    "decay_max_abs_diff": 1.1102230246251565e-16
+  },
+  "pub_high_frozen": [
+    7,
+    22,
+    25,
+    29,
+    40
+  ],
+  "family_full_high": [
+    7,
+    22,
+    25
+  ],
+  "family_censored2024_high": [
+    7,
+    25,
+    40
+  ],
+  "high_retained": [
+    7,
+    25
+  ],
+  "high_lost": [
+    22
+  ],
+  "high_gained": [
+    40
+  ],
+  "risk_changes_safety_candidates": 6,
+  "trend_changes_all_topics": 51,
+  "lifecycle_changes_all_topics": 26,
+  "spearman_rho_full_vs_c2024": 0.48656305656615634,
+  "spearman_p": 0.029593003566672944,
+  "threshold_support": {
+    "threshold_high": 0.08,
+    "n_high": 3,
+    "high_R_min": 0.3499999999838429,
+    "high_R_max": 5.600000000093008,
+    "high_R_min_over_threshold": 4.374999999798036,
+    "max_nonhigh_R": 0.06,
+    "gap_min_high_over_max_nonhigh": 5.833333333064049
+  },
+  "hmm_seed": 42
+}

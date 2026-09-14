@@ -1,0 +1,57 @@
+
+=== figure generation (vector PDF) ===
+timestamp_utc: 2026-09-02T04:10:37Z
+command: python src/make_figures.py
+F1 done
+F2 done
+Traceback (most recent call last):
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 274, in <module>
+    main()
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 265, in main
+    f3_condition_rates(desc)
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 144, in f3_condition_rates
+    props, plo, phi, ofs, oflo, ofhi = [], [], [], [], [], [], []
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 6)
+exit_code: 1
+
+=== figure generation rerun (after F3 unpack fix) ===
+timestamp_utc: 2026-09-02T04:10:59Z
+command: python src/make_figures.py
+F1 done
+F2 done
+Traceback (most recent call last):
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 274, in <module>
+    main()
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 265, in main
+    f3_condition_rates(desc)
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 157, in f3_condition_rates
+    ax.errorbar(x - 0.12, props, yerr=[plo, phi], fmt="o", ms=11, color=VERM,
+  File "<python>/envs/<env>/Lib\site-packages\matplotlib\_api\deprecation.py", line 453, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "<python>/envs/<env>/Lib\site-packages\matplotlib\__init__.py", line 1524, in inner
+    return func(
+           ^^^^^
+  File "<python>/envs/<env>/Lib\site-packages\matplotlib\axes\_axes.py", line 3825, in errorbar
+    raise ValueError(
+ValueError: 'yerr' must not contain negative values
+exit_code: 1
+
+=== figure generation rerun 2 ===
+timestamp_utc: 2026-09-02T04:11:35Z
+F1 done
+F2 done
+F3 done
+F4 done
+code excerpt done
+exit_code: 0
+
+=== figure generation rerun 3 (F3 ylim/legend, F2 caption states frozen label) ===
+timestamp_utc: 2026-09-02T04:15:06Z
+F1 done
+F2 done
+F3 done
+F4 done
+code excerpt done
+exit_code: 0

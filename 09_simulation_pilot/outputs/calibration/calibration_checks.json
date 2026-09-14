@@ -1,0 +1,32 @@
+{
+  "n_trials": 30,
+  "all_local_contracts_pass": true,
+  "no_numeric_unstable": true,
+  "no_nan": true,
+  "no_baseline_breach": true,
+  "min_margin_overall_m": 0.009194109962171626,
+  "trigger_fired_all_trials": true,
+  "full_approach_observed": true,
+  "per_speed": {
+    "0.15": {
+      "min_margin_m": 0.015478997498447306,
+      "breaches": 0,
+      "max_t_final_s": 4.115999999999769,
+      "trigger_missing": 0
+    },
+    "0.3": {
+      "min_margin_m": 0.009194109962171626,
+      "breaches": 0,
+      "max_t_final_s": 2.291999999999969,
+      "trigger_missing": 0
+    },
+    "0.45": {
+      "min_margin_m": 0.011890018482132086,
+      "breaches": 0,
+      "max_t_final_s": 1.7660000000000013,
+      "trigger_missing": 0
+    }
+  },
+  "config_sha256": "0bf3f0351d8e1622160b94b835b555fc6ffc44b79a077c2a4b6276e96c8d55e9",
+  "baseline_valid": true
+}

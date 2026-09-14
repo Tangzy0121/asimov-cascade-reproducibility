@@ -1,0 +1,23 @@
+{
+  "provider": "deepseek",
+  "base_url": "https://api.deepseek.com",
+  "requested_model": "deepseek-chat",
+  "temperature": 0.1,
+  "max_tokens": 350,
+  "override_params": false,
+  "run_index": 2,
+  "run_started_at_utc": "2026-08-17T11:12:54.351653+00:00",
+  "run_finished_at_utc": "2026-08-17T11:13:15.608810+00:00",
+  "attempted_topics": 77,
+  "api_ok_topics": 77,
+  "api_error_topics": 0,
+  "runner_sha256": "d33dac68d4189a0e44e602e35344501603e43c0034c08930cb114e6a32ea0b71",
+  "p01_script_sha256": "7bf63be05dd6dd66aa93314c62f880ed23c454e4aece83e9d20e42b37bd70108",
+  "few_shot_seed_sha256": "6b000696c35188576e61c87c7aab9ae500df4f2312779fab3fdd4af04ad7fe38",
+  "topic_summary_sha256": "92ccf08f5ca168381de720b0d7713ac3f9795aa4f4d1a1ed501bacefe38ba664",
+  "deepseek_labels_sha256": "cfc22b9e53fef74efb1384aeac6939a393ff8323be575be4220f1323e9042e2e",
+  "files": {
+    "labels.csv": "6c3fe7e73e28c52e64595a2194959ee02cc93b9bb6d0db146b6c43874a797735",
+    "raw_responses.jsonl": "7d56c432d27a32b78bd03297787cd84c81e6e9caa7ab3c7d59eee8dbc81f0f77"
+  }
+}

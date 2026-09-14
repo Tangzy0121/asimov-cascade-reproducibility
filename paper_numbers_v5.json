@@ -1,0 +1,108 @@
+{
+  "dataset": {
+    "n_retrieved": 9710,
+    "n_clean": 8928,
+    "n_removed": 782,
+    "year_min": 2006,
+    "year_max": 2026,
+    "cn_share_pct": 70.1,
+    "unit_of_analysis": "publication (not patent family)"
+  },
+  "bertopic": {
+    "n_topics": 77,
+    "n_noise_docs": 2698,
+    "noise_pct": 30.2,
+    "min_cluster_size": 25,
+    "n_neighbors": 15
+  },
+  "safety": {
+    "n_safety_topics": 20,
+    "n_non_safety": 57
+  },
+  "stm": {
+    "K": 12,
+    "n_train": 6249,
+    "n_test": 2679,
+    "n_effects_total": 120,
+    "n_effects_sig": 38
+  },
+  "cascade": {
+    "threshold": 0.08,
+    "n_high": 5,
+    "n_medium": 4,
+    "n_low": 11,
+    "n_non_safety": 57,
+    "high_signals": [
+      {
+        "id": 25,
+        "name": "25_industrial robot_industrial_tool_work",
+        "score": 4.44
+      },
+      {
+        "id": 22,
+        "name": "22_force_external force_human robot_robot",
+        "score": 4.0
+      },
+      {
+        "id": 40,
+        "name": "40_wheel_leg_wheel leg_wheel legged",
+        "score": 1.68
+      },
+      {
+        "id": 29,
+        "name": "29_module_intelligent_service_display",
+        "score": 1.47
+      },
+      {
+        "id": 7,
+        "name": "7_vehicle_lane_driving_lane changing",
+        "score": 1.27
+      }
+    ],
+    "logistic": {
+      "intercept": -1.98,
+      "beta_safety": 0.43,
+      "beta_decay": 1.82,
+      "beta_lifecycle": 0.52,
+      "decay_over_safety": 4.3
+    }
+  },
+  "cross_validation": {
+    "n_safety_subset": 20,
+    "n_confirmed": 1,
+    "n_stm_only": 4,
+    "n_bertopic_only": 8,
+    "n_low_consensus": 7,
+    "confirmed_id": 7,
+    "confirmed_name": "7_vehicle_lane_driving_lane changing",
+    "stm_only_ids": [
+      28,
+      32,
+      47,
+      65
+    ],
+    "bertopic_only_high_ids": [
+      22,
+      25,
+      29,
+      40
+    ]
+  },
+  "waves": {
+    "wave1_pre2018": 74,
+    "wave2_2018_2021": 3,
+    "wave3_2022plus": 0
+  },
+  "lifecycle": {
+    "n_declining_safety": 8,
+    "n_safety": 20,
+    "n_declining_non_safety": 29,
+    "n_non_safety": 57,
+    "hmm_state_counts_safety": {
+      "declining": 8,
+      "mature": 8,
+      "growing": 2,
+      "emerging": 2
+    }
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "created": "2026-09-02T22:27:08+0800",
+  "note": "Live Overleaf project was NOT modified. All writes under HelpCC/asimov_paper_audit_sim_revision/.",
+  "inputs": [
+    {
+      "path": "<project>/PatSense\\PaperWork\\sync_2026_08_09_Gagan\\03_Revision\\v2.5_ASIMOV_Cascade_ICRA_manuscript.docx",
+      "role": "designated v2.5 docx input (untouched)",
+      "sha256": "e3c807d5f07a0e39e0f8512e7dc4f7482b9a08ba9864b6ee5cd475d2c43f7334",
+      "size": 5796517,
+      "mtime": "2026-08-22T19:38:27+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\overleaf_snapshot\\ASIMOV_Overleaf_v26_latest.zip",
+      "role": "Overleaf project 6a94191458f7c7e7822bcee1 zip, fetched 2026-09-02 21:30 UTC+8",
+      "sha256": "70d629ba60f05237b38d6b24fc85013df341f7729a8c2bd2af65bc3dde336ae2",
+      "size": 607603,
+      "mtime": "2026-09-02T21:28:15+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_25_single_reviewer_audit\\audit_results.xlsx",
+      "role": "content audit results",
+      "sha256": "c19a187ad244430cbe546cf11f7fecde60236b80ea97f1d2691fd08a8fa8dd08",
+      "size": 101525,
+      "mtime": "2026-09-02T12:50:30+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_25_single_reviewer_audit\\audit_results.md",
+      "role": "content audit summary",
+      "sha256": "907b1ad420d4b8fe89c3c524443c1dc1351515e2ba05b513be150f121218794f",
+      "size": 2750,
+      "mtime": "2026-09-02T12:50:30+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_25_single_reviewer_audit\\duplicate_text_sensitivity.xlsx",
+      "role": "duplicate-text sensitivity",
+      "sha256": "922b52e43b21903f4a6718094e8cdec4591212c8cd3d8b00a148e45e7b2827ff",
+      "size": 13985,
+      "mtime": "2026-09-02T12:50:32+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_25_single_reviewer_audit\\02_round2_delayed_retest.xlsx",
+      "role": "same-session repeat coding workbook",
+      "sha256": "2fb1604b8434a68ab36bbc752b8fe34052038701a536a4d2072606355bfe60e9",
+      "size": 25013,
+      "mtime": "2026-09-02T12:44:25+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_controlled_propagation_sim\\work\\AUDIT_REPORT.md",
+      "role": "simulation audit report",
+      "sha256": "0d162405774e994e23845169a4ccd4fe0b50b46000e3d05ca6d04e7dabafb5cf",
+      "size": 6395,
+      "mtime": "2026-09-02T12:19:41+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_controlled_propagation_sim\\work\\page19_result_payload.md",
+      "role": "simulation result payload",
+      "sha256": "f444480519d031c068c49715b01e3b17780c1fbcfb564a99c1e7134a8143302f",
+      "size": 4836,
+      "mtime": "2026-09-02T12:16:52+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_controlled_propagation_sim\\work\\outputs\\raw_trials.csv",
+      "role": "frozen raw trials",
+      "sha256": "39a733141082f6a8b7e677d2b74d18159001431157cb56a292c15a884dd70897",
+      "size": 1268108,
+      "mtime": "2026-09-02T12:05:46+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_controlled_propagation_sim\\work\\outputs\\descriptive_results.csv",
+      "role": "descriptive results",
+      "sha256": "ee6c4768bb9033f7b350e8799d7f16a6d6f7a859edfed6f72e537f42175b490a",
+      "size": 10511,
+      "mtime": "2026-09-02T12:06:44+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_controlled_propagation_sim\\work\\outputs\\inferential_results.csv",
+      "role": "inferential results",
+      "sha256": "bf031e6893aec27be47064136ffa5a96a949efffbde78189744ab7d3b8cedf83",
+      "size": 4937,
+      "mtime": "2026-09-02T12:06:48+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_controlled_propagation_sim\\work\\outputs\\outcome_classification.json",
+      "role": "PILOT_SUPPORT classification",
+      "sha256": "031a5e80262af3a4681c20132ce8c882850fa56ca8a430e08ddfaffc3fb9309a",
+      "size": 539,
+      "mtime": "2026-09-02T12:06:48+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_controlled_propagation_sim\\work\\final_manifest.json",
+      "role": "sim manifest",
+      "sha256": "25e9c9bc50c3686601344b59899c14c07fe92f679c92cb1ac985ac8fcb160493",
+      "size": 8338,
+      "mtime": "2026-09-02T12:20:23+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\topic22_controlled_propagation_sim\\work\\figures\\F1_propagation_heatmap.pdf",
+      "role": "F1 heatmap source",
+      "sha256": "ca54bc3b23a4e1108eba82b612ac6b1ce1c0c33f5b2dbaddf37ec37bffaa81f2",
+      "size": 23317,
+      "mtime": "2026-09-02T12:15:07+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\kimi_family_id_audit\\work\\AUDIT_REPORT.md",
+      "role": "family-ID audit report",
+      "sha256": "2b5968816c541f06bbd07472b6c09c5338ff0b9cdcc66e1bc00963e63ce977cb",
+      "size": 14583,
+      "mtime": "2026-08-30T19:31:26+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\kimi_family_id_audit\\work\\baseline_vs_corrected.csv",
+      "role": "family baseline vs corrected",
+      "sha256": "9fdf6b08b8b53745aab7e8573226defec9ecd5c8c5f28487c1a979fb3ca177c5",
+      "size": 12089,
+      "mtime": "2026-08-30T19:33:01+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\kimi_family_id_audit\\work\\claim_impact_matrix.csv",
+      "role": "family claim impact matrix",
+      "sha256": "5c3fa4cb3a4d31da05571ec9647fb96cb084a27e234e4dffe940a25bf713bf50",
+      "size": 1923,
+      "mtime": "2026-08-30T19:33:01+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\kimi_family_id_audit\\work\\final_manifest.json",
+      "role": "family audit manifest",
+      "sha256": "eaa34ee204b9b0edafcbdbc7433a63edaf2341d44eb73a3376fab64de3e0f978",
+      "size": 15803,
+      "mtime": "2026-08-30T19:33:01+0800"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\overleaf_v26\\src\\main.tex",
+      "role": "revised manuscript LaTeX (final, 8 pages incl refs)",
+      "sha256": "aa48451af15d5b64d903f3d8076d625b1517dbf4476ee6507fcb5305a4ea02c2",
+      "size": 65482,
+      "mtime": "2026-09-03T01:49:35+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\overleaf_v26\\src\\main.pdf",
+      "role": "compiled PDF preview, 8 pages, ICRA 2027 compliant",
+      "sha256": "9f5c9bf7c305da60b5aeb1624e491b6af0728b53bc9303828bde1bbdb04ee41f",
+      "size": 747925,
+      "mtime": "2026-09-03T01:49:36+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\overleaf_v26\\src\\figures\\fig10_layers.pdf",
+      "role": "five-layer validation figure (GPT drawio, candy)",
+      "sha256": "67b9c11955a6f074a8d053722eaed56c8326a2b51f5f376f153b0707d21284de",
+      "size": 58654,
+      "mtime": "2026-09-02T23:43:08+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\overleaf_v26\\src\\figures\\fig11_sim_heatmap.pdf",
+      "role": "simulation heatmap (candy, footer stripped)",
+      "sha256": "d1a068e978350aa06798be4e9bb547d4d50299f4a359aa048f833209e5d061de",
+      "size": 19977,
+      "mtime": "2026-09-02T23:43:08+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\fig11_layers_gpt.drawio",
+      "role": "GPT drawio master (editable)",
+      "sha256": "5c7c6259cd64b25ce2a982809dd8f5e0550a8afe572b2fd0bedbc35d35d5985f",
+      "size": 9919,
+      "mtime": "2026-09-02T22:54:23+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\gen_fig_sim_heatmap_candy.py",
+      "role": "heatmap regeneration script",
+      "sha256": "1b2b7897489a616fecd799e538d7191a36c911288a7df22be22ff6cb11dc06ff",
+      "size": 3178,
+      "mtime": "2026-09-02T22:58:15+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\apply_v26_latex.py",
+      "role": "content patch script",
+      "sha256": "39770b4a43063bad1f84461a3f69bc6186fbd5a77db0eb2d50dd6969b0c78f3a",
+      "size": 17332,
+      "mtime": "2026-09-02T22:03:21+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\apply_v26_compress.py",
+      "role": "compression pass 1 (rm Fig6/7)",
+      "sha256": "f0869580825f2a481e19cbbc620520d6a837366b08350a7d7c09a130d6634a17",
+      "size": 3261,
+      "mtime": "2026-09-02T23:16:31+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\apply_v26_compress2.py",
+      "role": "compression pass 2 (rm Table III)",
+      "sha256": "04d2a3079c0a7459e04f03d732cc4c2942b90bb9161fe7df4c6d6e5ae8e8fe73",
+      "size": 3141,
+      "mtime": "2026-09-02T23:20:11+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\apply_v26_compress3.py",
+      "role": "compression pass 3",
+      "sha256": "31408acc26ee7365c31872f70d8d7547b01f2f6aca2775025b0992c0d7c63fa9",
+      "size": 1475,
+      "mtime": "2026-09-02T23:47:32+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\apply_v26_compress4.py",
+      "role": "compression pass 4 (condense new blocks)",
+      "sha256": "742440daee30551defbdc510320108cd0dc6582c59d8c5e7a0ebbe375202e8fb",
+      "size": 13357,
+      "mtime": "2026-09-03T01:27:25+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\apply_v26_compress5.py",
+      "role": "compression pass 5",
+      "sha256": "8609187a7643401e2497e138cf28dd41a931e609284a1ba24219d210d6cb4fc6",
+      "size": 4505,
+      "mtime": "2026-09-03T01:29:09+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\apply_v26_compress6.py",
+      "role": "compression pass 6 (rm Fig 4 corpus)",
+      "sha256": "2bdf270aea7e8fffe684a1fddd6208b9e02b036c05dff08093ed7eb9468f5bc5",
+      "size": 3234,
+      "mtime": "2026-09-03T01:32:29+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\apply_v26_compress7.py",
+      "role": "compression pass 7 (rm Fig 3 attrition)",
+      "sha256": "afac1d643423a7b5c9d58b38e5ff07b46f43194b1e69f79e5029fbb29f3fc309",
+      "size": 4277,
+      "mtime": "2026-09-03T01:47:39+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\apply_v26_compress8.py",
+      "role": "compression pass 8 (rm ranks fig; 8 pages reached)",
+      "sha256": "11432946964f776a613d886ebc4bc5d77cd8e9333693d1c174780b4330a55d7c",
+      "size": 3069,
+      "mtime": "2026-09-03T01:49:22+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\ASIMOV_v26_update_package.zip",
+      "role": "Overleaf update package (final)",
+      "sha256": "95da27d19417c981e4156c37b41c58d377a59c66880341c2a08729031955cdc8",
+      "size": 811709,
+      "mtime": "2026-09-03T01:58:40+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\claim_change_matrix.csv",
+      "role": "claim audit matrix (v26 final pages)",
+      "sha256": "a20cb5f1bc158cc6135f298db0598e15691c20d70d9dedfd9934292710868651",
+      "size": 13736,
+      "mtime": "2026-09-03T01:58:17+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\REVISION_REPORT.md",
+      "role": "revision report",
+      "sha256": "260d19c8e3c1cbb17f38b4ccf83bca212c1b4442e313ccf490b5568cd60e67ec",
+      "size": 9183,
+      "mtime": "2026-09-03T01:58:40+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\PAGE_BUDGET_REPORT.md",
+      "role": "page budget report",
+      "sha256": "2a5b358f93ed7463d852c5dcf593df227eab6f2ce7d76a42a5b6b58c0e4ee660",
+      "size": 2719,
+      "mtime": "2026-09-03T01:58:40+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\evidence_boundary_checklist.md",
+      "role": "evidence boundary checklist",
+      "sha256": "3db5fc656d2bfdf15a310253dd62a63a3ac5c2d8461525141056153002e492d2",
+      "size": 1959,
+      "mtime": "2026-09-02T22:27:07+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\SOURCE_CANDIDATE_REPORT.md",
+      "role": "source candidate report",
+      "sha256": "1edd6e87f865355a523d71d69082c6a2ebd3fede424ea9dec23d0695b908bfae",
+      "size": 3001,
+      "mtime": "2026-09-02T22:28:13+0800"
+    }
+  ],
+  "archived_docx_route": [
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\v2.6_ASIMOV_Cascade_ICRA_audit_simulation_working.docx",
+      "role": "docx working copy (route cancelled by user; kept as archive)",
+      "sha256": "727ba5132800c5eedb55aad9e728f5bf8a75719f787df99e4d78963dbc972192",
+      "size": 5801331,
+      "mtime": "2026-09-02T21:07:45+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\apply_v26_edits.py",
+      "role": "docx edit script (archive)",
+      "sha256": "7c0fd35d350d5a60ad4e66a8be5dd1b6f9b32e6e4380935b0d0f18a0c9ca93fc",
+      "size": 25005,
+      "mtime": "2026-09-02T21:06:07+0800"
+    },
+    {
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\insert_f1.py",
+      "role": "docx figure script (archive, unused)",
+      "sha256": "401af878ed2fad380db80abfc0875510a46761905755d7856a69d6236c7a59a1",
+      "size": 4051,
+      "mtime": "2026-09-02T21:11:36+0800"
+    }
+  ],
+  "updated": "2026-09-03T01:59:05+0800",
+  "round3_2026_09_03": {
+    "sha256:overleaf_v26/src/main.tex": "e2d15761d9be68f204fe3908ad835bed1abe1d00170febfe4dff742daf6c8cf4",
+    "sha256:overleaf_v26/src/main.pdf": "c0fe5c74b5f22212c1940633316847604c7c5ef1b9b67a9aada7c70ad9247364",
+    "sha256:ASIMOV_v26_update_package.zip": "a31b29172276748829f126fb8bfeb2973a38600724b466b17fd952c65c75b89b",
+    "sha256:REVISION_REPORT.md": "c147686d3413aaf944b8aae199e46c801441ec8ee7d42040dfc752c34504a020",
+    "sha256:PAGE_BUDGET_REPORT.md": "0f6e1c6cece91f64ec829f9f617f03799678a6c43e9243d7f6a4b114e9d696be",
+    "sha256:v2.6_preview_r3.pdf": "c0fe5c74b5f22212c1940633316847604c7c5ef1b9b67a9aada7c70ad9247364",
+    "note": "Fig.8 moved to top of pg-7 beside VI-B text; Table IV converted to full-width bottom float (stfloats [!b]); minor abstract/caption trims; final 8 pages incl. refs, 0 overfull"
+  }
+}

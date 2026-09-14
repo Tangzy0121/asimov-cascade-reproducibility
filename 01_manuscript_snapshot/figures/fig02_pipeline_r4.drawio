@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="Electron" modified="2026-09-04T04:20:42.694Z" version="30.3.6">
+  <diagram id="live-page" name="Figure 2">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f2_canvas" parent="1" style="rounded=0;arcSize=12;fillColor=#FFFFFF;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="228" width="1008" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_title" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=19.5;fontColor=#203C50;fontStyle=1;align=left;verticalAlign=middle;spacing=0;" value="EVIDENCE-GATED MONITORING" vertex="1">
+          <mxGeometry height="29" width="405" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_definition" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=15.8;fontColor=#243745;fontStyle=0;align=left;verticalAlign=middle;spacing=0;" value="Corpus evidence → expert gate → completed checks → bounded claims." vertex="1">
+          <mxGeometry height="29" width="594" x="414" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_zone_0" parent="1" style="rounded=0;arcSize=12;fillColor=#F1F5F8;strokeColor=none;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="163" width="298" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_zone_bar_0" parent="1" style="rounded=0;arcSize=12;fillColor=#203C50;strokeColor=none;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="163" width="6" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_zone_title_0" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=16;fontColor=#203C50;fontStyle=1;align=left;verticalAlign=middle;spacing=0;" value="1  DISCOVERY ENGINE" vertex="1">
+          <mxGeometry height="24" width="272" x="14" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_zone_1" parent="1" style="rounded=0;arcSize=12;fillColor=#EDF7F6;strokeColor=none;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="163" width="340" x="310" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_zone_bar_1" parent="1" style="rounded=0;arcSize=12;fillColor=#087F83;strokeColor=none;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="163" width="6" x="310" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_zone_title_1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=16;fontColor=#087F83;fontStyle=1;align=left;verticalAlign=middle;spacing=0;" value="2  EVIDENCE GATE + PRIORITY" vertex="1">
+          <mxGeometry height="24" width="314" x="324" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_zone_2" parent="1" style="rounded=0;arcSize=12;fillColor=#F3F5F8;strokeColor=none;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="163" width="346" x="662" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_zone_bar_2" parent="1" style="rounded=0;arcSize=12;fillColor=#2875A0;strokeColor=none;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="163" width="6" x="662" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_zone_title_2" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=16;fontColor=#2875A0;fontStyle=1;align=left;verticalAlign=middle;spacing=0;" value="3  VALIDATION SYSTEM" vertex="1">
+          <mxGeometry height="24" width="320" x="676" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_raw" parent="1" style="ellipse;fillColor=#FFFFFF;strokeColor=#203C50;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="54" width="54" x="23" y="69" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_raw_value" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=19;fontColor=#203C50;fontStyle=1;align=center;verticalAlign=middle;spacing=0;" value="9,710" vertex="1">
+          <mxGeometry height="25" width="54" x="23" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_raw_label" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=13.5;fontColor=#243745;fontStyle=0;align=center;verticalAlign=middle;spacing=0;" value="retrieved" vertex="1">
+          <mxGeometry height="22" width="74" x="13" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_clean" parent="1" style="ellipse;fillColor=#FFFFFF;strokeColor=#087F83;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="54" width="54" x="119" y="69" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_clean_value" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=19;fontColor=#087F83;fontStyle=1;align=center;verticalAlign=middle;spacing=0;" value="8,928" vertex="1">
+          <mxGeometry height="25" width="54" x="119" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_clean_label" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=13.5;fontColor=#243745;fontStyle=0;align=center;verticalAlign=middle;spacing=0;" value="analyzed" vertex="1">
+          <mxGeometry height="22" width="74" x="109" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_topics" parent="1" style="ellipse;fillColor=#FFFFFF;strokeColor=#2875A0;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="54" width="54" x="219" y="69" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_topics_value" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=19;fontColor=#2875A0;fontStyle=1;align=center;verticalAlign=middle;spacing=0;" value="77" vertex="1">
+          <mxGeometry height="25" width="54" x="219" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_topics_label" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=13.5;fontColor=#243745;fontStyle=0;align=center;verticalAlign=middle;spacing=0;" value="topics" vertex="1">
+          <mxGeometry height="22" width="74" x="209" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_raw_to_clean_start" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="78.5" y="95.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_raw_to_clean_end" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="115.5" y="95.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_raw_to_clean" edge="1" parent="1" source="f2_raw_to_clean_start" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087F83;strokeWidth=1.8;endArrow=block;endFill=1;endSize=6;dashed=0;" target="f2_raw_to_clean_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_clean_to_topics_start" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="174.5" y="95.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_clean_to_topics_end" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="215.5" y="95.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_clean_to_topics" edge="1" parent="1" source="f2_clean_to_topics_start" style="edgeStyle=none;html=0;rounded=0;strokeColor=#2875A0;strokeWidth=1.8;endArrow=block;endFill=1;endSize=6;dashed=0;" target="f2_clean_to_topics_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_clean_label_1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=11.8;fontColor=#637380;fontStyle=0;align=center;verticalAlign=middle;spacing=0;" value="" vertex="1">
+          <mxGeometry height="18" width="69" x="78" y="53" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_topic_label" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=11.8;fontColor=#637380;fontStyle=0;align=center;verticalAlign=middle;spacing=0;" value="" vertex="1">
+          <mxGeometry height="18" width="60" x="177" y="53" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_family_branch_start" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="145.5" y="124.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_family_branch_end" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="145.5" y="142.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_family_branch" edge="1" parent="1" source="f2_family_branch_start" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087F83;strokeWidth=1.5;endArrow=block;endFill=1;endSize=6;dashed=0;" target="f2_family_branch_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_families" parent="1" style="rounded=1;arcSize=14;html=0;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#087F83;strokeWidth=1.2;fontFamily=Arial;fontSize=13.2;fontColor=#087F83;fontStyle=1;align=center;verticalAlign=middle;spacing=2;" value="6,602 canonical families" vertex="1">
+          <mxGeometry height="24" width="178" x="57" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_discovery_caption" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=11.8;fontColor=#637380;fontStyle=0;align=center;verticalAlign=middle;spacing=0;" value="Clean · embed · BERTopic&#xA;publication ↔ family levels" vertex="1">
+          <mxGeometry height="27" width="266" x="17" y="171" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_funnel" parent="1" style="shape=trapezoid;direction=south;fillColor=#DCEFED;strokeColor=#087F83;strokeWidth=1.8;fontFamily=Arial;fontSize=14;fontColor=#087F83;fontStyle=1;align=center;verticalAlign=middle;" value="Keyword + LLM&#xA;77 → 20" vertex="1">
+          <mxGeometry height="54" width="98" x="326" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_audit" parent="1" style="rounded=1;arcSize=14;html=0;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#087F83;strokeWidth=1.2;fontFamily=Arial;fontSize=14;fontColor=#087F83;fontStyle=1;align=center;verticalAlign=middle;spacing=2;" value="EXCERPT AUDIT" vertex="1">
+          <mxGeometry height="46" width="102" x="442" y="71" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_score" parent="1" style="shape=hexagon;fillColor=#E6F0F7;strokeColor=#2875A0;strokeWidth=1.8;fontFamily=Arial;fontSize=14;fontColor=#2875A0;fontStyle=1;align=center;verticalAlign=middle;" value="Rⱼ = 10&#xA;Sⱼ Dⱼ Lⱼ" vertex="1">
+          <mxGeometry height="66" width="70" x="565" y="63" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_screen_to_audit" edge="1" parent="1" source="f2_funnel" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087F83;strokeWidth=1.8;endArrow=block;endFill=1;endSize=6;dashed=0;" target="f2_audit" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_audit_to_score" edge="1" parent="1" source="f2_audit" style="edgeStyle=none;html=0;rounded=0;strokeColor=#2875A0;strokeWidth=1.8;endArrow=block;endFill=1;endSize=6;dashed=0;" target="f2_score" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_tag_Safety" parent="1" style="rounded=1;arcSize=14;html=0;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#087F83;strokeWidth=1.2;fontFamily=Arial;fontSize=12.8;fontColor=#087F83;fontStyle=1;align=center;verticalAlign=middle;spacing=2;" value="Safety" vertex="1">
+          <mxGeometry height="22" width="72" x="326" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_tag_Harm_link" parent="1" style="rounded=1;arcSize=14;html=0;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#C18412;strokeWidth=1.2;fontFamily=Arial;fontSize=12.8;fontColor=#C18412;fontStyle=1;align=center;verticalAlign=middle;spacing=2;" value="Harm link" vertex="1">
+          <mxGeometry height="22" width="84" x="405" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_tag_Cascade_role" parent="1" style="rounded=1;arcSize=14;html=0;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#AC3F54;strokeWidth=1.2;fontFamily=Arial;fontSize=12.8;fontColor=#AC3F54;fontStyle=1;align=center;verticalAlign=middle;spacing=2;" value="Cascade role" vertex="1">
+          <mxGeometry height="22" width="100" x="497" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_ranked_queue" parent="1" style="rounded=1;arcSize=14;html=0;whiteSpace=wrap;fillColor=#203C50;strokeColor=none;strokeWidth=1.2;fontFamily=Arial;fontSize=13.5;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;spacing=2;" value="HIGH   •   MEDIUM   •   LOW" vertex="1">
+          <mxGeometry height="23" width="309" x="326" y="157" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_priority_note" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=12.3;fontColor=#637380;fontStyle=0;align=center;verticalAlign=middle;spacing=0;" value="Frozen coding · family checks · STM/BH · scope" vertex="1">
+          <mxGeometry height="17" width="320" x="320" y="181" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_validation_outline" parent="1" style="rounded=1;arcSize=12;fillColor=none;strokeColor=#B7C4CC;strokeWidth=1.2;dashed=1;dashPattern=5 4;" value="" vertex="1">
+          <mxGeometry height="118" width="320" x="674" y="63" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_iso_pending" parent="1" style="rounded=1;arcSize=14;html=0;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#2875A0;strokeWidth=1.2;fontFamily=Arial;fontSize=11.8;fontColor=#2875A0;fontStyle=1;align=center;verticalAlign=middle;spacing=2;" value="EVIDENCE BOUNDARY" vertex="1">
+          <mxGeometry height="21" width="108" x="880" y="41" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_claim_bound" parent="1" style="shape=hexagon;fillColor=#203C50;strokeColor=#203C50;strokeWidth=1.5;fontFamily=Arial;fontSize=13;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;" value="BOUND&#xA;CLAIM" vertex="1">
+          <mxGeometry height="48" width="76" x="804" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_robustness" parent="1" style="rounded=1;arcSize=14;html=0;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#2875A0;strokeWidth=1.2;fontFamily=Arial;fontSize=12.5;fontColor=#2875A0;fontStyle=1;align=center;verticalAlign=middle;spacing=2;" value="ROBUSTNESS&#xA;STM + BH" vertex="1">
+          <mxGeometry height="34" width="112" x="784" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_reproduction" parent="1" style="rounded=1;arcSize=14;html=0;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#AC3F54;strokeWidth=1.2;fontFamily=Arial;fontSize=13.0;fontColor=#AC3F54;fontStyle=1;align=center;verticalAlign=middle;spacing=2;" value="REPRODUCTION&#xA;319 scenarios" vertex="1">
+          <mxGeometry height="38" width="120" x="675" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_content" parent="1" style="rounded=1;arcSize=14;html=0;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#087F83;strokeWidth=1.2;fontFamily=Arial;fontSize=11.8;fontColor=#087F83;fontStyle=1;align=center;verticalAlign=middle;spacing=2;" value="CONTENT AUDIT&#xA;blinded review" vertex="1">
+          <mxGeometry height="40" width="112" x="882" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_pilot" parent="1" style="rounded=1;arcSize=14;html=0;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#C18412;strokeWidth=1.2;fontFamily=Arial;fontSize=12.5;fontColor=#C18412;fontStyle=1;align=center;verticalAlign=middle;spacing=2;" value="1-D PILOT&#xA;3,300 trials" vertex="1">
+          <mxGeometry height="34" width="112" x="784" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_robustness_to_claim_start" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="839.5" y="99.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_robustness_to_claim_end" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="839.5" y="101.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_robustness_to_claim" edge="1" parent="1" source="f2_robustness_to_claim_start" style="edgeStyle=none;html=0;rounded=0;strokeColor=#2875A0;strokeWidth=1.4;endArrow=block;endFill=1;endSize=6;dashed=0;" target="f2_robustness_to_claim_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_reproduction_to_claim_start" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="794.5" y="123.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_reproduction_to_claim_end" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="803.5" y="123.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_reproduction_to_claim" edge="1" parent="1" source="f2_reproduction_to_claim_start" style="edgeStyle=none;html=0;rounded=0;strokeColor=#AC3F54;strokeWidth=1.4;endArrow=block;endFill=1;endSize=6;dashed=0;" target="f2_reproduction_to_claim_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_content_to_claim_start" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="881.5" y="123.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_content_to_claim_end" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="879.5" y="123.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_content_to_claim" edge="1" parent="1" source="f2_content_to_claim_start" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087F83;strokeWidth=1.4;endArrow=block;endFill=1;endSize=6;dashed=0;" target="f2_content_to_claim_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_pilot_to_claim_start" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="839.5" y="147.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_pilot_to_claim_end" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="839.5" y="149.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_pilot_to_claim" edge="1" parent="1" source="f2_pilot_to_claim_start" style="edgeStyle=none;html=0;rounded=0;strokeColor=#C18412;strokeWidth=1.4;endArrow=block;endFill=1;endSize=6;dashed=0;" target="f2_pilot_to_claim_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_validation_note" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=12.5;fontColor=#637380;fontStyle=0;align=center;verticalAlign=middle;spacing=0;" value="Distinct completed checks bound each claim." vertex="1">
+          <mxGeometry height="15" width="305" x="682" y="183" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_discover_to_gate_start" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="288.5" y="112.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_discover_to_gate_end" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="316.5" y="112.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_discover_to_gate" edge="1" parent="1" source="f2_discover_to_gate_start" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087F83;strokeWidth=2.3;endArrow=block;endFill=1;endSize=6;dashed=0;" target="f2_discover_to_gate_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_gate_to_validation_start" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="641.5" y="112.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_gate_to_validation_end" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="669.5" y="112.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_gate_to_validation" edge="1" parent="1" source="f2_gate_to_validation_start" style="edgeStyle=none;html=0;rounded=0;strokeColor=#2875A0;strokeWidth=2.3;endArrow=block;endFill=1;endSize=6;dashed=0;" target="f2_gate_to_validation_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_feedback_line" parent="1" style="rounded=0;arcSize=12;fillColor=#203C50;strokeColor=none;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="23" width="1008" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_feedback_head_start" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="325.5" y="213.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_feedback_head_end" parent="1" style="rounded=0;arcSize=12;fillColor=none;strokeColor=none;strokeWidth=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="311.5" y="213.5" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_feedback_head" edge="1" parent="1" source="f2_feedback_head_start" style="edgeStyle=none;html=0;rounded=0;strokeColor=none;strokeWidth=0;endArrow=none;" target="f2_feedback_head_end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_feedback" parent="1" style="text;html=0;strokeColor=none;fillColor=none;whiteSpace=wrap;overflow=visible;fontFamily=Arial;fontSize=13.2;fontColor=#FFFFFF;fontStyle=1;align=center;verticalAlign=middle;spacing=0;" value="←  VALIDATION FEEDBACK  ·  Failed gates narrow claims; priority orders attention, not injury risk." vertex="1">
+          <mxGeometry height="23" width="984" x="12" y="205" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

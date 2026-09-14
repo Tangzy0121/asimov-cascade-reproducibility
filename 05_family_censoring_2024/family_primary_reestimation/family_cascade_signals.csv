@@ -1,0 +1,78 @@
+﻿bertopic_id,bertopic_name,safety_score,safety_category,decay_probability,trend_direction,current_state_name,lifecycle_stage,tmi,fit_reliable,bertopic_count,dim_safety,dim_temporal_decay,dim_lifecycle_risk,cascade_score,risk_level
+0,0_leg_end_wheel_connected,2,stability_balance,5.0583007775951016e-15,declining,declining,mature,0.265,True,530,0.4,5.0583007775951016e-15,0.35,7.081621088633141e-15,LOW
+1,1_humanoid robot_humanoid_joint_robot,2,safe_control,0.01,mature,mature,growing,0.1888,True,298,0.4,0.01,0.1,0.004,LOW
+2,2_voice_user_emotion_expression,0,not_safety,0.01,growing,growing,growing,0.2739,True,264,0.0,0.01,0.1,0.0,NON_SAFETY
+3,3_foot_robot_foot robot_leg,2,stability_balance,0.01,growing,mature,growing,0.1487,True,176,0.4,0.01,0.1,0.004,LOW
+4,4_finger_thumb_palm_knuckle,0,not_safety,7.696974880029628e-148,declining,declining,mature,0.4373,True,152,0.0,7.696974880029628e-148,0.35,0.0,NON_SAFETY
+5,5_learning_training_strategy_network,1,not_safety,0.01,mature,mature,growing,0.0,True,151,0.2,0.01,0.1,0.002,NON_SAFETY
+6,6_network_learning_foot_strategy,0,not_safety,0.01,mature,mature,mature,0.0,True,140,0.0,0.01,0.35,0.0,NON_SAFETY
+7,7_vehicle_lane_driving_lane changing,2,collision_protection,0.9090914354845782,declining,declining,mature,0.0595,True,128,0.4,0.9090914354845782,0.35,1.2727280096784093,HIGH
+8,8_patient_medical_device_user,1,fault_detection,0.0,declining,declining,mature,0.2734,True,134,0.2,0.0,0.35,0.0,NON_SAFETY
+9,9_hip_thigh_joint_second,0,not_safety,0.01,mature,mature,growing,0.085,True,122,0.0,0.01,0.1,0.0,NON_SAFETY
+10,10_grabbing_hand_task_humanoid,0,not_safety,0.01,mature,mature,growing,0.114,True,101,0.0,0.01,0.1,0.0,NON_SAFETY
+11,11_toy_left_doll_game,0,not_safety,2.569987137274221e-130,declining,declining,saturated,0.3619,True,86,0.0,2.569987137274221e-130,0.6,0.0,NON_SAFETY
+12,12_bearing_shaft_motor_output,2,fail_safe_emergency,0.01,mature,mature,growing,0.1403,True,90,0.4,0.01,0.1,0.004,LOW
+13,13_connecting_shell_piece_second,0,not_safety,0.01,mature,mature,growing,0.1329,True,95,0.0,0.01,0.1,0.0,NON_SAFETY
+14,14_training_target_target body_plate,0,not_safety,0.5713809880784972,declining,declining,saturated,0.2242,True,87,0.0,0.5713809880784972,0.6,0.0,NON_SAFETY
+15,15_point_point cloud_cloud_map,2,safe_control,0.01,mature,mature,growing,0.0949,True,78,0.4,0.01,0.1,0.004,LOW
+16,16_test_testing_plate_device,1,stability_balance,0.01,mature,mature,growing,0.1738,True,68,0.2,0.01,0.1,0.002,NON_SAFETY
+17,17_data_task_semantic_humanoid robot,0,not_safety,0.01,mature,mature,growing,0.0369,True,65,0.0,0.01,0.1,0.0,NON_SAFETY
+18,18_plate_bridge_ladder_rod,1,stability_balance,0.7777959378009404,declining,declining,saturated,0.1676,True,83,0.2,0.7777959378009404,0.6,0.9333551253611284,NON_SAFETY
+19,19_joint_wrist_connecting_knee joint,0,not_safety,0.01,growing,mature,growing,0.1906,True,73,0.0,0.01,0.1,0.0,NON_SAFETY
+20,20_layer_skin_textile_bionic,0,not_safety,0.01,mature,mature,mature,0.3259,True,64,0.0,0.01,0.35,0.0,NON_SAFETY
+21,21_decision_semantic information_semantic_information,0,not_safety,0.01,mature,mature,growing,0.1339,True,65,0.0,0.01,0.1,0.0,NON_SAFETY
+22,22_force_external force_human robot_robot,5,collision_protection,0.8000000000021171,declining,declining,saturated,0.37,True,49,1.0,0.8000000000021171,0.6,4.8000000000127026,HIGH
+23,23_image_vehicle_images_camera,0,not_safety,0.21917738415090687,declining,declining,mature,0.4418,True,64,0.0,0.21917738415090687,0.35,0.0,NON_SAFETY
+24,24_massage_mi_bed_mi mi,0,not_safety,0.6363636363616778,declining,declining,saturated,0.2564,True,73,0.0,0.6363636363616778,0.6,0.0,NON_SAFETY
+25,25_industrial robot_industrial_tool_work,4,risk_assessment,0.01,growing,growing,declining,0.1687,True,38,0.8,0.01,1.0,0.08,HIGH
+26,26_face_image_video_frame,0,not_safety,0.01,growing,growing,mature,0.3359,True,58,0.0,0.01,0.35,0.0,NON_SAFETY
+27,27_path_navigation_obstacle_point,3,safe_control,0.01,mature,mature,growing,0.0696,True,54,0.6,0.01,0.1,0.006,LOW
+28,28_tobacco_robotic_operation_shelf,2,safe_control,1.5568876512848212e-34,declining,declining,growing,0.1165,True,51,0.4,1.5568876512848212e-34,0.1,6.227550605139285e-35,LOW
+29,29_module_intelligent_service_display,3,collision_protection,2.393872018177671e-29,declining,declining,mature,0.2467,True,57,0.6,2.393872018177671e-29,0.35,5.027131238173109e-29,LOW
+30,30_inspection_detection_disease_tunnel,1,thermal_management,0.01,mature,mature,mature,0.0,True,50,0.2,0.01,0.35,0.006999999999999999,NON_SAFETY
+31,31_lamp_light_display_led,0,not_safety,0.01,nascent,nascent,saturated,0.2491,True,54,0.0,0.01,0.6,0.0,NON_SAFETY
+32,32_action_data_sequence_motion,2,safe_control,0.01,growing,mature,growing,0.0,True,41,0.4,0.01,0.1,0.004,LOW
+33,33_path_grid_map_point,2,collision_protection,0.01,growing,mature,growing,0.0,True,48,0.4,0.01,0.1,0.004,LOW
+34,34_commands_position sensor_position velocity_velocity,0,not_safety,0.01,growing,growing,declining,0.0,True,10,0.0,0.01,1.0,0.0,NON_SAFETY
+35,35_image_chess_point cloud_cloud,0,not_safety,3.133992298881528e-71,declining,declining,growing,0.1057,True,34,0.0,3.133992298881528e-71,0.1,0.0,NON_SAFETY
+36,36_welding_welding robot_straightening_mechanical,0,not_safety,0.0,declining,declining,growing,0.063,True,43,0.0,0.0,0.1,0.0,NON_SAFETY
+37,37_foot_sole_heel_arch,2,stability_balance,0.01,mature,mature,growing,0.1889,True,34,0.4,0.01,0.1,0.004,LOW
+38,38_control_robot_core_nios,0,not_safety,7.096253988678488e-222,declining,declining,growing,0.1357,True,41,0.0,7.096253988678488e-222,0.1,0.0,NON_SAFETY
+39,39_picking_mechanism_device_cake,0,not_safety,0.5000000000000002,declining,declining,saturated,0.0,True,40,0.0,0.5000000000000002,0.6,0.0,NON_SAFETY
+40,40_wheel_leg_wheel leg_wheel legged,3,stability_balance,0.01,growing,growing,mature,0.0,True,28,0.6,0.01,0.35,0.020999999999999998,MEDIUM
+41,41_image_detection_human_human shape,0,not_safety,0.9090903950339395,declining,declining,mature,0.015,True,35,0.0,0.9090903950339395,0.35,0.0,NON_SAFETY
+42,42_service_user_information_module,0,not_safety,0.0,declining,declining,saturated,0.2041,True,40,0.0,0.0,0.6,0.0,NON_SAFETY
+43,43_monitoring_image_camera_area,1,thermal_management,0.8888888888888896,declining,declining,mature,0.3142,True,35,0.2,0.8888888888888896,0.35,0.6222222222222227,NON_SAFETY
+44,44_control_module_communication_humanoid robot,1,fail_safe_emergency,0.0006131554083561333,declining,declining,growing,0.2147,True,35,0.2,0.0006131554083561333,0.1,0.00012263108167122667,NON_SAFETY
+45,45_legged robot_legged_desired trajectory_trajectory,0,not_safety,0.01,growing,growing,saturated,0.0,True,19,0.0,0.01,0.6,0.0,NON_SAFETY
+46,46_module_signal_household_internet things,0,not_safety,1.6366267519173742e-289,declining,declining,mature,0.353,True,38,0.0,1.6366267519173742e-289,0.35,0.0,NON_SAFETY
+47,47_fault_health_state_data,4,fault_detection,0.01,mature,mature,growing,0.2557,True,24,0.8,0.01,0.1,0.008,LOW
+48,48_rehabilitation_exoskeleton_training_module,0,not_safety,0.01,growing,growing,growing,0.1948,True,31,0.0,0.01,0.1,0.0,NON_SAFETY
+49,49_circuit_power_battery_supply,0,not_safety,0.01,growing,growing,growing,0.2155,True,31,0.0,0.01,0.1,0.0,NON_SAFETY
+50,50_image_detection_monitoring_human,0,not_safety,0.9285714285713648,declining,declining,saturated,0.0,True,30,0.0,0.9285714285713648,0.6,0.0,NON_SAFETY
+51,51_pedestrian_video_target_image,0,not_safety,0.7999999999999796,declining,declining,declining,0.1212,True,28,0.0,0.7999999999999796,1.0,0.0,NON_SAFETY
+52,52_dog_robot dog_box_shaped cover,1,stability_balance,2.8541211149182082e-98,declining,declining,mature,0.0,True,31,0.2,2.8541211149182082e-98,0.35,1.9978847804427455e-98,NON_SAFETY
+53,53_image_detection_human_target,1,stability_balance,0.909090909090909,declining,declining,saturated,0.0,True,29,0.2,0.909090909090909,0.6,1.0909090909090906,NON_SAFETY
+54,54_unmanned_aerial_unmanned aerial_unmanned boat,0,not_safety,0.7272727272730406,declining,declining,mature,0.2524,True,28,0.0,0.7272727272730406,0.35,0.0,NON_SAFETY
+55,55_respective object_respective_self location_object,0,not_safety,0.01,growing,growing,declining,0.0,True,8,0.0,0.01,1.0,0.0,NON_SAFETY
+56,56_information pairs_pairs_ml_spatial,0,not_safety,0.7999995461228582,declining,declining,mature,0.0,True,13,0.0,0.7999995461228582,0.35,0.0,NON_SAFETY
+57,57_strategy_training_network_strategy network,0,not_safety,0.01,growing,mature,growing,0.058,True,24,0.0,0.01,0.1,0.0,NON_SAFETY
+58,58_stimuli_events_allows_end effector,0,not_safety,0.01,growing,growing,saturated,0.0,True,5,0.0,0.01,0.6,0.0,NON_SAFETY
+59,59_breathing_mask_experiment_respirator,0,not_safety,0.01,growing,emerging,saturated,0.108,True,25,0.0,0.01,0.6,0.0,NON_SAFETY
+60,60_target_rescue_aid_extinguishing,0,not_safety,0.0,declining,declining,growing,0.2452,True,19,0.0,0.0,0.1,0.0,NON_SAFETY
+61,61_food_food weight_weight_feeder,0,not_safety,0.0,declining,declining,mature,0.2862,True,26,0.0,0.0,0.35,0.0,NON_SAFETY
+62,62_electrode_measurement electrode_108_elements,3,collision_protection,8.875215248611545e-41,declining,declining,mature,0.0913,True,9,0.6,8.875215248611545e-41,0.35,1.8637952022084245e-40,LOW
+63,63_primitives_minimanipulations_actions_movements,0,not_safety,0.01,growing,growing,declining,0.1681,True,9,0.0,0.01,1.0,0.0,NON_SAFETY
+64,64_charging_wireless_wireless electromagnetic_electromagnetic,1,thermal_management,8.48859364423515e-23,declining,declining,mature,0.2502,True,24,0.2,8.48859364423515e-23,0.35,5.942015550964605e-23,NON_SAFETY
+65,65_social_reasoning_instruction_remote,4,safe_control,0.01,growing,mature,growing,0.1141,True,22,0.8,0.01,0.1,0.008,LOW
+66,66_magnetic_powder_material_adhesive,0,not_safety,0.01,growing,mature,growing,0.1836,True,24,0.0,0.01,0.1,0.0,NON_SAFETY
+67,67_dance_music_playing_piano,0,not_safety,0.01,growing,mature,growing,0.2792,True,21,0.0,0.01,0.1,0.0,NON_SAFETY
+68,68_animation_bone_skeleton_digital,0,not_safety,0.01,growing,growing,growing,0.2037,True,16,0.0,0.01,0.1,0.0,NON_SAFETY
+69,69_embodiments_agricultural_various embodiments_interfaces,0,not_safety,0.01,growing,growing,saturated,0.1706,True,17,0.0,0.01,0.6,0.0,NON_SAFETY
+70,70_elevator_main elevator_floor_secondary elevator,0,not_safety,0.5711417366342053,declining,declining,mature,0.3536,True,23,0.0,0.5711417366342053,0.35,0.0,NON_SAFETY
+71,71_moving_double mechanical_mechanical_double,1,force_control,0.8571428571428571,declining,declining,growing,0.1446,True,22,0.2,0.8571428571428571,0.1,0.17142857142857143,NON_SAFETY
+72,72_cleaning_mechanism_chassis_cleaning mechanism,0,not_safety,0.01,growing,growing,mature,0.2989,True,22,0.0,0.01,0.35,0.0,NON_SAFETY
+73,73_power_supply_power supply_battery,1,stability_balance,0.8750000000000004,declining,declining,mature,0.2477,True,18,0.2,0.8750000000000004,0.35,0.6125000000000003,NON_SAFETY
+74,74_target_foot_state data_landing,2,stability_balance,0.01,growing,growing,declining,0.0,True,13,0.4,0.01,1.0,0.04,MEDIUM
+75,75_chair_group_handle_movable,0,not_safety,0.01,nascent,nascent,declining,0.3649,True,19,0.0,0.01,1.0,0.0,NON_SAFETY
+76,76_elements_elements articulation_articulation_given,4,force_control,0.01,growing,growing,saturated,0.0,True,5,0.8,0.01,0.6,0.048,MEDIUM

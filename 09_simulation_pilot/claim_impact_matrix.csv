@@ -1,0 +1,9 @@
+claim,pre_experiment_status,evidence,action,evidence_ref
+"有界接口失配可在局部契约全过时传播并侵蚀全局安全裕度（仿真机制主张）",hypothesis,"C1 41.0% (369/900) 与 C2 24.8% (149/600) 传播率；0.30/0.45 m/s 各有 >=2 相邻显著单元格；518 次传播全部局部契约通过且 100% 严格顺序",UPGRADE_TO_PILOT,outputs/outcome_classification.json + outputs/inferential_results.csv
+"Topic 22 专利趋势能预测现实事故",unsupported,本实验不含任何真实事故数据；禁止表述清单已列,WITHDRAW,spec.md 3 + page19_result_payload.md 8
+"仿真接触力可验证人体伤害风险",unsupported,全部 3300 次试验合成接触力为 0 N；该量仅为仿真变量，禁止换算伤害概率,WITHDRAW,outputs/raw_trials.csv (peak_contact_force_n) + AUDIT_REPORT.md 5
+"显式部件故障 (C3) 可在非级联机制下产生不安全结果",hypothesis,"C3 150/150 全部 ORDINARY_FAILURE（感知契约构造性失败），0 次计入传播",RETAIN,outputs/event_summary.csv (condition=C3)
+"匹配接口修复（25 ms 年龄门 + 共享阈值检查）能遏制侵蚀",hypothesis,"C4 0/1500 传播；凡父条件传播的单元格修复后 RD=父条件率且 CI 下界 > 0",UPGRADE_TO_PILOT,outputs/inferential_results.csv (family=C4)
+"未观察到传播因此级联不存在",forbidden inference,本实验观察到受控传播；且该推断形式本身被禁止,WITHDRAW,page19_result_payload.md 8
+"Topic 25 可作为同场景物理对照",out of scope,本轮明确不作此处理；Topic 25 仅保留为主题级比较对象,WITHDRAW,spec.md 4
+"延迟越大传播越严重（单调剂量响应）",hypothesis,"趋势非单调：大延迟下突破先于延迟触发，转为 BREACH_UNORDERED；Cochran-Armitage Z 符号随速度变化",WEAKEN,outputs/inferential_results.csv (kind=trend_cochran_armitage)

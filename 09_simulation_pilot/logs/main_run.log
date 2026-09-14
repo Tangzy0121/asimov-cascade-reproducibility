@@ -1,0 +1,84 @@
+=== main experiment run (3300 trials) ===
+timestamp_utc: 2026-09-02T04:00:01Z
+command: python src/run_experiment.py
+[phase0] trial table: 3300 trials, sha256=526dc9b8a3e654b3c4bfe0facb562696c9a7cfad2d83a610623f657c76e130d4
+Traceback (most recent call last):
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\run_experiment.py", line 224, in <module>
+    main()
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\run_experiment.py", line 131, in main
+    spec_by_id = table.set_index("trial_id")[key_cols].to_dict("index")
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "<python>/envs/<env>/Lib\site-packages\pandas\core\frame.py", line 4384, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python>/envs/<env>/Lib\site-packages\pandas\core\indexes\base.py", line 6302, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "<python>/envs/<env>/Lib\site-packages\pandas\core\indexes\base.py", line 6355, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['trial_id'] not in index"
+exit_code: 1
+
+=== main experiment run 2 (after trial_id index fix; run 1 crashed before any trial executed) ===
+timestamp_utc: 2026-09-02T04:03:23Z
+command: python src/run_experiment.py
+[phase0] trial table: 3300 trials, sha256=526dc9b8a3e654b3c4bfe0facb562696c9a7cfad2d83a610623f657c76e130d4
+[phase1] 250 new trials executed
+[phase1] 500 new trials executed
+[phase1] 750 new trials executed
+[phase1] 1000 new trials executed
+[phase1] 1250 new trials executed
+[phase1] 1500 new trials executed
+[phase1] 1750 new trials executed
+[phase1] 2000 new trials executed
+[phase1] 2250 new trials executed
+[phase1] 2500 new trials executed
+[phase1] 2750 new trials executed
+[phase1] 3000 new trials executed
+[phase1] 3250 new trials executed
+[phase1] executed 3300 new trials (3300 total)
+[phase2] raw_trials.csv written, sha256=09a6844994942cb0980f0ee977678c9dbfb7c86bf4cded47c9049670325c4818
+condition  label           
+C0         CONTAINED            150
+C1         BREACH_UNORDERED     244
+           CONTAINED            287
+           PROPAGATED           369
+C2         BREACH_UNORDERED     151
+           CONTAINED            300
+           PROPAGATED           149
+C3         ORDINARY_FAILURE     150
+C4         CONTAINED           1500
+[phase3] 66 representative traces, deterministic replay verified for 66
+Traceback (most recent call last):
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\run_experiment.py", line 224, in <module>
+    main()
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\run_experiment.py", line 215, in main
+    assert row["min_margin_m"] == s["min_margin_m"], tid
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: T0000
+exit_code: 1
+
+=== main run 3: resume (phase1 skips all 3300), phases 2-4 with precise_float parse ===
+timestamp_utc: 2026-09-02T04:05:45Z
+command: python src/run_experiment.py
+[phase0] trial table: 3300 trials, sha256=526dc9b8a3e654b3c4bfe0facb562696c9a7cfad2d83a610623f657c76e130d4
+[phase1] resuming: 3300 trials already done
+[phase1] executed 0 new trials (3300 total)
+[phase2] raw_trials.csv written, sha256=39a733141082f6a8b7e677d2b74d18159001431157cb56a292c15a884dd70897
+condition  label           
+C0         CONTAINED            150
+C1         BREACH_UNORDERED     244
+           CONTAINED            287
+           PROPAGATED           369
+C2         BREACH_UNORDERED     151
+           CONTAINED            300
+           PROPAGATED           149
+C3         ORDINARY_FAILURE     150
+C4         CONTAINED           1500
+[phase3] 66 representative traces, deterministic replay verified for 66
+[phase4] reproducibility verified on 14 fixed trials
+[done] main experiment complete
+exit_code: 0
+
+=== final manifest freeze ===
+timestamp_utc: 2026-09-02T04:20:23Z
+command: python src/make_manifest.py

@@ -1,0 +1,78 @@
+﻿bertopic_id,bertopic_name,n_years_active,hmm_fitted,current_state,current_state_name,decay_probability,trend_direction,viterbi_path,hmm_score
+0,0_leg_end_wheel_connected,19,True,4,declining,5.0583007775951016e-15,declining,"1,1,1,1,1,1,1,4,2,4,2,4,2,3,2,4,2,3,2,4",1.0103545644017693
+1,1_humanoid robot_humanoid_joint_robot,21,True,3,mature,0.01,mature,"0,0,0,0,0,0,2,0,2,1,2,3,3,2,3,3,1,2,3,3,3",1.6634557044734648
+2,2_voice_user_emotion_expression,21,True,2,growing,0.01,growing,"0,0,0,0,0,0,2,0,2,1,2,3,2,2,1,2,2,1,2,3,2",1.7045083851040854
+3,3_foot_robot_foot robot_leg,17,True,3,mature,0.01,growing,"0,0,0,0,0,2,1,2,3,0,2,1,2,3,1,2,3",0.05981484147000374
+4,4_finger_thumb_palm_knuckle,21,True,4,declining,7.696974880029628e-148,declining,"1,2,3,2,3,2,4,1,2,3,2,3,2,3,3,2,3,2,3,2,4",-0.5443596236478597
+5,5_learning_training_strategy_network,14,True,3,mature,0.01,mature,"0,0,0,0,0,0,0,0,0,1,2,0,1,2,2,1,2,2,3,3,3",1.4333473657427922
+6,6_network_learning_foot_strategy,9,True,3,mature,0.01,mature,"1,2,0,1,2,3,2,3,2,3",-0.1447358571852894
+7,7_vehicle_lane_driving_lane changing,14,True,4,declining,0.9090914354845782,declining,"4,4,4,4,4,4,4,4,4,4,4,1,2,2,2,2,3,2,3,4",1.5584937830254446
+8,8_patient_medical_device_user,18,True,4,declining,0.0,declining,"1,1,1,1,1,1,1,1,1,1,2,4,2,4,3,3,3,3,3,3,4",1.949725570793464
+9,9_hip_thigh_joint_second,14,True,3,mature,0.01,mature,"0,0,0,0,0,0,0,1,2,2,3,0,1,2,2,3,2,3",1.3455956392732942
+10,10_grabbing_hand_task_humanoid,15,True,3,mature,0.01,mature,"0,0,0,0,0,0,0,0,1,2,1,2,3,2,3,2,3,2,3,2,3",0.8415956020817874
+11,11_toy_left_doll_game,20,True,4,declining,2.569987137274221e-130,declining,"4,2,3,4,2,2,4,2,2,4,2,3,1,3,1,1,2,4,2,2,4",0.38610476787676296
+12,12_bearing_shaft_motor_output,14,True,3,mature,0.01,mature,"2,2,2,2,2,2,2,2,2,2,2,3,1,2,2,2,3,3,3",1.4894393615783896
+13,13_connecting_shell_piece_second,13,True,3,mature,0.01,mature,"1,0,1,0,2,1,0,2,1,0,2,1,0,3,3,3",0.7756527884616092
+14,14_training_target_target body_plate,16,True,4,declining,0.5713809880784972,declining,"4,4,4,2,4,4,2,2,3,2,3,2,4,2,3,2,3,4,4",0.9687625292451191
+15,15_point_point cloud_cloud_map,13,True,3,mature,0.01,mature,"2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3",2.1665302410028575
+16,16_test_testing_plate_device,14,True,3,mature,0.01,mature,"2,2,1,2,2,1,2,2,1,2,2,3,3,3,3,3",1.279409009100413
+17,17_data_task_semantic_humanoid robot,11,True,3,mature,0.01,mature,"2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,3,3,3",1.8729185527077021
+18,18_plate_bridge_ladder_rod,16,True,4,declining,0.7777959378009404,declining,"4,4,4,4,4,4,4,4,2,2,3,3,3,3,2,2,2,4,2,2,4",1.23564958030035
+19,19_joint_wrist_connecting_knee joint,16,True,3,mature,0.01,growing,"2,0,0,0,0,0,0,0,2,1,0,2,0,2,1,3,2,3,3",1.5798219665400477
+20,20_layer_skin_textile_bionic,17,True,3,mature,0.01,mature,"1,1,1,1,1,1,1,1,3,3,1,2,0,2,3,3,3,3",1.750709156198675
+21,21_decision_semantic information_semantic_information,14,True,3,mature,0.01,mature,"0,0,0,0,0,0,0,0,1,2,2,2,2,3,2,3,2,3",1.2465758560771112
+22,22_force_external force_human robot_robot,17,True,4,declining,0.8000000000021171,declining,"4,4,4,4,4,4,4,4,3,3,2,3,2,4,3,3,3,2,4,4",1.8406051106599335
+23,23_image_vehicle_images_camera,16,True,4,declining,0.21917738415090687,declining,"2,3,2,3,4,1,2,4,1,2,4,3,3,2,3,4,4",1.187064209785843
+24,24_massage_mi_bed_mi mi,18,True,4,declining,0.6363636363616778,declining,"4,4,4,4,4,4,4,4,2,4,2,2,4,3,2,3,2,4,2,2,4",1.6886261340617654
+25,25_industrial robot_industrial_tool_work,15,True,2,growing,0.01,growing,"2,2,2,2,2,3,2,3,2,3,2,2,2,2,2,3,2,2,2",1.8694887654379462
+26,26_face_image_video_frame,15,True,2,growing,0.01,growing,"3,2,1,1,1,1,1,1,1,2,2,3,3,2,2,3,2",1.4487697977546288
+27,27_path_navigation_obstacle_point,11,True,3,mature,0.01,mature,"1,2,0,1,2,2,1,2,2,2,3,3,3",0.8903058338515457
+28,28_tobacco_robotic_operation_shelf,12,True,4,declining,1.5568876512848212e-34,declining,"1,2,0,1,2,4,0,1,2,4,0,3,4,3,4",0.2950266645962862
+29,29_module_intelligent_service_display,15,True,4,declining,2.393872018177671e-29,declining,"4,2,0,4,2,0,4,2,2,4,2,2,4,2,2,3,2,4,2,2,4",0.42377573614754654
+30,30_inspection_detection_disease_tunnel,11,True,3,mature,0.01,mature,"1,1,1,1,1,1,1,1,1,2,2,2,3,3,3,3",1.9353630146067258
+31,31_lamp_light_display_led,16,True,0,nascent,0.01,nascent,"0,1,0,1,2,0,1,3,2,3,2,3,2,1,3,0,1,0",0.37132315452918063
+32,32_action_data_sequence_motion,7,True,3,mature,0.01,growing,"2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3",2.1426075860974194
+33,33_path_grid_map_point,9,True,3,mature,0.01,growing,"0,0,0,0,1,2,2,2,2,3,3",1.494201997534106
+34,34_commands_position sensor_position velocity_velocity,4,True,2,growing,0.01,growing,"2,3,2,2,2,2,2,2,2,2,2,2,2",2.398140713186447
+35,35_image_chess_point cloud_cloud,11,True,4,declining,3.133992298881528e-71,declining,"1,1,1,1,1,1,1,1,2,1,1,2,4,3,3,3,4",1.751133451312937
+36,36_welding_welding robot_straightening_mechanical,10,True,4,declining,0.0,declining,"2,1,2,1,4,2,1,2,1,4,3,3,4",1.5637285300630568
+37,37_foot_sole_heel_arch,13,True,3,mature,0.01,mature,"0,0,0,0,1,0,0,0,0,0,0,0,1,2,0,1,2,1,3,3,3",1.718724603513879
+38,38_control_robot_core_nios,12,True,4,declining,7.096253988678488e-222,declining,"4,1,4,1,2,4,1,4,1,4,1,2,4,1,3,3,3,3,4",1.7690070377680218
+39,39_picking_mechanism_device_cake,13,True,4,declining,0.5000000000000002,declining,"1,0,1,0,1,0,1,0,2,4,3,1,0,2,4,4",0.8316520143268341
+40,40_wheel_leg_wheel leg_wheel legged,10,True,2,growing,0.01,growing,"1,1,1,1,1,1,1,1,1,2,0,2,3,2,2,2,2",1.8849569087514666
+41,41_image_detection_human_human shape,11,True,4,declining,0.9090903950339395,declining,"4,4,4,4,4,4,4,4,4,4,4,3,2,3,2,3,2,3,4",1.5465126337784345
+42,42_service_user_information_module,13,True,4,declining,0.0,declining,"4,2,0,4,2,2,3,2,2,2,4,2,2,3,4",0.7173203221661448
+43,43_monitoring_image_camera_area,14,True,4,declining,0.8888888888888896,declining,"2,2,4,4,4,4,4,4,4,4,4,3,2,1,3,3,4",1.7384919120729503
+44,44_control_module_communication_humanoid robot,11,True,4,declining,0.0006131554083561333,declining,"2,0,3,2,0,1,2,0,1,2,0,1,2,0,3,4,3,4",1.0530303153937983
+45,45_legged robot_legged_desired trajectory_trajectory,9,True,2,growing,0.01,growing,"2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,2,2,2",2.4594961269817626
+46,46_module_signal_household_internet things,12,True,4,declining,1.6366267519173742e-289,declining,"2,3,2,4,0,3,2,2,3,2,2,2,3,2,4",0.2314146598508745
+47,47_fault_health_state_data,11,True,3,mature,0.01,mature,"2,1,2,1,2,2,1,2,1,2,1,2,2,1,2,2,1,2,3,3,3",1.0504319544426832
+48,48_rehabilitation_exoskeleton_training_module,11,True,2,growing,0.01,growing,"2,2,2,2,2,2,2,2,2,2,2,2,3,2,3,2,3,2,3,2",2.05755341168992
+49,49_circuit_power_battery_supply,11,True,2,growing,0.01,growing,"2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,3,2",1.6379821822533909
+50,50_image_detection_monitoring_human,10,True,4,declining,0.9285714285713648,declining,"4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,3,3,2,3,2,4",2.154345007258926
+51,51_pedestrian_video_target_image,11,True,4,declining,0.7999999999999796,declining,"4,4,4,4,4,4,4,2,2,2,2,2,2,4,4,3,4,4",1.9097585908101504
+52,52_dog_robot dog_box_shaped cover,9,True,4,declining,2.8541211149182082e-98,declining,"2,0,1,2,0,4,2,0,3,3,3,4",1.419606818845846
+53,53_image_detection_human_target,10,True,4,declining,0.909090909090909,declining,"2,4,4,4,4,4,4,4,4,4,4,2,2,3,3,3,2,4,4",1.9644462800063112
+54,54_unmanned_aerial_unmanned aerial_unmanned boat,12,True,4,declining,0.7272727272730406,declining,"4,4,4,4,4,4,4,3,4,4,3,4,3,4,4",2.057771861814451
+55,55_respective object_respective_self location_object,5,True,2,growing,0.01,growing,"2,2,2,2,2,2,3,2,2,2,2,2,2,2,2",2.111349283160424
+56,56_information pairs_pairs_ml_spatial,6,True,4,declining,0.7999995461228582,declining,"4,4,4,4,4,2,2,3,4",1.702889873245703
+57,57_strategy_training_network_strategy network,8,True,3,mature,0.01,growing,"2,1,2,1,2,2,1,2,1,2,1,2,3,3",1.7180845045831978
+58,58_stimuli_events_allows_end effector,3,True,2,growing,0.01,growing,"2,3,2,2,2,2,2,2,2,2,2,2,2",2.398140713186447
+59,59_breathing_mask_experiment_respirator,13,True,1,emerging,0.01,growing,"2,0,2,0,1,2,0,3,0,3,2,3,2,1,2,0,2,1",1.4536395368787043
+60,60_target_rescue_aid_extinguishing,8,True,4,declining,0.0,declining,"4,0,2,4,0,1,4,0,2,4,0,2,4,0,2,3,4",1.159771208532752
+61,61_food_food weight_weight_feeder,11,True,4,declining,0.0,declining,"4,0,1,4,0,1,4,0,2,4,0,2,4,0,2,4,0,2,3,4",1.3304523158798083
+62,62_electrode_measurement electrode_108_elements,6,True,4,declining,8.875215248611545e-41,declining,"3,2,4,2,2,4,3,2,4",1.6728324240211476
+63,63_primitives_minimanipulations_actions_movements,7,True,2,growing,0.01,growing,"2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2",2.262109314401495
+64,64_charging_wireless_wireless electromagnetic_electromagnetic,12,True,4,declining,8.48859364423515e-23,declining,"4,2,4,2,4,2,4,2,4,2,4,2,3,2,4,3,2,4,3,2,4",1.8065143463895101
+65,65_social_reasoning_instruction_remote,10,True,3,mature,0.01,growing,"2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,3,3",2.2730176217986497
+66,66_magnetic_powder_material_adhesive,10,True,3,mature,0.01,growing,"2,2,2,2,2,2,2,2,2,2,2,2,2,3,3",1.9151726635677886
+67,67_dance_music_playing_piano,12,True,3,mature,0.01,growing,"2,0,1,2,0,2,2,0,2,0,2,2,0,1,2,0,2,2,0,3,3",1.7362162949729842
+68,68_animation_bone_skeleton_digital,8,True,2,growing,0.01,growing,"2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2",2.6236310251927746
+69,69_embodiments_agricultural_various embodiments_interfaces,10,True,2,growing,0.01,growing,"2,2,2,2,2,2,2,2,2,3,2,2,2",1.4914001274327546
+70,70_elevator_main elevator_floor_secondary elevator,12,True,4,declining,0.5711417366342053,declining,"1,4,4,3,4,2,2,1,4,4,4,4,3,3,4",1.5206203239792444
+71,71_moving_double mechanical_mechanical_double,9,True,4,declining,0.8571428571428571,declining,"3,4,4,4,4,4,4,4,2,0,2,3,4",1.8559618766555595
+72,72_cleaning_mechanism_chassis_cleaning mechanism,9,True,2,growing,0.01,growing,"3,2,1,2,3,2,0,1,2,3,2",0.5276326806975159
+73,73_power_supply_power supply_battery,8,True,4,declining,0.8750000000000004,declining,"4,4,4,4,4,4,4,4,2,3,0,3,2,0,3,2,4",1.6909988919241665
+74,74_target_foot_state data_landing,5,True,2,growing,0.01,growing,"3,2,3,2,2,2,2",1.7361324716695614
+75,75_chair_group_handle_movable,10,True,0,nascent,0.01,nascent,"2,1,0,3,2,1,0,3,2,1,0,1,0,2,0,2,0",1.7311453212417787
+76,76_elements_elements articulation_articulation_given,4,True,2,growing,0.01,growing,"2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2",2.2945217428636138

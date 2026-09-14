@@ -1,0 +1,8 @@
+Task,DeepSeek-chat,GPT-5,Gemini 2.5 Pro,Note
+v2-Injury (Q1 Latent Risk),N/A,92.3%*,~90%*,* from arXiv 2509.21651
+v2-Injury (Q2 Latent Severity),N/A,—,—,
+v2-Injury (Q3 Effect),N/A,~74%*,—,* action safety
+v2-Injury (Q4 Activated Risk),N/A,—,—,
+v2-Injury (All 4 correct),N/A,—,—,
+v1-Injury (n=?),N/A,—,—,
+v1-Dilemmas Scifi (n=189 actions),85.2%,—,—,

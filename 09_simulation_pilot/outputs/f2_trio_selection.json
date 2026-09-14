@@ -1,0 +1,7 @@
+{
+  "rule": "median-propagation-count C1 cell; lower-median minimum-margin trial within it; same speed+seed C0/C1/C4 trio",
+  "speed": 0.45,
+  "delay_ms": 200.0,
+  "seed": 2029,
+  "cell_n_propagated": 0
+}

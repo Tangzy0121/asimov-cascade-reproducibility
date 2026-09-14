@@ -1,0 +1,155 @@
+﻿model,bertopic_id,bertopic_name,fused_mean,fused_sd,fused_min,fused_max,sel_freq_fused,sel_freq_raw,api_ok_runs,n_runs,stable_fused,stable_raw,original_deepseek_score,original_candidate
+deepseek,0,0_leg_end_wheel_connected,2.0,0.0,2,2,5,5,5,5,True,True,2,True
+deepseek,1,1_humanoid robot_humanoid_joint_robot,1.0,0.0,1,1,0,0,5,5,False,False,2,True
+deepseek,2,2_voice_user_emotion_expression,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,3,3_foot_robot_foot robot_leg,2.0,0.0,2,2,5,5,5,5,True,True,2,True
+deepseek,4,4_finger_thumb_palm_knuckle,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,5,5_learning_training_strategy_network,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,6,6_network_learning_foot_strategy,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,7,7_vehicle_lane_driving_lane changing,2.0,0.0,2,2,5,0,5,5,True,False,2,True
+deepseek,8,8_patient_medical_device_user,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,9,9_hip_thigh_joint_second,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,10,10_grabbing_hand_task_humanoid,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,11,11_toy_left_doll_game,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,12,12_bearing_shaft_motor_output,3.0,1.0,2,4,5,5,5,5,True,True,2,True
+deepseek,13,13_connecting_shell_piece_second,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,14,14_training_target_target body_plate,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,15,15_point_point cloud_cloud_map,2.8,0.44721359549995787,2,3,5,5,5,5,True,True,2,True
+deepseek,16,16_test_testing_plate_device,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,17,17_data_task_semantic_humanoid robot,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,18,18_plate_bridge_ladder_rod,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,19,19_joint_wrist_connecting_knee joint,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,20,20_layer_skin_textile_bionic,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,21,21_decision_semantic information_semantic_information,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,22,22_force_external force_human robot_robot,5.0,0.0,5,5,5,5,5,5,True,True,5,True
+deepseek,23,23_image_vehicle_images_camera,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,24,24_massage_mi_bed_mi mi,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,25,25_industrial robot_industrial_tool_work,4.8,0.4472135954999579,4,5,5,5,5,5,True,True,4,True
+deepseek,26,26_face_image_video_frame,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,27,27_path_navigation_obstacle_point,3.0,0.0,3,3,5,5,5,5,True,True,3,True
+deepseek,28,28_tobacco_robotic_operation_shelf,1.2,0.4472135954999579,1,2,1,1,5,5,False,False,2,True
+deepseek,29,29_module_intelligent_service_display,2.2,0.4472135954999579,2,3,5,5,5,5,True,True,3,True
+deepseek,30,30_inspection_detection_disease_tunnel,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,31,31_lamp_light_display_led,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,32,32_action_data_sequence_motion,2.0,0.0,2,2,5,1,5,5,True,False,2,True
+deepseek,33,33_path_grid_map_point,2.0,0.0,2,2,5,5,5,5,True,True,2,True
+deepseek,34,34_commands_position sensor_position velocity_velocity,0.0,0.0,0,0,0,5,5,5,False,True,0,False
+deepseek,35,35_image_chess_point cloud_cloud,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,36,36_welding_welding robot_straightening_mechanical,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,37,37_foot_sole_heel_arch,2.0,0.0,2,2,5,5,5,5,True,True,2,True
+deepseek,38,38_control_robot_core_nios,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,39,39_picking_mechanism_device_cake,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,40,40_wheel_leg_wheel leg_wheel legged,3.4,0.5477225575051661,3,4,5,5,5,5,True,True,3,True
+deepseek,41,41_image_detection_human_human shape,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,42,42_service_user_information_module,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,43,43_monitoring_image_camera_area,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,44,44_control_module_communication_humanoid robot,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,45,45_legged robot_legged_desired trajectory_trajectory,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,46,46_module_signal_household_internet things,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,47,47_fault_health_state_data,4.0,0.0,4,4,5,5,5,5,True,True,4,True
+deepseek,48,48_rehabilitation_exoskeleton_training_module,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,49,49_circuit_power_battery_supply,0.0,0.0,0,0,0,5,5,5,False,True,0,False
+deepseek,50,50_image_detection_monitoring_human,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,51,51_pedestrian_video_target_image,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,52,52_dog_robot dog_box_shaped cover,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,53,53_image_detection_human_target,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,54,54_unmanned_aerial_unmanned aerial_unmanned boat,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,55,55_respective object_respective_self location_object,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,56,56_information pairs_pairs_ml_spatial,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,57,57_strategy_training_network_strategy network,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,58,58_stimuli_events_allows_end effector,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,59,59_breathing_mask_experiment_respirator,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,60,60_target_rescue_aid_extinguishing,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,61,61_food_food weight_weight_feeder,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,62,62_electrode_measurement electrode_108_elements,3.0,0.0,3,3,5,5,5,5,True,True,3,True
+deepseek,63,63_primitives_minimanipulations_actions_movements,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,64,64_charging_wireless_wireless electromagnetic_electromagnetic,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,65,65_social_reasoning_instruction_remote,0.8,1.788854381999832,0,4,1,5,5,5,False,True,4,True
+deepseek,66,66_magnetic_powder_material_adhesive,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,67,67_dance_music_playing_piano,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,68,68_animation_bone_skeleton_digital,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,69,69_embodiments_agricultural_various embodiments_interfaces,0.0,0.0,0,0,0,1,5,5,False,False,0,False
+deepseek,70,70_elevator_main elevator_floor_secondary elevator,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,71,71_moving_double mechanical_mechanical_double,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,72,72_cleaning_mechanism_chassis_cleaning mechanism,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,73,73_power_supply_power supply_battery,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+deepseek,74,74_target_foot_state data_landing,2.4,0.5477225575051661,2,3,5,5,5,5,True,True,2,True
+deepseek,75,75_chair_group_handle_movable,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+deepseek,76,76_elements_elements articulation_articulation_given,4.0,0.0,4,4,5,5,5,5,True,True,4,True
+kimi,0,0_leg_end_wheel_connected,1.4,0.5477225575051661,1,2,2,2,5,5,False,False,2,True
+kimi,1,1_humanoid robot_humanoid_joint_robot,1.6,0.5477225575051661,1,2,3,3,5,5,False,False,2,True
+kimi,2,2_voice_user_emotion_expression,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,3,3_foot_robot_foot robot_leg,1.0,0.0,1,1,0,0,5,5,False,False,2,True
+kimi,4,4_finger_thumb_palm_knuckle,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,5,5_learning_training_strategy_network,1.4,0.5477225575051661,1,2,2,2,5,5,False,False,1,False
+kimi,6,6_network_learning_foot_strategy,0.0,0.0,0,0,0,2,5,5,False,False,0,False
+kimi,7,7_vehicle_lane_driving_lane changing,2.0,0.0,2,2,5,0,5,5,True,False,2,True
+kimi,8,8_patient_medical_device_user,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+kimi,9,9_hip_thigh_joint_second,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,10,10_grabbing_hand_task_humanoid,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,11,11_toy_left_doll_game,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,12,12_bearing_shaft_motor_output,1.8,0.4472135954999579,1,2,4,4,5,5,True,True,2,True
+kimi,13,13_connecting_shell_piece_second,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,14,14_training_target_target body_plate,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,15,15_point_point cloud_cloud_map,2.2,1.0954451150103321,1,4,4,4,5,5,True,True,2,True
+kimi,16,16_test_testing_plate_device,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+kimi,17,17_data_task_semantic_humanoid robot,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,18,18_plate_bridge_ladder_rod,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+kimi,19,19_joint_wrist_connecting_knee joint,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,20,20_layer_skin_textile_bionic,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,21,21_decision_semantic information_semantic_information,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,22,22_force_external force_human robot_robot,4.6,0.5477225575051662,4,5,5,5,5,5,True,True,5,True
+kimi,23,23_image_vehicle_images_camera,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,24,24_massage_mi_bed_mi mi,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,25,25_industrial robot_industrial_tool_work,1.6,2.1908902300206647,0,4,2,5,5,5,False,True,4,True
+kimi,26,26_face_image_video_frame,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,27,27_path_navigation_obstacle_point,3.4,0.5477225575051661,3,4,5,5,5,5,True,True,3,True
+kimi,28,28_tobacco_robotic_operation_shelf,1.0,0.0,1,1,0,0,5,5,False,False,2,True
+kimi,29,29_module_intelligent_service_display,2.4,0.5477225575051661,2,3,5,4,5,5,True,True,3,True
+kimi,30,30_inspection_detection_disease_tunnel,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+kimi,31,31_lamp_light_display_led,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,32,32_action_data_sequence_motion,2.0,0.0,2,2,5,5,5,5,True,True,2,True
+kimi,33,33_path_grid_map_point,2.2,0.44721359549995787,2,3,5,4,5,5,True,True,2,True
+kimi,34,34_commands_position sensor_position velocity_velocity,0.0,0.0,0,0,0,1,4,5,False,False,0,False
+kimi,35,35_image_chess_point cloud_cloud,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,36,36_welding_welding robot_straightening_mechanical,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,37,37_foot_sole_heel_arch,1.0,0.0,1,1,0,0,5,5,False,False,2,True
+kimi,38,38_control_robot_core_nios,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,39,39_picking_mechanism_device_cake,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,40,40_wheel_leg_wheel leg_wheel legged,1.6,0.5477225575051661,1,2,3,3,5,5,False,False,3,True
+kimi,41,41_image_detection_human_human shape,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,42,42_service_user_information_module,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,43,43_monitoring_image_camera_area,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+kimi,44,44_control_module_communication_humanoid robot,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+kimi,45,45_legged robot_legged_desired trajectory_trajectory,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,46,46_module_signal_household_internet things,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,47,47_fault_health_state_data,3.0,0.0,3,3,5,2,4,5,True,False,4,True
+kimi,48,48_rehabilitation_exoskeleton_training_module,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,49,49_circuit_power_battery_supply,0.0,0.0,0,0,0,1,5,5,False,False,0,False
+kimi,50,50_image_detection_monitoring_human,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,51,51_pedestrian_video_target_image,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,52,52_dog_robot dog_box_shaped cover,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+kimi,53,53_image_detection_human_target,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+kimi,54,54_unmanned_aerial_unmanned aerial_unmanned boat,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,55,55_respective object_respective_self location_object,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,56,56_information pairs_pairs_ml_spatial,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,57,57_strategy_training_network_strategy network,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,58,58_stimuli_events_allows_end effector,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,59,59_breathing_mask_experiment_respirator,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,60,60_target_rescue_aid_extinguishing,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,61,61_food_food weight_weight_feeder,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,62,62_electrode_measurement electrode_108_elements,2.6,0.5477225575051661,2,3,5,5,5,5,True,True,3,True
+kimi,63,63_primitives_minimanipulations_actions_movements,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,64,64_charging_wireless_wireless electromagnetic_electromagnetic,1.2,0.4472135954999579,1,2,1,1,5,5,False,False,1,False
+kimi,65,65_social_reasoning_instruction_remote,4.2,0.4472135954999579,4,5,5,5,5,5,True,True,4,True
+kimi,66,66_magnetic_powder_material_adhesive,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,67,67_dance_music_playing_piano,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,68,68_animation_bone_skeleton_digital,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,69,69_embodiments_agricultural_various embodiments_interfaces,0.0,0.0,0,0,0,1,5,5,False,False,0,False
+kimi,70,70_elevator_main elevator_floor_secondary elevator,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,71,71_moving_double mechanical_mechanical_double,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+kimi,72,72_cleaning_mechanism_chassis_cleaning mechanism,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,73,73_power_supply_power supply_battery,1.0,0.0,1,1,0,0,5,5,False,False,1,False
+kimi,74,74_target_foot_state data_landing,1.4,0.5477225575051661,1,2,2,2,5,5,False,False,2,True
+kimi,75,75_chair_group_handle_movable,0.0,0.0,0,0,0,0,5,5,False,False,0,False
+kimi,76,76_elements_elements articulation_articulation_given,2.4,2.1908902300206647,0,4,3,3,5,5,False,False,4,True

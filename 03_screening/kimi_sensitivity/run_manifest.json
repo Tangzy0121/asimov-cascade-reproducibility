@@ -1,0 +1,25 @@
+{
+  "run_started_at_utc": "2026-07-31T06:48:48.790263+00:00",
+  "run_finished_at_utc": "2026-07-31T06:53:56.742228+00:00",
+  "provider": "Kimi",
+  "base_url": "https://api.kimi.com/coding/v1",
+  "requested_model": "kimi-for-coding",
+  "forced_temperature": 1.0,
+  "forced_max_tokens": 2048,
+  "attempted_topics": 77,
+  "valid_topics": 76,
+  "runner_sha256": "7d71397d19f44496423d3b70a4afaa4345a789b1cb5e80b1f78cdcd3de629dbb",
+  "p01_script_sha256": "7bf63be05dd6dd66aa93314c62f880ed23c454e4aece83e9d20e42b37bd70108",
+  "few_shot_seed_sha256": "6b000696c35188576e61c87c7aab9ae500df4f2312779fab3fdd4af04ad7fe38",
+  "topic_summary_sha256": "92ccf08f5ca168381de720b0d7713ac3f9795aa4f4d1a1ed501bacefe38ba664",
+  "deepseek_labels_sha256": "cfc22b9e53fef74efb1384aeac6939a393ff8323be575be4220f1323e9042e2e",
+  "files": {
+    "cross_model_disagreement_audit.csv": "8d5e14920430badd4c0313e4eca8d3bd1a8c1d050abda2a55dba636a34fd1697",
+    "deepseek_kimi_comparison.csv": "ff8397b586daa23909e252b270b66c02eb1e7a9fb6bfb98ba08c3333dbb3bbb1",
+    "kimi_raw_responses_run1.jsonl": "d875cc196f019a373f3c2b22bde652b9ac6feae5913c1fc8505bfd46bb5f6288",
+    "kimi_safety_labels_run1.csv": "55e0ecb972ae3b37e131cf4ee1d7b7e3e86d289df0a7bf90faa5aa08c349e3a6",
+    "kimi_sensitivity_summary.json": "6d2718e9b62ed6367104bd231a90df28f36396a55fb4a9802aa53c5664af852c"
+  },
+  "postprocessed_at_utc": "2026-07-31T06:55:59.615126+00:00",
+  "postprocessor_sha256": "6481dd76685f6c17d9a4e741a8051f83cec946362ef76cd33ce2adcd5e120172"
+}

@@ -1,0 +1,11 @@
+﻿model,run,n_candidates_fused,n_candidates_raw,api_ok,api_errors
+deepseek,1,17,19,77,0
+deepseek,2,17,18,77,0
+deepseek,3,18,19,77,0
+deepseek,4,18,18,77,0
+deepseek,5,17,19,77,0
+kimi,1,15,13,77,0
+kimi,2,14,15,76,1
+kimi,3,17,15,77,0
+kimi,4,11,13,77,0
+kimi,5,14,13,76,1

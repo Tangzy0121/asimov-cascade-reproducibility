@@ -1,0 +1,259 @@
+
+=== TDD evidence: test_dynamics.py BEFORE implementation ===
+timestamp_utc: 2026-09-02T03:23:17Z
+command: python -m pytest tests/test_dynamics.py -v
+============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-9.1.0, pluggy-1.6.0 -- <python>/envs/<env>/python.exe
+cachedir: .pytest_cache
+rootdir: <project>/HelpCC\topic22_controlled_propagation_sim\work
+plugins: anyio-4.12.1
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+___________________ ERROR collecting tests/test_dynamics.py ___________________
+ImportError while importing test module '<project>/HelpCC\topic22_controlled_propagation_sim\work\tests\test_dynamics.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+<python>/envs/<env>/Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_dynamics.py:4: in <module>
+    from config import load_config
+E   ImportError: cannot import name 'load_config' from 'config' (unknown location)
+=========================== short test summary info ===========================
+ERROR tests/test_dynamics.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.46s ===============================
+exit_code: 2
+
+=== TDD evidence: test_dynamics.py AFTER implementation ===
+timestamp_utc: 2026-09-02T03:23:51Z
+command: python -m pytest tests/test_dynamics.py -v
+============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-9.1.0, pluggy-1.6.0 -- <python>/envs/<env>/python.exe
+cachedir: .pytest_cache
+rootdir: <project>/HelpCC\topic22_controlled_propagation_sim\work
+plugins: anyio-4.12.1
+collecting ... collected 6 items
+
+tests/test_dynamics.py::test_stationary_state_stays_stationary PASSED    [ 16%]
+tests/test_dynamics.py::test_acceleration_is_bounded PASSED              [ 33%]
+tests/test_dynamics.py::test_velocity_never_negative PASSED              [ 50%]
+tests/test_dynamics.py::test_gap_nonnegative_before_contact PASSED       [ 66%]
+tests/test_dynamics.py::test_deterministic_replay PASSED                 [ 83%]
+tests/test_dynamics.py::test_contact_force_zero_without_penetration_and_positive_on_penetration PASSED [100%]
+
+============================== 6 passed in 0.22s ==============================
+exit_code: 0
+
+=== TDD evidence: test_modules.py + test_contracts.py BEFORE implementation ===
+timestamp_utc: 2026-09-02T03:25:12Z
+command: python -m pytest tests/test_modules.py tests/test_contracts.py -v
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_modules.py:5: in <module>
+    from modules import PerceptionModule, PlannerModule, SafetyMonitor, Controller
+E   ModuleNotFoundError: No module named 'modules'
+__________________ ERROR collecting tests/test_contracts.py ___________________
+ImportError while importing test module '<project>/HelpCC\topic22_controlled_propagation_sim\work\tests\test_contracts.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+<python>/envs/<env>/Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_contracts.py:6: in <module>
+    from contracts import evaluate_local_contracts
+E   ModuleNotFoundError: No module named 'contracts'
+=========================== short test summary info ===========================
+ERROR tests/test_modules.py
+ERROR tests/test_contracts.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!
+============================== 2 errors in 0.92s ==============================
+exit_code: 2
+
+=== TDD evidence: test_modules.py + test_contracts.py AFTER implementation ===
+timestamp_utc: 2026-09-02T03:26:55Z
+command: python -m pytest tests/test_modules.py tests/test_contracts.py -v
+============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-9.1.0, pluggy-1.6.0 -- <python>/envs/<env>/python.exe
+cachedir: .pytest_cache
+rootdir: <project>/HelpCC\topic22_controlled_propagation_sim\work
+plugins: anyio-4.12.1
+collecting ... collected 14 items
+
+tests/test_modules.py::test_perception_accuracy_judged_at_sample_time_not_consumption_time PASSED [  7%]
+tests/test_modules.py::test_perception_delay_selects_older_sample PASSED [ 14%]
+tests/test_modules.py::test_planner_never_exceeds_speed_bound PASSED     [ 21%]
+tests/test_modules.py::test_safety_monitor_rule_on_received_values PASSED [ 28%]
+tests/test_modules.py::test_safety_monitor_threshold_offset_shifts_trigger PASSED [ 35%]
+tests/test_modules.py::test_c2_rescue_uses_more_conservative_threshold PASSED [ 42%]
+tests/test_modules.py::test_controller_tracking_within_contract PASSED   [ 50%]
+tests/test_modules.py::test_c3_fault_exceeds_perception_contract_by_construction PASSED [ 57%]
+tests/test_contracts.py::test_all_contracts_pass_on_clean_trace PASSED   [ 64%]
+tests/test_contracts.py::test_perception_contract_failure_detected PASSED [ 71%]
+tests/test_contracts.py::test_planner_speed_violation_detected PASSED    [ 78%]
+tests/test_contracts.py::test_monitor_rule_violation_detected PASSED     [ 85%]
+tests/test_contracts.py::test_controller_tracking_violation_detected PASSED [ 92%]
+tests/test_contracts.py::test_fault_flags_fail_contract PASSED           [100%]
+
+============================= 14 passed in 0.74s ==============================
+exit_code: 0
+
+=== TDD evidence: test_classifier.py BEFORE implementation ===
+timestamp_utc: 2026-09-02T03:32:54Z
+command: python -m pytest tests/test_classifier.py -v
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_classifier.py:6: in <module>
+    from classify import classify_trial
+E   ModuleNotFoundError: No module named 'classify'
+=========================== short test summary info ===========================
+ERROR tests/test_classifier.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 2.06s ===============================
+exit_code: 2
+
+=== TDD evidence: test_classifier.py AFTER implementation ===
+timestamp_utc: 2026-09-02T03:33:56Z
+command: python -m pytest tests/test_classifier.py -v
+cachedir: .pytest_cache
+rootdir: <project>/HelpCC\topic22_controlled_propagation_sim\work
+plugins: anyio-4.12.1
+collecting ... collected 7 items
+
+tests/test_classifier.py::test_propagated_label_requires_full_ordered_chain PASSED [ 14%]
+tests/test_classifier.py::test_local_contract_failure_forbids_propagated PASSED [ 28%]
+tests/test_classifier.py::test_no_breach_is_contained_not_propagated PASSED [ 42%]
+tests/test_classifier.py::test_breach_without_delay_order_is_not_propagated PASSED [ 57%]
+tests/test_classifier.py::test_breach_without_positive_command_during_delay_is_not_propagated PASSED [ 71%]
+tests/test_classifier.py::test_nan_flags_yield_unresolved PASSED         [ 85%]
+tests/test_classifier.py::test_short_margin_dip_is_not_a_breach PASSED   [100%]
+
+============================== 7 passed in 1.86s ==============================
+exit_code: 0
+
+=== regression: full suite after classify.py refactor + perception fallback fix ===
+timestamp_utc: 2026-09-02T03:39:14Z
+command: python -m pytest tests/ -v
+>       assert res.label != "PROPAGATED"
+E       AssertionError: assert 'PROPAGATED' != 'PROPAGATED'
+E        +  where 'PROPAGATED' = TrialClassification(label='PROPAGATED', local_pass=True, ordered_events=True, margin_breach=True, t_mismatch=0.0, baseline_trigger_t=1.0, trigger_t=1.2, breach_start_t=1.3, positive_cmd_during_delay=True, stop_latency_s=0.19999999999999996).label
+
+tests\test_classifier.py:90: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_classifier.py::test_breach_without_positive_command_during_delay_is_not_propagated
+======================== 1 failed, 26 passed in 4.36s =========================
+exit_code: 1
+
+=== regression: full suite after exact pos_cmd_runs fix ===
+timestamp_utc: 2026-09-02T03:49:31Z
+command: python -m pytest tests/ -v
+tests/test_modules.py::test_safety_monitor_threshold_offset_shifts_trigger PASSED [ 88%]
+tests/test_modules.py::test_c2_rescue_uses_more_conservative_threshold PASSED [ 92%]
+tests/test_modules.py::test_controller_tracking_within_contract PASSED   [ 96%]
+tests/test_modules.py::test_c3_fault_exceeds_perception_contract_by_construction PASSED [100%]
+
+============================= 27 passed in 1.95s ==============================
+exit_code: 0
+
+=== TDD evidence: test_reproducibility.py BEFORE simulator implementation ===
+timestamp_utc: 2026-09-02T03:50:37Z
+command: python -m pytest tests/test_reproducibility.py -v
+    from simulator import make_rng_streams, run_trial
+E   ModuleNotFoundError: No module named 'simulator'
+=========================== short test summary info ===========================
+ERROR tests/test_reproducibility.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.91s ===============================
+exit_code: 2
+
+=== TDD evidence: test_reproducibility.py AFTER simulator implementation ===
+timestamp_utc: 2026-09-02T03:54:09Z
+command: python -m pytest tests/test_reproducibility.py -v
+        from classify import extract_events, decide_label
+        from contracts import evaluate_local_contracts
+        events = extract_events(trace, cfg)
+        contracts = evaluate_local_contracts(trace, cfg, C1_SPEC["speed"])
+        via_events = decide_label(events, contracts["all_pass"],
+>                                 base_row["trigger_t"], cfg)
+                                  ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'trigger_t'
+
+tests\test_reproducibility.py:54: KeyError
+=========================== short test summary info ===========================
+FAILED tests/test_reproducibility.py::test_trial_is_deterministic - KeyError:...
+FAILED tests/test_reproducibility.py::test_trace_classifier_agrees_with_event_path
+========================= 2 failed, 4 passed in 0.67s =========================
+exit_code: 1
+
+=== test_reproducibility.py rerun after key-name fix in tests ===
+timestamp_utc: 2026-09-02T03:54:42Z
+command: python -m pytest tests/test_reproducibility.py -v
+rootdir: <project>/HelpCC\topic22_controlled_propagation_sim\work
+plugins: anyio-4.12.1
+collecting ... collected 6 items
+
+tests/test_reproducibility.py::test_rng_streams_identical_across_conditions_for_same_seed PASSED [ 16%]
+tests/test_reproducibility.py::test_trial_is_deterministic PASSED        [ 33%]
+tests/test_reproducibility.py::test_trace_classifier_agrees_with_event_path PASSED [ 50%]
+tests/test_reproducibility.py::test_c3_trial_fails_perception_contract PASSED [ 66%]
+tests/test_reproducibility.py::test_c0_baseline_does_not_breach PASSED   [ 83%]
+tests/test_reproducibility.py::test_c4_rescue_contains_matched_c1 PASSED [100%]
+
+============================== 6 passed in 0.51s ==============================
+exit_code: 0
+
+=== regression after row-schema fix + calibration run 2 ===
+timestamp_utc: 2026-09-02T03:55:59Z
+command: python -m pytest tests/ -q
+.................................                                        [100%]
+33 passed in 0.73s
+exit_code: 0
+command: python src/calibrate.py
+{
+  "n_trials": 30,
+  "all_local_contracts_pass": true,
+  "no_numeric_unstable": true,
+  "no_nan": true,
+  "no_baseline_breach": true,
+  "min_margin_overall_m": 0.009194109962171626,
+  "trigger_fired_all_trials": false,
+  "full_approach_observed": false,
+  "per_speed": {
+    "0.15": {
+      "min_margin_m": 0.015702997498447308,
+      "breaches": 0,
+      "max_t_final_s": 3.999999999999781,
+      "trigger_missing": 2
+    },
+    "0.3": {
+      "min_margin_m": 0.009194109962171626,
+      "breaches": 0,
+      "max_t_final_s": 2.291999999999969,
+      "trigger_missing": 0
+    },
+    "0.45": {
+      "min_margin_m": 0.011890018482132086,
+      "breaches": 0,
+      "max_t_final_s": 1.7660000000000013,
+      "trigger_missing": 0
+    }
+  },
+  "config_sha256": "99e784f75a2113482c668f7bc54b2e646b210b7aad95923cf0699bc784e29580",
+  "baseline_valid": false
+}
+exit_code: 0
+
+=== FINAL: full test suite from clean process ===
+timestamp_utc: 2026-09-02T04:18:29Z
+command: python -m pytest tests/ -v
+tests/test_modules.py::test_controller_tracking_within_contract PASSED   [ 78%]
+tests/test_modules.py::test_c3_fault_exceeds_perception_contract_by_construction PASSED [ 81%]
+tests/test_reproducibility.py::test_rng_streams_identical_across_conditions_for_same_seed PASSED [ 84%]
+tests/test_reproducibility.py::test_trial_is_deterministic PASSED        [ 87%]
+tests/test_reproducibility.py::test_trace_classifier_agrees_with_event_path PASSED [ 90%]
+tests/test_reproducibility.py::test_c3_trial_fails_perception_contract PASSED [ 93%]
+tests/test_reproducibility.py::test_c0_baseline_does_not_breach PASSED   [ 96%]
+tests/test_reproducibility.py::test_c4_rescue_contains_matched_c1 PASSED [100%]
+
+============================= 33 passed in 0.67s ==============================
+exit_code: 0

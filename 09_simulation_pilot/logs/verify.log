@@ -1,0 +1,26 @@
+=== package verification (clean process) ===
+timestamp_utc: 2026-09-02T04:17:52Z
+command: python src/verify_package.py
+[PASS] exactly 3300 trials n=3300
+[PASS] trial_ids unique 
+[PASS] raw matches planned trial table 
+[PASS] condition counts C0=150 C1=900 C2=600 C3=150 C4=1500 {'C4': 1500, 'C1': 900, 'C2': 600, 'C0': 150, 'C3': 150}
+[PASS] every preregistered cell has exactly 50 seeds, no duplicates n_cells=66
+[PASS] seeds within frozen range 2000-2049 
+[PASS] config file hash matches frozen hash 0bf3f0351d8e
+[PASS] every raw row carries the frozen config hash 
+[PASS] C0 baseline valid (no breach, contracts pass) 
+[PASS] C3 all ORDINARY_FAILURE with contract failure 
+[PASS] all PROPAGATED trials pass local contracts and strict order n=518
+[PASS] no PROPAGATED in C0/C3/C4 
+[PASS] no UNRESOLVED trials 
+[PASS] statistics regenerate byte-identically from frozen raw CSV 
+[PASS] figure exists: F1_propagation_heatmap.pdf 
+[PASS] figure exists: F2_aligned_traces.pdf 
+[PASS] figure exists: F3_condition_rates.pdf 
+[PASS] figure exists: F4_contract_and_rescue.pdf 
+[PASS] figure exists: code_excerpt.pdf 
+[PASS] frozen outcome classification present PILOT_SUPPORT
+
+20/20 checks passed
+exit_code: 0

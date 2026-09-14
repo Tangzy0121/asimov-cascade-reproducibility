@@ -1,0 +1,120 @@
+{
+  "schema_version": "p1_topic_safety_human_review_approval_v1",
+  "approval_date": "2026-07-24",
+  "approval_status": "APPROVED",
+  "source_csv": "P1_topic_safety_review_queue.csv",
+  "scope": {
+    "approved_topic_ids": [
+      65,
+      74,
+      76
+    ],
+    "preserve_all_automatic_fields": true,
+    "preserve_all_unlisted_topics": true,
+    "csv_mutation_authorized_by_this_snapshot": false
+  },
+  "approved_field_order": [
+    "human_safety_judgment",
+    "human_harm_link",
+    "cascade_role",
+    "plausible_cascade_path",
+    "scope_limitation",
+    "reviewer_confidence",
+    "reviewer_note"
+  ],
+  "topics": [
+    {
+      "bertopic_id": 65,
+      "bertopic_name": "65_social_reasoning_instruction_remote",
+      "automatic_fields_to_preserve": {
+        "proposed_safety": "NOT_SAFETY",
+        "evidence_status": "INSUFFICIENT"
+      },
+      "approved_fields": {
+        "human_safety_judgment": "PARTIAL",
+        "human_harm_link": "INDIRECT",
+        "cascade_role": "PROPAGATION_NODE",
+        "plausible_cascade_path": "操作者意图或人机接触任务 → 语义解析与期望校准 → 无线通信或高层动作锚点 → 全身控制命令；若意图、时序、坐标、接触阶段或禁止动作边界在接口间不一致，即使各模块分别按自身输入正确运行，仍可能产生非预期全身运动或身体接触并伤及人员；互锁验证和并行监控构成阻断屏障。",
+        "scope_limitation": "主题较混杂；主要是信息—控制传播链，部分专利同时包含安全互锁屏障。专利没有明确报告人员受伤。",
+        "reviewer_confidence": "MEDIUM",
+        "reviewer_note": "原文支持从人机输入、通信、规划到全身控制的跨系统传播链，并包含物理接触场景。未明确描述人员受伤，因此标记为INDIRECT；主题内部分远程操控专利包含互锁和安全解锁机制，但主题的主要Cascade角色仍为PROPAGATION_NODE。"
+      },
+      "integrity": {
+        "plausible_cascade_path": {
+          "character_length": 133,
+          "sha256_utf8": "614198e41a3cb1f470ca2a533827f02f8f4901dbb3185d5db85cc7a6e04d4e54"
+        },
+        "scope_limitation": {
+          "character_length": 46,
+          "sha256_utf8": "196ad9ad5d15a1e99cb2881859148b1b00bdc29b074a9327b7fdb3f2b5550887"
+        },
+        "reviewer_note": {
+          "character_length": 119,
+          "sha256_utf8": "f443e66aafd2a57ad3b07402553f2e13780eb6b2fa330aa8e005e2c1b7b39458"
+        }
+      }
+    },
+    {
+      "bertopic_id": 74,
+      "bertopic_name": "74_target_foot_state data_landing",
+      "automatic_fields_to_preserve": {
+        "proposed_safety": "NOT_SAFETY",
+        "evidence_status": "INSUFFICIENT"
+      },
+      "approved_fields": {
+        "human_safety_judgment": "DIRECT",
+        "human_harm_link": "INDIRECT",
+        "cascade_role": "PROPAGATION_NODE",
+        "plausible_cascade_path": "感知及历史状态 → 世界模型或落脚点规划 → 质心、接触力与摩擦约束 → 期望关节角和关节力矩；若地形法向量、摩擦系数、接触相位或状态时间戳在模块间不一致，各模块即使分别正确求解，整体仍可能选择实际上不稳定的落脚点并导致打滑或跌倒，进而可能撞击附近人员。",
+        "scope_limitation": "代表专利覆盖一般足式机器人，包括二足、四足和六足，并非严格的人形机器人证据；人员伤害是间接推断。",
+        "reviewer_confidence": "MEDIUM",
+        "reviewer_note": "原文支持状态估计、落脚点规划、接触约束与关节控制之间的传播链，并明确涉及打滑、跌倒和运动故障风险；但代表专利适用于一般足式机器人，且未直接描述人员受伤，因此标记为INDIRECT/PROPAGATION_NODE，并保留非人形机器人范围限制。"
+      },
+      "integrity": {
+        "plausible_cascade_path": {
+          "character_length": 127,
+          "sha256_utf8": "7e7ebd77cfabd9f10927b8149bfd9043cfbe60119eb4502edd1f5d6c86437c55"
+        },
+        "scope_limitation": {
+          "character_length": 48,
+          "sha256_utf8": "8594c3311b0baeea578552b881e6b7aca5d7d9ee3b6f354e0d555617e134da7e"
+        },
+        "reviewer_note": {
+          "character_length": 121,
+          "sha256_utf8": "7f463c2490cc1eb1f9eb6c77b4d4064beb542caab4349e2a06006e1de929ed48"
+        }
+      }
+    },
+    {
+      "bertopic_id": 76,
+      "bertopic_name": "76_elements_elements articulation_articulation_given",
+      "automatic_fields_to_preserve": {
+        "proposed_safety": "NOT_SAFETY",
+        "evidence_status": "INSUFFICIENT"
+      },
+      "approved_fields": {
+        "human_safety_judgment": "DIRECT",
+        "human_harm_link": "DIRECT",
+        "cascade_role": "SAFETY_BARRIER",
+        "plausible_cascade_path": "正常关节运动接近行程端或执行器发生异常 → 相邻刚性部件夹住人体手指，或活动部件产生过大止挡力 → 柔性皮肤限制夹持力，或阈值开关触发急停/断电；若柔性区域、允许行程、触发阈值、开关或断电链之间不匹配，最后安全屏障可能失效并导致夹伤或撞击伤害。",
+        "scope_limitation": "主题包含防夹手柔性结构和过力急停两类安全屏障；二者机制不同，但都针对人形机器人关节安全。",
+        "reviewer_confidence": "HIGH",
+        "reviewer_note": "专利原文明示人形机器人关节可能夹伤附近人员手指，并提供柔性防夹结构、过力检测开关及急停/断电机制。人体伤害关联明确，故标记为DIRECT；这些机制主要用于阻断上游运动或执行器异常，故标记为SAFETY_BARRIER。"
+      },
+      "integrity": {
+        "plausible_cascade_path": {
+          "character_length": 122,
+          "sha256_utf8": "e4753762dd26ded268aab90ad5c97c765ec293053da17ff47a2d8eda4adad44c"
+        },
+        "scope_limitation": {
+          "character_length": 44,
+          "sha256_utf8": "ff5ccc5fad4ebcbbc5424690506ce077f835906bd6228273ecce330a6e285a02"
+        },
+        "reviewer_note": {
+          "character_length": 109,
+          "sha256_utf8": "66493ee111b3b3416e7d1959936088387f175a9f598109f84df994ee2a277a70"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "status": "exploratory_post_hoc",
+  "no_api_calls": true,
+  "input_hashes": {
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\asimov_validation\\mapping_v2.csv": "63f18c640b99f19a2ab947cd3a74f443435cfbd77fb45cb23535d6b9fbe47fce",
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\asimov_validation\\v2_injury_results.csv": "1a73842cf21cfabb8c61c653b29e2d7cd477453684f4e45a7c9351058e6d8d2f",
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\asimov_validation\\cache\\embed_cache.npz": "f3114f4954d40d6a4ebbfacf3b72cb17f15e7f817ea836304559643620884e4e",
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\asimov_validation\\cache\\safety_patents.npz": "4afdc42b29b34f07e7a20fa85e5ba9c7da42d674f51f44cbad536ce44ed3f5e3",
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\time_analysis\\04_bertopic_time\\document_topic_assignment.csv": "50236752c45f88bc6cdc260bf6a0d901c5228af8beb9c1f16b378c9f25904699",
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\time_analysis\\11_temporal_enrichment\\06_cascade_v3\\cascade_signals_v5.csv": "d435a5c6d66dc5caae28991b8a0742d5396f68ff546dabfe233d53c4ea3198ed",
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\family_primary_reestimation\\family_cascade_signals.csv": "bbf399059ae538049c83880af6ad40a2ed4e4b02c5be8d1c4d06ddc73d23397e",
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\family_primary_reestimation\\family_representatives.csv": "0c5a672406ad906f77d54228e7259dfd2e2d686e0b819e36bffcedffc4befd8a",
+    "<project>/PatSense\\Cascade\\BERT_Python\\output\\subsystem_validation\\human_review\\P1_topic_safety_reviewed.csv": "6e9b0e11d0b827b3284f3d4f7f33096cfba4dbce0679241c00f3ae6cba99429a"
+  },
+  "n_v2_scenarios": 319,
+  "n_deepseek_scenarios": 319,
+  "n_kimi_common_scenarios": 308,
+  "n_publication_patents": 2395,
+  "n_family_patents": 1773,
+  "role_topic_counts": {
+    "SAFETY_BARRIER": 12,
+    "PROPAGATION_NODE": 5,
+    "OUT_OF_SCOPE": 1,
+    "CONTEXT_ONLY": 1,
+    "UNCLEAR": 1
+  },
+  "pooled_exposure_max_abs_diff": {
+    "25": 9.71445146547012e-17,
+    "50": 9.71445146547012e-17,
+    "100": 9.71445146547012e-17
+  },
+  "pooled_coefficient_reproduction": {
+    "DeepSeek": {
+      "25": {
+        "expected": -3.7526580241604006,
+        "observed": -3.752658024160411,
+        "abs_diff": 1.021405182655144e-14
+      },
+      "50": {
+        "expected": -3.8180766973740274,
+        "observed": -3.8180766973740456,
+        "abs_diff": 1.8207657603852567e-14
+      },
+      "100": {
+        "expected": -3.835135667435912,
+        "observed": -3.8351356674359276,
+        "abs_diff": 1.554312234475219e-14
+      }
+    },
+    "KimiMV": {
+      "25": {
+        "expected": -2.1140386316900344,
+        "observed": -2.114038631690043,
+        "abs_diff": 8.43769498715119e-15
+      },
+      "50": {
+        "expected": -2.2633652343750876,
+        "observed": -2.2633652343750814,
+        "abs_diff": 6.217248937900877e-15
+      },
+      "100": {
+        "expected": -2.2233601855834917,
+        "observed": -2.2233601855834904,
+        "abs_diff": 1.3322676295501878e-15
+      }
+    }
+  },
+  "primary_interpretation": {
+    "deepseek_barrier": "negative in both publication and family models after BH correction",
+    "deepseek_propagation": "not distinguishable from zero",
+    "kimi_role_terms": "none survive BH correction",
+    "family_barrier_caveat": "sign reverses when Topic 22 is omitted"
+  }
+}

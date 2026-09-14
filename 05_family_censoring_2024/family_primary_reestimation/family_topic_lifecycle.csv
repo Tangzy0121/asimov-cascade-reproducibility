@@ -1,0 +1,78 @@
+﻿bertopic_id,bertopic_name,bertopic_count,n_years_active,K,r,tm,r_squared,lifecycle_stage,tmi,current_fraction_of_K,fit_reliable,safety_score
+0,0_leg_end_wheel_connected,530,19,709.46,0.3226,2022.5,0.9973,mature,0.265,0.747,True,2
+1,1_humanoid robot_humanoid_joint_robot,298,21,894.0,0.2168,2029.6,0.9859,growing,0.1888,0.3333,True,2
+2,2_voice_user_emotion_expression,264,21,560.8,0.2091,2026.8,0.9848,growing,0.2739,0.4708,True,0
+3,3_foot_robot_foot robot_leg,176,17,528.0,0.2769,2028.4,0.9946,growing,0.1487,0.3333,True,2
+4,4_finger_thumb_palm_knuckle,152,21,209.31,0.1989,2021.4,0.9904,mature,0.4373,0.7262,True,0
+5,5_learning_training_strategy_network,151,14,453.0,0.5449,2027.3,0.9646,growing,0.0,0.3333,True,1
+6,6_network_learning_foot_strategy,140,9,229.04,0.629,2025.2,0.9958,mature,0.0,0.6113,True,0
+7,7_vehicle_lane_driving_lane changing,128,14,156.94,0.4635,2022.6,0.9982,mature,0.0595,0.8156,True,2
+8,8_patient_medical_device_user,134,18,170.17,0.3264,2021.9,0.9984,mature,0.2734,0.7874,True,1
+9,9_hip_thigh_joint_second,122,14,366.0,0.3725,2027.7,0.9674,growing,0.085,0.3333,True,0
+10,10_grabbing_hand_task_humanoid,101,15,303.0,0.329,2028.1,0.9765,growing,0.114,0.3333,True,0
+11,11_toy_left_doll_game,86,20,90.98,0.3086,2017.7,0.9943,saturated,0.3619,0.9452,True,0
+12,12_bearing_shaft_motor_output,90,14,270.0,0.2895,2028.8,0.9184,growing,0.1403,0.3333,True,2
+13,13_connecting_shell_piece_second,95,13,285.0,0.3006,2028.3,0.9812,growing,0.1329,0.3333,True,0
+14,14_training_target_target body_plate,87,16,94.22,0.3786,2018.9,0.9963,saturated,0.2242,0.9234,True,0
+15,15_point_point cloud_cloud_map,78,13,163.9,0.4003,2026.1,0.9943,growing,0.0949,0.4759,True,2
+16,16_test_testing_plate_device,68,14,176.47,0.2744,2027.5,0.9938,growing,0.1738,0.3853,True,1
+17,17_data_task_semantic_humanoid robot,65,11,195.0,0.4447,2027.5,0.9333,growing,0.0369,0.3333,True,0
+18,18_plate_bridge_ladder_rod,83,16,83.76,0.4154,2018.7,0.9924,saturated,0.1676,0.9909,True,1
+19,19_joint_wrist_connecting_knee joint,73,16,219.0,0.214,2029.4,0.9972,growing,0.1906,0.3333,True,0
+20,20_layer_skin_textile_bionic,64,17,103.29,0.237,2024.2,0.9889,mature,0.3259,0.6196,True,0
+21,21_decision_semantic information_semantic_information,65,14,195.0,0.2991,2028.3,0.9951,growing,0.1339,0.3333,True,0
+22,22_force_external force_human robot_robot,49,17,53.4,0.2984,2018.7,0.9916,saturated,0.37,0.9177,True,5
+23,23_image_vehicle_images_camera,64,16,75.77,0.2385,2018.7,0.9673,mature,0.4418,0.8447,True,0
+24,24_massage_mi_bed_mi mi,73,18,79.4,0.3606,2019.3,0.9969,saturated,0.2564,0.9194,True,0
+25,25_industrial robot_industrial_tool_work,38,15,35.86,0.4204,2015.2,0.9687,declining,0.1687,1.0598,True,4
+26,26_face_image_video_frame,58,15,101.83,0.2052,2024.4,0.9813,mature,0.3359,0.5696,True,0
+27,27_path_navigation_obstacle_point,54,11,162.0,0.3956,2027.7,0.9804,growing,0.0696,0.3333,True,3
+28,28_tobacco_robotic_operation_shelf,51,12,153.0,0.3253,2028.1,0.9683,growing,0.1165,0.3333,True,2
+29,29_module_intelligent_service_display,57,15,63.9,0.3617,2020.1,0.9965,mature,0.2467,0.892,True,3
+30,30_inspection_detection_disease_tunnel,50,11,71.8,0.568,2024.4,0.9949,mature,0.0,0.6963,True,1
+31,31_lamp_light_display_led,54,16,58.32,0.3655,2018.2,0.9961,saturated,0.2491,0.926,True,0
+32,32_action_data_sequence_motion,41,7,123.0,0.6564,2027.0,0.9412,growing,0.0,0.3333,True,2
+33,33_path_grid_map_point,48,9,132.53,0.5146,2027.1,0.9991,growing,0.0,0.3622,True,2
+34,34_commands_position sensor_position velocity_velocity,10,4,8.0,0.541,2015.4,0.868,declining,0.0,1.25,True,0
+35,35_image_chess_point cloud_cloud,34,11,102.0,0.3414,2027.8,0.9777,growing,0.1057,0.3333,True,0
+36,36_welding_welding robot_straightening_mechanical,43,10,129.0,0.4054,2027.5,0.9719,growing,0.063,0.3333,True,0
+37,37_foot_sole_heel_arch,34,13,102.0,0.2166,2029.5,0.9693,growing,0.1889,0.3333,True,2
+38,38_control_robot_core_nios,41,12,123.0,0.2964,2028.2,0.9628,growing,0.1357,0.3333,True,0
+39,39_picking_mechanism_device_cake,40,13,41.57,0.5072,2020.4,0.9956,saturated,0.0,0.9623,True,0
+40,40_wheel_leg_wheel leg_wheel legged,28,10,31.73,0.5477,2022.1,0.9941,mature,0.0,0.8823,True,3
+41,41_image_detection_human_human shape,35,11,41.45,0.4911,2022.1,0.9949,mature,0.015,0.8443,True,0
+42,42_service_user_information_module,40,13,41.65,0.3937,2019.8,0.9858,saturated,0.2041,0.9605,True,0
+43,43_monitoring_image_camera_area,35,14,66.38,0.202,2024.9,0.9814,mature,0.3142,0.5273,True,1
+44,44_control_module_communication_humanoid robot,35,11,105.0,0.1779,2030.8,0.9196,growing,0.2147,0.3333,True,1
+45,45_legged robot_legged_desired trajectory_trajectory,19,9,20.23,0.8541,2021.6,0.955,saturated,0.0,0.9392,True,0
+46,46_module_signal_household_internet things,38,12,43.78,0.2967,2019.9,0.9876,mature,0.353,0.8679,True,0
+47,47_fault_health_state_data,24,11,64.91,0.1542,2031.0,0.9046,growing,0.2557,0.3697,True,4
+48,48_rehabilitation_exoskeleton_training_module,31,11,93.0,0.2078,2029.5,0.9723,growing,0.1948,0.3333,True,0
+49,49_circuit_power_battery_supply,31,11,76.33,0.2347,2027.7,0.9707,growing,0.2155,0.4061,True,0
+50,50_image_detection_monitoring_human,30,10,32.68,0.6237,2021.5,0.9789,saturated,0.0,0.9181,True,0
+51,51_pedestrian_video_target_image,28,11,29.17,0.4369,2019.8,0.9894,declining,0.1212,0.9599,True,0
+52,52_dog_robot dog_box_shaped cover,31,9,43.31,0.6381,2024.4,0.991,mature,0.0,0.7157,True,1
+53,53_image_detection_human_target,29,10,31.02,0.6962,2021.0,0.9827,saturated,0.0,0.9349,True,1
+54,54_unmanned_aerial_unmanned aerial_unmanned boat,28,12,34.54,0.3443,2021.1,0.9933,mature,0.2524,0.8106,True,0
+55,55_respective object_respective_self location_object,8,5,7.79,1.0153,2017.9,0.9739,declining,0.0,1.0266,True,0
+56,56_information pairs_pairs_ml_spatial,13,6,22.93,0.5447,2025.3,0.97,mature,0.0,0.5669,True,0
+57,57_strategy_training_network_strategy network,24,8,72.0,0.413,2028.1,0.9324,growing,0.058,0.3333,True,0
+58,58_stimuli_events_allows_end effector,5,3,5.04,2.0,2014.5,0.9972,saturated,0.0,0.9925,True,0
+59,59_breathing_mask_experiment_respirator,25,13,25.69,0.4445,2018.3,0.9928,saturated,0.108,0.9732,True,0
+60,60_target_rescue_aid_extinguishing,19,8,43.52,0.2192,2026.8,0.9768,growing,0.2452,0.4366,True,0
+61,61_food_food weight_weight_feeder,26,11,30.66,0.3313,2020.8,0.99,mature,0.2862,0.848,True,0
+62,62_electrode_measurement electrode_108_elements,9,6,10.04,0.4491,2021.2,0.9634,mature,0.0913,0.8967,True,3
+63,63_primitives_minimanipulations_actions_movements,9,7,8.4,0.4215,2014.6,0.9631,declining,0.1681,1.0709,True,0
+64,64_charging_wireless_wireless electromagnetic_electromagnetic,24,12,27.83,0.3549,2020.3,0.9875,mature,0.2502,0.8623,True,1
+65,65_social_reasoning_instruction_remote,22,10,66.0,0.3288,2028.4,0.9259,growing,0.1141,0.3333,True,4
+66,66_magnetic_powder_material_adhesive,24,10,72.0,0.2246,2030.0,0.8912,growing,0.1836,0.3333,True,0
+67,67_dance_music_playing_piano,21,12,55.31,0.1323,2031.0,0.9471,growing,0.2792,0.3797,True,0
+68,68_animation_bone_skeleton_digital,16,8,48.0,0.1944,2030.5,0.8233,growing,0.2037,0.3333,True,0
+69,69_embodiments_agricultural_various embodiments_interfaces,17,10,17.52,0.4121,2020.1,0.9824,saturated,0.1706,0.9703,True,0
+70,70_elevator_main elevator_floor_secondary elevator,23,12,34.94,0.2313,2023.7,0.9555,mature,0.3536,0.6582,True,0
+71,71_moving_double mechanical_mechanical_double,22,9,66.0,0.2831,2028.1,0.9694,growing,0.1446,0.3333,True,1
+72,72_cleaning_mechanism_chassis_cleaning mechanism,22,9,31.38,0.2868,2023.6,0.9592,mature,0.2989,0.701,True,0
+73,73_power_supply_power supply_battery,18,8,21.91,0.3493,2021.3,0.9735,mature,0.2477,0.8217,True,1
+74,74_target_foot_state data_landing,13,5,13.24,1.1884,2021.5,0.9949,declining,0.0,0.9821,True,2
+75,75_chair_group_handle_movable,19,10,19.12,0.3164,2017.1,0.9781,declining,0.3649,0.9938,True,0
+76,76_elements_elements articulation_articulation_given,5,4,5.1,0.8475,2013.9,0.9356,saturated,0.0,0.9798,True,4

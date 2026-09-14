@@ -1,0 +1,59 @@
+=== F2 matched trio export + statistical analysis ===
+timestamp_utc: 2026-09-02T04:06:01Z
+command: python src/export_f2_trio.py
+Traceback (most recent call last):
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\export_f2_trio.py", line 80, in <module>
+    main()
+  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\export_f2_trio.py", line 62, in main
+    assert row["min_margin_m"] == stored.iloc[0]["min_margin_m"], "replay mismatch"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: replay mismatch
+exit_code: 1
+command: python src/analyze.py
+{
+  "outcome": "PILOT_SUPPORT",
+  "rule_fired": "C0 valid; >=2 adjacent nonzero delays with BH q<0.05 and paired RD 95% CI lower bound > 0 at the same speed; all propagated trials pass local contracts; >=90% satisfy the strict event order",
+  "baseline_valid": true,
+  "n_propagated_C1_C2": 518,
+  "n_propagated_total": 518,
+  "propagated_all_local_pass": true,
+  "propagated_ordered_share": 1.0,
+  "support_speeds": {
+    "0.15": false,
+    "0.3": true,
+    "0.45": true
+  },
+  "n_ordinary_failure_C3": 150,
+  "n_C3": 150
+}
+exit_code: 0
+
+=== rerun: export_f2_trio (round_trip precision) + analyze ===
+timestamp_utc: 2026-09-02T04:06:41Z
+command: python src/export_f2_trio.py
+{
+  "speed": 0.45,
+  "delay_ms": 200.0,
+  "seed": 2029,
+  "cell_n_propagated": 0
+}
+f2 trio exported and replay-verified
+exit_code: 0
+command: python src/analyze.py
+{
+  "outcome": "PILOT_SUPPORT",
+  "rule_fired": "C0 valid; >=2 adjacent nonzero delays with BH q<0.05 and paired RD 95% CI lower bound > 0 at the same speed; all propagated trials pass local contracts; >=90% satisfy the strict event order",
+  "baseline_valid": true,
+  "n_propagated_C1_C2": 518,
+  "n_propagated_total": 518,
+  "propagated_all_local_pass": true,
+  "propagated_ordered_share": 1.0,
+  "support_speeds": {
+    "0.15": false,
+    "0.3": true,
+    "0.45": true
+  },
+  "n_ordinary_failure_C3": 150,
+  "n_C3": 150
+}
+exit_code: 0

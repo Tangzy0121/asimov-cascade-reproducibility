@@ -1,0 +1,101 @@
+{
+  "_note": "Key numbers for Asimov Cascade ICRA 2027 paper. All values from pipeline outputs.",
+  "data": {
+    "total_patents": 781,
+    "year_range": "2009-2026",
+    "countries": {"CN": 611, "Other": 87, "IN": 23, "US": 22, "JP": 12, "KR": 8, "DE": 5, "GB": 4, "FR": 3, "EP": 1},
+    "english_claims": 591,
+    "filtered_pre2006": 27,
+    "filtered_short_text": 1
+  },
+  "bertopic": {
+    "n_topics": 65,
+    "n_noise": 1,
+    "embedding_model": "all-MiniLM-L6-v2",
+    "min_cluster_size": 5,
+    "n_neighbors": 5,
+    "min_samples": 3
+  },
+  "stm": {
+    "K": 12,
+    "egami_split": 0.7,
+    "sig_C2_topics": 3,
+    "sig_C10_topics": 3,
+    "sig_total": 6
+  },
+  "safety": {
+    "n_safety_topics": 18,
+    "n_cascade_candidates": 6,
+    "classification_mode": "hybrid",
+    "categories": {
+      "collision_protection": 6,
+      "force_control": 4,
+      "impedance_compliance": 3,
+      "fail_safe_emergency": 3,
+      "safety_monitoring": 3,
+      "fault_detection": 3,
+      "stability_balance": 2,
+      "safe_control": 2,
+      "thermal_management": 1
+    }
+  },
+  "temporal_trends": {
+    "n_growing": 30,
+    "n_declining": 12,
+    "n_emerging": 5,
+    "n_sporadic": 9,
+    "n_stable": 9
+  },
+  "lifecycle": {
+    "n_growing": 15,
+    "n_mature": 17,
+    "n_declining": 11,
+    "n_saturated": 13,
+    "n_nascent": 9,
+    "safety_declining": 2,
+    "fit_reliable": 56
+  },
+  "cascade_v4": {
+    "n_HIGH": 3,
+    "n_MEDIUM": 0,
+    "n_LOW": 15,
+    "top_signals": [
+      {"id": 2, "name": "trajectory_obstacle_members", "score": 4.000, "safety": 2, "decay": 1.00, "lifecycle": "declining", "note": "93% Non-CN patents"},
+      {"id": 32, "name": "rod_rocker_ring_cantilever", "score": 1.132, "safety": 2, "decay": 0.28, "lifecycle": "declining"},
+      {"id": 14, "name": "output_motor_speed_shaft", "score": 0.705, "safety": 2, "decay": 0.50, "lifecycle": "mature"}
+    ]
+  },
+  "granger": {
+    "n_tests": 1170,
+    "n_significant_bonferroni": "see granger_causality.csv",
+    "health_warning": "n=18 years, maxlag=2, EXPLORATORY ONLY"
+  },
+  "bursts": {
+    "n_bursts": 33,
+    "n_topics_with_bursts": 33,
+    "params": "s=3.0, min_duration>=2"
+  },
+  "tem": {
+    "n_weak_signals": 30
+  },
+  "evolution": {
+    "n_emerging": 43,
+    "n_accelerating": 7,
+    "n_persistent_decline": 8,
+    "n_safety_emerging": 11,
+    "n_safety_decline": 2,
+    "method": "density-ratio (late/early window)"
+  },
+  "urgency": {
+    "n_urgency_cascades": 2,
+    "urgency_cascade_topics": ["T2_trajectory_obstacle", "T5_member_movable"],
+    "safety_C10_mean": 0.919,
+    "all_C10_mean": 0.872,
+    "safety_C2_mean_months": 9.2,
+    "all_C2_mean_months": 9.6
+  },
+  "country_analysis": {
+    "key_finding": "T2 (top cascade signal) is 93% non-Chinese patents (26/28). Most safety topics are CN-dominated.",
+    "CN_dominance": "78% of all patents"
+  }
+}

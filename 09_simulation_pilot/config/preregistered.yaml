@@ -1,0 +1,92 @@
+# Preregistered configuration for the Topic 22 controlled propagation simulation.
+# Values copied verbatim from PREREGISTERED_PARAMETERS.md (authoritative).
+# Frozen before calibration; changes allowed only under the calibration-change rule.
+
+dynamics:
+  dt_s: 0.002
+  trial_duration_s: 8.0
+  initial_true_gap_m: 0.80
+  initial_gap_jitter_m: 0.02          # +/- paired seed variation
+  d_safe_m: 0.20
+  max_accel_mps2: 1.0
+  max_decel_mps2: 2.0
+  command_start_jitter_s: 0.02        # +/- paired seed variation
+  contact_stiffness_npm: 2500.0       # synthetic Kelvin-Voigt stiffness (simulation proxy only)
+  contact_damping_ns_per_m: 50.0      # synthetic damping (simulation proxy only)
+
+modules:
+  perception_period_s: 0.020
+  planner_period_s: 0.020
+  safety_period_s: 0.010
+  controller_period_s: 0.005
+  perception_noise_sigma_m: 0.002
+
+contracts:
+  perception_contract_abs_error_m: 0.010
+  controller_contract_abs_velocity_error_mps: 0.030
+  safety_buffer_m: 0.020
+  margin_breach_min_duration_s: 0.010
+  approach_velocity_min_for_breach_mps: 0.050
+  # matched safety trigger: d_trigger = d_safe + v^2 / (2 * max_decel) + safety_buffer
+  # local monitor correctness is judged against the values it actually receives;
+  # global safety uses current ground truth.
+
+grids:
+  approach_speed_mps: [0.15, 0.30, 0.45]
+  perception_delay_ms: [0, 25, 50, 75, 100, 150, 200]
+  threshold_offset_m: [-0.06, -0.03, 0.0, 0.03, 0.06]
+  main_repeats_per_cell: 50
+
+seeds:
+  calibration_seeds: [1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009]
+  main_seed_start: 2000
+  main_seed_end: 2049
+  # common random numbers: same seed must generate the same initial gap, noise stream,
+  # command jitter, and physical variation across matched conditions.
+
+trial_counts:
+  C0: 150    # 3 speeds x 50 seeds
+  C1: 900    # 3 speeds x 6 nonzero delays x 50
+  C2: 600    # 3 speeds x 4 nonzero threshold offsets x 50
+  C3: 150    # 3 speeds x 50
+  C4: 1500   # matched rescue for every C1 and C2 cell
+  total: 3300
+
+c3_fault:
+  perception_bias_m: 0.08            # +0.08 m perception bias
+  bias_duration_s: 0.25              # for 0.25 s; exceeds 0.010 m perception contract by construction
+
+c4_rescue:
+  c1_age_gate_ms: 25.0               # reject perception samples older than 25 ms
+  c1_on_gate_violation: conservative_stop
+  c2_shared_threshold_check: true    # when thresholds differ, both use the more conservative threshold
+  c2_log_reconciliation_event: true
+
+safety_margin:
+  # margin(t) = true_gap(t) - d_safe
+  # breach: margin < 0 continuously for >= margin_breach_min_duration_s while still approaching
+  # (approach speed >= approach_velocity_min_for_breach_mps)
+
+propagation_event_order:
+  # PROPAGATED requires ALL of the following, in strict temporal order:
+  # 1. interface mismatch present (data age > 0 for C1, or threshold offset != 0 for C2)
+  # 2. safety trigger delayed relative to the speed/seed-matched C0 baseline
+  # 3. positive (approach) control output persists during the delay
+  # 4. global safety margin breach follows
+  # 5. ALL local contracts pass throughout
+  # any local contract failure forbids the PROPAGATED label.
+
+outcome_classification:
+  PILOT_SUPPORT: >
+    C0 valid; at the same speed, at least two adjacent nonzero delays each satisfy
+    BH-corrected exact McNemar q < 0.05 and paired risk-difference 95% CI lower bound > 0
+    against the paired C0; all trials counted as propagated pass local contracts, and
+    at least 90% of them satisfy the strict event order.
+  CONTAINED: >
+    no propagation observed within the preregistered mismatch range, and baseline,
+    sensitivity, and numerical checks are valid.
+  ORDINARY_FAILURE: >
+    unsafe outcome accompanied by at least one local contract failure.
+  UNRESOLVED: >
+    baseline itself unsafe, numerical instability, results depend on post-hoc tuning,
+    or verification fails.

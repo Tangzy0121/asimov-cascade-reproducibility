@@ -1,0 +1,92 @@
+[
+  {
+    "role": "positive_collision",
+    "topic_name": "2_trajectory_obstacle_members_upper members",
+    "topic_keywords": "trajectory, obstacle, members, upper members, robot adapted, collision, safety zone, avoidance obstacle",
+    "representative_doc": "The invention relates to a humanoid robot which can move on its lower limb to execute a trajectory. According to the invention, the robot is capable of detecting intrusion of obstacles in a safety zone defined around its body as a function of its speed.",
+    "safety_score": 5,
+    "safety_category": "collision_protection",
+    "rationale": "Explicitly describes obstacle detection in a safety zone and collision avoidance for a humanoid robot."
+  },
+  {
+    "role": "positive_force_control",
+    "topic_name": "3_impedance_force_control_contact force",
+    "topic_keywords": "impedance, force control, contact force, compliance control, foot end, humanoid robot",
+    "representative_doc": "The invention monitors the contact force vector and sliding trend in real time through multi-dimensional tactile sensors. A three-level tactile response layer is used to dynamically switch the force/position mixed impedance mode.",
+    "safety_score": 4,
+    "safety_category": "impedance_compliance",
+    "rationale": "Monitors contact force and switches impedance mode to ensure safe human-robot physical interaction."
+  },
+  {
+    "role": "positive_injury_prevention",
+    "topic_name": "16_elements_26_given_skin",
+    "topic_keywords": "elements, skin, flexible, humanoid type, outer surface, contact, movement given range",
+    "representative_doc": "The invention relates to the safety of use of a humanoid-type robot. The two elements each comprising a skin delimiting the outer surface thereof, the articulation allowing movement in a given range, a first element being intended to come substantially into contact with a region of the skin of a second element.",
+    "safety_score": 4,
+    "safety_category": "injury_prevention",
+    "rationale": "Flexible skin and controlled contact range are designed to prevent injury during humanoid robot motion."
+  },
+  {
+    "role": "positive_force_switch",
+    "topic_name": "19_elements_abutment_elements articulation_articulation",
+    "topic_keywords": "elements, abutment, articulation, switch, contact, force exerted, exceeds given force",
+    "representative_doc": "A humanoid-type robot comprises two elements and an articulation. The switch is configured to actuate an electrical contact when a force exerted by the first element against the abutment exceeds a given force.",
+    "safety_score": 4,
+    "safety_category": "force_control",
+    "rationale": "Force-threshold switch stops excessive force at a joint, directly protecting humans and hardware."
+  },
+  {
+    "role": "positive_fail_safe",
+    "topic_name": "40_disaster_factory_disaster relief_relief",
+    "topic_keywords": "disaster, emergency, safety control, braking, stop, torque control, humanoid robot",
+    "representative_doc": "The invention provides an emergency shutdown control method of a wheeled humanoid robot in an industrial scene. When receiving the emergency stop signal, collect state information and determine emergency braking parameters.",
+    "safety_score": 5,
+    "safety_category": "fail_safe_emergency",
+    "rationale": "Emergency shutdown and braking control for humanoid robot in industrial scene."
+  },
+  {
+    "role": "positive_emergency_stop",
+    "topic_name": "56_emergency stop_emergency_stop_stop control",
+    "topic_keywords": "emergency stop, emergency, stop control, stop switch, protection button, quadruped robot",
+    "representative_doc": "The utility model discloses a multi-mode emergency stop mechanism of a quadruped robot. The robot is provided with three emergency stop modes: a line emergency stop switch, a power supply emergency stop switch and an instruction emergency stop switch.",
+    "safety_score": 5,
+    "safety_category": "fail_safe_emergency",
+    "rationale": "Multi-mode emergency stop mechanism explicitly for robot safety."
+  },
+  {
+    "role": "negative_privacy",
+    "topic_name": "6_image_monitoring_human_face",
+    "topic_keywords": "image, monitoring, human face, security, camera, face recognition, safety helmet",
+    "representative_doc": "The invention discloses a method for rapidly calculating identity characteristics of privacy security. Multi-channel monitoring cameras collect videos and each AI analysis box processes real-time image frames.",
+    "safety_score": 0,
+    "safety_category": "not_safety",
+    "rationale": "Surveillance/identity recognition for privacy security, not a humanoid robot safety mechanism that protects humans from robot hazards."
+  },
+  {
+    "role": "negative_ar_vr",
+    "topic_name": "37_planning_unit_user_virtual",
+    "topic_keywords": "planning, virtual, ar vr, risk value, hand device, interactive terminal",
+    "representative_doc": "A humanoid robot based on AR/VR. The hybrid interactive terminal recognizes user instructions to control the robot body, and at the same time provides somatosensory feedback to the user.",
+    "safety_score": 0,
+    "safety_category": "not_safety",
+    "rationale": "AR/VR human-robot interaction and planning; risk value is mentioned but not as an explicit safety control mechanism."
+  },
+  {
+    "role": "negative_elevator",
+    "topic_name": "59_elevator_suspected_connecting_human shaped",
+    "topic_keywords": "elevator, human shaped, real humanoid, construction elevator, identification, video image",
+    "representative_doc": "The invention provides an elevator lifting intelligent identification system. The acquisition module receives an elevator starting signal and acquires a video image in an elevator car.",
+    "safety_score": 0,
+    "safety_category": "not_safety",
+    "rationale": "Elevator passenger identification for safety monitoring, not a humanoid robot mechanism."
+  },
+  {
+    "role": "negative_actuator",
+    "topic_name": "5_member_movable_movable element_element 200",
+    "topic_keywords": "member, movable, element, compact actuator, force control, device",
+    "representative_doc": "The utility model discloses a compact actuator device, comprising a motor, a reducer and a transmission mechanism. The device has the advantages of compact structure and large output torque.",
+    "safety_score": 0,
+    "safety_category": "not_safety",
+    "rationale": "Generic actuator hardware; no explicit humanoid robot safety or human-protection purpose."
+  }
+]

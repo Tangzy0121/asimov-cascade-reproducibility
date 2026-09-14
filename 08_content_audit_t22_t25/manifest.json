@@ -1,0 +1,19 @@
+{
+  "seed": 20260902,
+  "retest_n": 18,
+  "source_files": {
+    "<project>/HelpCC\\kimi_family_id_audit\\work\\corrected\\family_representatives.csv": "662024420a189d629b9a901f4dc4bde3d848d3978eaa7deae0c3a08376c0f80a",
+    "<project>/PatSense\\Cascade\\data\\humanoid_safety_patents_v5_clean.xlsx": "721ebbc30a8915bc64ffce2cefe6cf645ee109379a97c9cc41d96fb3331131ca"
+  },
+  "outputs": {
+    "01_round1_blinded_review.xlsx": "9e0b0983f4b481ac34930fb11f8268abce8accc819150ea2e6d66ccf5db637aa",
+    "02_round2_delayed_retest.xlsx": "ed26e0876173cfd4b36348b4a06f453f1fb4a868820770e022eb5b6aa06da90f",
+    "99_DO_NOT_OPEN_topic_key.xlsx": "4f20c69372247bb7868d3d9823a4b3d481f94ec807fb29af6f25c634dc7314e5"
+  },
+  "counts": {
+    "round1": 87,
+    "round2": 18,
+    "topic_22": 49,
+    "topic_25": 38
+  }
+}

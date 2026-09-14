@@ -1,0 +1,8 @@
+Task,n,DeepSeek-chat,GPT-5 (SOTA),Gemini 2.5 Pro,Opus 4.1,Gap vs SOTA,Paper Source
+v2-Injury Q1 Latent Risk,319,76.8%,92.3%,~90%,~88%,-15.5pp,arXiv 2509.21651
+v2-Injury Q2 Latent Severity,319,65.8%,—,—,—,—,
+v2-Injury Q3 Effect (Action Safety),319,69.0%,~74%,—,—,-5pp,arXiv 2509.21651
+v2-Injury Q4 Activated Risk,319,63.6%,—,—,—,—,
+v2-Injury All 4 Correct,319,36.7%,—,—,—,—,
+v1-Injury Binary Undesirable,304,92.8%,84.3%,—,—,+8.5pp,arXiv 2503.08663
+v1-Dilemmas Scifi Per-Action,189,85.2%,—,—,—,—,—
