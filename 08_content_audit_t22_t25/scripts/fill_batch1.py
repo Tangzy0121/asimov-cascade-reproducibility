@@ -266,6 +266,65 @@ ROWS = {
     ],
 }
 
+# --- English glosses (NOT written to the workbook) ---
+# Each row above contains two Chinese strings that are audit data written
+# verbatim into 01_round1_blinded_review.xlsx; they are preserved unchanged so
+# this script reproduces the recorded blinded review exactly:
+#   - column W (quote): a verbatim quote from the original patent claim or
+#     abstract, mostly Chinese-language patent text, kept as audit evidence;
+#   - column X (reason): the reviewer's coding rationale, recorded in Chinese.
+# Faithful English translations are given below, keyed by worksheet row, so
+# that English-speaking reviewers can read the evidence and the rationale.
+# Quotes that are already in English in the data are not repeated.
+EN_GLOSS = {
+    2: {
+        "quote": "The limits of the variable motion parameters are predefined in such a way that every variable of the motion parameters ensures safe human-robot collaboration; if an abnormal state of the human collaborator is detected, at least one motion parameter is automatically changed toward its lower limit.",
+        "reason": "The main function is interactive online adjustment of motion parameters (programming convenience), but the parameter limits are explicitly predefined to 'ensure safe human-robot collaboration', and detecting an abnormal state of the collaborating human automatically lowers the parameter toward its limit; safety is an important component rather than the sole main function, hence PARTIAL+MIXED. Detecting the human's position, judging the abnormality, and reducing speed to the lower limit: all three steps of the chain are present in the text.",
+    },
+    3: {
+        "quote": "jaws capable of applying a positioning force to the positioning drive (64) of the base (16), the permissible limit force not exceeding ...",
+        "reason": "The claimed subject is a gripping/clamping unit (end effector), not a robot system, so NON_ROBOT per the codebook. The distinguishing feature is the limited positioning drive force (limit force not exceeded), a force-limiting protective design with a plausible downstream anti-pinch path in HRC use, though the text does not explicitly mention human injury; there is no sensing/detection or threshold-judgment wording. The force-limiting safety feature is the point of invention, hence IN_SCOPE.",
+    },
+    4: {
+        "quote": "Workstation (1) ... providing several zones for human-robot collaboration (MRK) with different levels of hazard posed by the industrial robot (4) to the operator; Abstract: Contact between the worker (5) and the industrial robot (4) is possible.",
+        "reason": "The workstation is divided into zones of different risk levels according to how hazardous the robot is to the operator; the hazard zoning itself is the main technical content (DIRECT). The abstract explicitly states that the worker's and robot's work areas overlap and that contact is possible, so the link to human injury is explicit. Managing risk through hazard zoning is an organizational hazard-limitation measure, barrier=YES. The text has no sensing, judgment, or protective-response step.",
+    },
+    5: {
+        "quote": "a plurality of tactile sensors arranged on the robot body to detect contact ... determining a safety action based on the tactile data; and, in response to the detected contact, controlling the robot body to perform the safety action; Abstract: The safety action may comprise retracting the robot body away from a detected contact point.",
+        "reason": "Modular robot skin: tactile sensing detects contact, a safety action is determined from the tactile data, and the safety action is executed (the abstract's example is retracting away from the detected contact point); all three steps of the complete mechanism chain are YES. The text explicitly states 'safe human-robot interaction' as the purpose, and contact detection is directly tied to human collision protection.",
+    },
+    6: {
+        "quote": "when the detected external force is at or above a first threshold, the control device stops the motion of the robot, and when the detected external force is at or above a second threshold that exceeds the first threshold, a warning is issued.",
+        "reason": "External-force sensing, two-threshold comparison, then stop + warning (MULTIPLE=STOP+WARNING): a complete mechanism chain. The stated purpose is to prevent robot overload (including use by unskilled operators); human injury is a plausible downstream path but is not explicitly stated, hence harm=INDIRECT.",
+    },
+    7: {
+        "quote": "a determination unit that determines a work type relating to the object; and a control unit that controls the attachment operation of the tool corresponding to the work type determined by the determination unit.",
+        "reason": "The content is task control that automatically changes tools according to the work type, with no safety mechanism (NOT_SAFETY/OFF_TOPIC). Work-type determination is classification judgment, hence decision=YES. Determination-unit output feeding the control unit is a normal control flow; per the calibration convention it is not coded as explicit cross-subsystem propagation, so PLAUSIBLE_ONLY.",
+    },
+    8: {
+        "reason": "Warehouse robot scheduling: when preset conditions are met, the load-carrying mechanisms of two robots in adjacent cells are controlled into a vertically staggered arrangement; this is logistics/scheduling with no safety mechanism (the 'human-robot' wording in the abstract is a mistranslation of robot scheduling). 'Preset conditions met' is a control-condition judgment, hence decision=YES; there is no sensing-detection or protective-response wording.",
+    },
+    9: {
+        "quote": "when the sensor data indicates a force exceeding a threshold force, stopping the motion of the at least one of the movable parts; and, in response to the measured speed exceeding a speed limit, stopping the motion of the at least one of the movable parts; Abstract: haptic warning and proximity sensing.",
+        "reason": "Force-threshold stop + overspeed stop (claim); the abstract additionally specifies haptic warning and proximity sensing, hence sensing=BOTH and action=MULTIPLE (STOP+WARNING). Complete mechanism chain aimed at HRC safety protection; the human-injury path is plausible but the text does not explicitly mention injury, harm=INDIRECT.",
+    },
+    10: {
+        "quote": "the robot axes have an integrated detection sensor system (11) for the load acting on the respective robot axis (I-VII), and a personal-protection device (4) is additionally arranged in the region of the machining tool (3).",
+        "reason": "HRC industrial robot: force-controlled axes with integrated load-detection sensing (sensor=YES; force control implies a control condition, decision=YES), plus a personnel-protection device near the machining tool, so personnel protection is explicit (harm=DIRECT). The protection device's specific action type is not described in the text, coded OTHER.",
+    },
+    11: {
+        "reason": "Shared human-robot workspace: a first force-detection part measures the external force, it is compared with a threshold (during manual operation the operating force measured by a second detection part is subtracted), and the robot is moved in the direction that reduces the external force or is stopped (MULTIPLE=RETREAT+STOP). Safety-assurance operation is the main function; the external force involves a human but injury is not explicitly stated, harm=INDIRECT.",
+    },
+    12: {
+        "quote": "determining a probability that each task step in the task-step list corresponds to an action of the human in the scene captured by the sensor; and determining a predicted next intent step based on the probabilities.",
+        "reason": "Intent tracking: vision captures the scene and detects objects, predicts the human's next intent step, and executes the corresponding operation. The codebook explicitly lists intent tracking as OFF_TOPIC; no safety language (NOT_SAFETY). Detecting the person's action gives sensor=YES (vision, hence sensing=OTHER); the intent/probability judgment gives decision=YES; no protective response.",
+    },
+    13: {
+        "quote": "determining, with an automated evaluation module, a permissible process speed (v_zul) (38) for the path; comparing the actual process speed (v_POI, v_TCP) with the permissible process speed (v_zul); Abstract: optionally body zones or body parts at risk of collision are specified.",
+        "reason": "HRC process monitoring: the layout and collaboration zones are recorded and the motion path is detected, the evaluation module determines the permissible process speed, and it is compared with the actual speed. The abstract explicitly specifies body parts at risk of collision (harm=DIRECT). The mechanism is speed-and-separation monitoring based on the spatial layout/zones (PROXIMITY_SEPARATION). The claim steps stop at the speed comparison with no protective-action wording, response=NO.",
+    },
+}
+
 wb = openpyxl.load_workbook(PATH)
 ws = wb["01_REVIEW"]
 for r, vals in ROWS.items():

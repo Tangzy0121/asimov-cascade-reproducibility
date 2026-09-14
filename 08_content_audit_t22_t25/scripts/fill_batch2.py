@@ -263,6 +263,66 @@ ROWS = {
     ],
 }
 
+# --- English glosses (NOT written to the workbook) ---
+# Each row above contains two Chinese strings that are audit data written
+# verbatim into 01_round1_blinded_review.xlsx; they are preserved unchanged so
+# this script reproduces the recorded blinded review exactly:
+#   - column W (quote): a verbatim quote from the original patent claim or
+#     abstract, mostly Chinese-language patent text, kept as audit evidence;
+#   - column X (reason): the reviewer's coding rationale, recorded in Chinese.
+# Faithful English translations are given below, keyed by worksheet row, so
+# that English-speaking reviewers can read the evidence and the rationale.
+# Quotes that are already in English in the data are not repeated.
+EN_GLOSS = {
+    14: {
+        "quote": "at least one imaging device directed at the collaborative workspace for individually tracking the position of a human body member within the collaborative workspace; wherein the controller is configured to guide, based on the individually tracked position of the body member performing the at least one manually performed operation, the motion of the at least one robot performing the at least one robot operation.",
+        "reason": "The imaging device individually tracks the body member's position and the controller guides the robot's motion accordingly: a proximity-monitoring HRI mechanism (IN_SCOPE). But no safety language appears in the text; the tracking serves simultaneous human-robot operation rather than explicitly stated protection, so safety relevance is coded PARTIAL; there is no explicit protective action (slowdown/stop etc.), response=NO; the hazard-blocking effect is not explicitly stated, barrier=UNCLEAR.",
+    },
+    15: {
+        "quote": "the industrial robot (8) has a plurality of robot axes (I-VII), each robot axis having a sensor for detecting path and/or position and for absorbing externally acting loads, in particular forces or moments.",
+        "reason": "A haptic industrial robot used for steering-wheel measurement (centering, measuring steering angle/hysteresis); the force/torque sensing serves measurement accuracy, not safety (cf. the codebook boundary example 'detecting external force to improve trajectory accuracy'), hence INCIDENTAL+OFF_TOPIC. Load sensing and force-controlled axes give sensor/decision=YES; no protective response.",
+    },
+    16: {
+        "quote": "monitoring a region (15) of the robot (11) and detecting an intrusion that penetrates into the region (15) from an object (13) located in the region (15), such that the robot (11) endangers the respective object (13) ... determining a modified speed profile on the basis of the frequency (k) determined for each segment.",
+        "reason": "In HRC, the robot's region is monitored and penetrating intrusions are detected (the robot endangering an object), the intrusion frequency is tallied per segment, and the speed profile is modified for subsequent control; hazard reduction is the main technical function (DIRECT) and the protective action is slowing down (SLOW). The text says 'object' and does not explicitly state human injury, harm=INDIRECT.",
+    },
+    17: {
+        "quote": "determining a probability that each task step in the task-step list corresponds to an action of the human in the scene captured by the sensor; and determining a predicted next intent step based on the probabilities.",
+        "reason": "Intent tracking (identical claim text to another record in the material package, a same-family duplicate): vision captures the scene, predicts the human's next intent step, and executes the operation; the codebook explicitly lists intent tracking as OFF_TOPIC and there is no safety language. Detecting the person's action gives sensor=YES (vision, hence sensing=OTHER); the intent/probability judgment gives decision=YES; no protective response.",
+    },
+    18: {
+        "quote": "configuring the robot system on the basis of the detected forces and torques and the desired forces of the manipulator model, and controlling target torques.",
+        "reason": "Force/torque sensing plus deviation-type control against modeled target torques; the abstract claims suitability for HRC, but the claim states no safety use (collision detection/protection), so safety relevance is INCIDENTAL; the contact context (whether the contacted object is a person or a thing) is unclear from the text, contact=UNCLEAR; the protective blocking effect is not explicitly stated, barrier=UNCLEAR. Force perception is the essence; the coding relies mainly on indirect cues, confidence LOW.",
+    },
+    19: {
+        "quote": "the conveying device is formed as a gravity conveyor and a downwardly inclined conveyor on which the industrial robot is mounted, arranged so as to be movable by its own weight.",
+        "reason": "An industrial robot mounted on a gravity conveyor track and moved by its own weight: a purely mechanical/logistics arrangement with no safety mechanism, sensing, or judgment step at all.",
+    },
+    20: {
+        "quote": "one or more robot axes (I-VII) with integrated power control or force control, detection sensors (11) for the load acting on the respective robot axis (I-VII), and additionally a personal-protection device (4) arranged in the die-machining region (3), comprising an actuator (5) with activation and deactivation.",
+        "reason": "HRC industrial robot: force-controlled axes with integrated load detection (sensor=YES; force control implies a control condition, decision=YES), plus an activatable/deactivatable personnel-protection device in the machining area, so personnel protection is explicit (harm=DIRECT). The protection device's specific action type is not described, coded OTHER. Same family as another record in the material package (with the additional actuator-activation feature).",
+    },
+    21: {
+        "reason": "A safety system used together with a robot: the position/timing information of the planned trajectory is delivered to the HRC environment as visual and/or auditory signals, i.e. warning-type protection (WARNING, response=YES). The information comes from the controller's planned trajectory rather than from sensed detection, so sensor=NO and decision=NO. Aimed at HRC safety warning, IN_SCOPE. The claim is a poorly translated utility-model text, confidence MEDIUM.",
+    },
+    22: {
+        "quote": "providing a robot (2) having at least two articulated arms (21, 22), a screw unit with a screw tool being arranged on each articulated arm ... inserting the helical blade into the receiving device to form a form-fitting connection, and manipulating the component by means of the manipulator.",
+        "reason": "An assembly method in which a dual-arm robot manipulates components with screw units; workpiece-oriented, with no safety mechanism, sensing, judgment, or protection step.",
+    },
+    23: {
+        "quote": "a sensor arranged on a support table, in a human-collaborative robot system, characterized in that the sensor detects a person intruding into the working range of the robot.",
+        "reason": "The claim's distinguishing feature is a sensor that detects a person intruding into the robot's working range; safety detection is the point of invention (DIRECT). Intrusion determination is state judgment, decision=YES. The provided claim/abstract text stops at the detection step and contains no protective-action wording, response=NO; the blocking effect of detection alone is not explicitly stated, barrier=UNCLEAR.",
+    },
+    24: {
+        "quote": "when the external force detected by the external-force detection part is greater than a first threshold, an avoidance-motion instruction part (22) that instructs an avoidance motion moving in the direction of decreasing the external force ... an avoidance-operation stop part (24) that stops the avoidance operation when the avoidance region is left.",
+        "reason": "Shared human-robot workspace: external-force detection, exceeding the first threshold, then avoidance is instructed in the direction that reduces the external force (RETREAT); an avoidance region and a stop part are provided to prevent excessive retreat caused by false detections. Complete mechanism chain; the external force involves a human shared space but injury is not explicitly stated, harm=INDIRECT.",
+    },
+    25: {
+        "quote": "a safety-degree generation part that evaluates a safety degree based on the captured-image information of the user and generates, according to the safety degree, a region that includes a preset interaction region between the user and the surrounding motion-performing body ... a motion-instruction part that prescribes the respective motion speeds of the motion-performing body in these regions.",
+        "reason": "Explicitly aimed at 'safe and flexible human-robot contact' (abstract): the user's position/posture is computed from captured-image information, zones around the user are generated according to the safety degree, and motion speeds are prescribed per zone (SLOW). Contact with the user is explicit (harm=DIRECT); complete mechanism chain, IN_SCOPE.",
+    },
+}
+
 wb = openpyxl.load_workbook(PATH)
 ws = wb["01_REVIEW"]
 for r, vals in ROWS.items():

@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 # ============================================================================
 # run_stm_phase3.py  |  Tier 1 (active)
 # Purpose : Python bridge that builds stm_input.csv and runs the STM (K=12) Egami analysis in R.
@@ -37,7 +37,7 @@ set_style(font_scale=1.1)
 OUT = Path('output/time_analysis/04_stm')
 OUT.mkdir(parents=True, exist_ok=True)
 STM_R = Path(r'<project>/PatSense/Cascade/STM_R/run_stm_phase3.R')
-RSCRIPT = 'E:/R-4.6.0/bin/Rscript.exe'
+RSCRIPT = 'Rscript'  # assumes Rscript is on PATH; set an absolute path here if needed
 
 
 # ============================================================
@@ -66,6 +66,8 @@ def generate_stm_input():
         auth = df['Publication Authority'].astype(str).str.strip()
     else:
         auth = df.get('country_simple', pd.Series(['Other'] * len(df)))
+    # incoPat publication-authority labels (Chinese keys), matched verbatim
+    # against the raw export
     mapping = {'China': 'China', 'India': 'India', 'United States': 'US',
                '中国': 'China', '美国': 'US', '印度': 'India',
                '日本': 'Japan', '韩国': 'Korea', '德国': 'Germany',

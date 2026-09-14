@@ -139,7 +139,7 @@ def main():
     # --- Frozen baseline assignments (READ ONLY) ---
     base_assign = pd.read_csv(FROZEN / 'document_topic_assignment.csv')
     assert list(base_assign['patent_number']) == patent_numbers, \
-        'Baseline assignment order mismatch — dataset口径不一致'
+        'Baseline assignment order mismatch — dataset does not match'
     base_topic = base_assign['topic'].to_numpy()
     base_topics = sorted(t for t in set(base_topic) if t != -1)
     base_sets = {t: set(base_assign.loc[base_topic == t, 'patent_number'])

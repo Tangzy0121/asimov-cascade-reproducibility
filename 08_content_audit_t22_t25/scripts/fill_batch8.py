@@ -9,6 +9,12 @@ import openpyxl
 PATH = "01_round1_blinded_review.xlsx"
 TODAY = datetime.date.today().isoformat()
 
+# Each value list: coding values and an evidence-source tag, then two free-text
+# fields: (1) a verbatim claim/abstract excerpt quoted from the source patent
+# record, kept in the original language exactly as exported for traceability, and
+# (2) the reviewer's rationale note in Chinese, with an English gloss in the
+# "# EN:" comment line directly beneath it. The trailing fields are confidence,
+# coding time (minutes), and coding date.
 ROWS = {
    86: [
       "COMPLETE",
@@ -27,6 +33,7 @@ ROWS = {
       "FIRST_CLAIM",
       "the stop instruction by the said detecting part detects the physical quantity with a first threshold value and…second threshold value…respectively comparing…stops, and the physical quantity is more than the second threshold value, the robot than stopping method of the predetermined short time interval",
       "人协调机器人共享作业空间：检测随接触力变化的物理量→与第一/第二阈值分别比较→超第一阈值按预定方式停止、超第二阈值以更短時間间隔急停（分级 STOP）。完整机制链，接触力涉人共享空间但未明言伤害，harm=INDIRECT。",
+      # EN: Human-coordination robot sharing a workspace: a physical quantity that varies with contact force is detected -> compared against first/second thresholds -> exceeding the first threshold stops the robot in a predetermined manner, exceeding the second threshold triggers an emergency stop at shorter time intervals (graded STOP). Complete mechanism chain; contact force involves a shared human workspace but injury is not explicitly stated, so harm=INDIRECT.
       "HIGH",
       4,
       TODAY,
@@ -48,6 +55,7 @@ ROWS = {
       "FIRST_CLAIM",
       "when a detected value of said force sensor exceeds a predetermined value, stopping said robot or controlling operation of said robot so that a detected value of said force sensor becomes smaller…a limiter which limits a work area of said human so as to prevent contact by said human with said first robot portion",
       "人机共享区域：力传感器检测值超限→停止或控制使力减小（STOP+LIMIT_FORCE），另设限制器限制人的工作区域以防止人与机器人第一部份接触（ISOLATE），action=MULTIPLE。明确防止人体接触，harm=DIRECT。",
+      # EN: Shared human-robot area: force-sensor reading over limit -> stop or control the robot so the force decreases (STOP+LIMIT_FORCE); additionally, a limiter restricts the human's work area to prevent contact with the robot's first portion (ISOLATE); action=MULTIPLE. Prevention of human-body contact is explicit, so harm=DIRECT.
       "HIGH",
       5,
       TODAY,
@@ -69,6 +77,7 @@ ROWS = {
       "FIRST_CLAIM",
       "如果所监测的操作参数偏离所需状态，则通过自给的第二辅助真空源(20, 26)在抽吸夹持器(12)中产生辅助负压",
       "人机协作真空搬运装置：搬运中监测状态变量（真空压力类，sensing=FORCE_TORQUE）→偏离所需状态时自给辅助真空源产生辅助负压保持工件（故障应急保持，ISOLATE_OR_FALLBACK），防掉件的故障响应是主要安全功能（DIRECT）。掉件伤人路径合理但未明言，harm=INDIRECT。主体为真空搬运装置而非机器人系统，NON_ROBOT。",
+      # EN: Human-robot collaborative vacuum handling device: during transport, state variables (vacuum-pressure type, sensing=FORCE_TORQUE) are monitored -> on deviation from the required state, a self-contained auxiliary vacuum source generates auxiliary negative pressure to hold the workpiece (emergency hold on fault, ISOLATE_OR_FALLBACK); the fault response preventing workpiece drop is the main safety function (DIRECT). A dropped-workpiece injury pathway is plausible but not stated, so harm=INDIRECT. The subject is a vacuum handling device rather than a robot system, so NON_ROBOT.
       "MEDIUM",
       5,
       TODAY,

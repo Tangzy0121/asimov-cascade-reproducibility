@@ -1,70 +1,92 @@
-# 77 Topic 双人人工筛查标注协议(ICRA 2027 revision)
+# Protocol for Dual Human Screening and Annotation of the 77 Topics (ICRA 2027 revision)
 
-## 0. 目的
+## 0. Purpose
 
-回应审稿意见:语料经冻结筛选后仅含 77 个非噪声 BERTopic topic,全部由两名作者
-独立人工判读并报告 Cohen's kappa,取代原文 "57 unadjudicated topics" 的局限表述。
-标注标签体系沿用 P1 试点(`output/subsystem_validation/human_review/P1_topic_safety_reviewed.csv`)
-与论文 Section IV-C 的框架,取值定义见同目录 `label_definitions.md`。
+Response to the reviewer comments: after the frozen screening, the corpus contains
+only 77 non-noise BERTopic topics, all of which are independently reviewed by two
+authors, with Cohen's kappa reported; this replaces the original manuscript's
+limitation statement about "57 unadjudicated topics". The annotation label scheme
+follows the P1 pilot (`output/subsystem_validation/human_review/P1_topic_safety_reviewed.csv`)
+and the framework of Section IV-C of the paper; the value definitions are given in
+`label_definitions.md` in the same directory.
 
-## 1. 材料
+## 1. Materials
 
-| 文件 | 说明 |
-| ---- | ---- |
-| `dual_review_workbook.xlsx` | 标注工作簿,77 行(每 topic 一行),含 topic id、label、top keywords、3 篇代表专利节选(摘要前 ~400 字符),后接 Rater A / B 两套空列。 |
-| `label_definitions.md` | 五个标注字段的取值定义,**标注前必读**。 |
-| `PROTOCOL.md` | 本文件。 |
+| File | Description |
+| ---- | ----------- |
+| `dual_review_workbook.xlsx` | The annotation workbook: 77 rows (one per topic), containing the topic id, label, top keywords, and excerpts of 3 representative patents (first ~400 characters of each abstract), followed by two empty column blocks for Rater A and Rater B. |
+| `label_definitions.md` | Value definitions for the five annotation fields; **required reading before annotation**. |
+| `PROTOCOL.md` | This file. |
 
-每位评审填写 6 列:`*_safety_judgment`、`*_harm_link`、`*_cascade_role`、
-`*_scope_limitation`、`*_confidence`、`*_note`。前四个枚举字段已配置下拉
-(枚举值与 P1 schema 一致);`scope_limitation` 与 `note` 为自由文本。
+Each rater fills in 6 columns: `*_safety_judgment`, `*_harm_link`, `*_cascade_role`,
+`*_scope_limitation`, `*_confidence`, and `*_note`. The first four enumerated fields
+have dropdowns configured (the enumerated values are consistent with the P1 schema);
+`scope_limitation` and `note` are free text.
 
-## 2. 盲法要求(强制)
+## 2. Blinding Requirements (Mandatory)
 
-- 工作簿中**不含** DeepSeek 冻结标签(`llm_safety_labels.csv`),评审全程不得查阅该文件,
-  也不得查阅 P1 已审 20 题的作者标签。
-- Rater A 与 Rater B **各自保存一份工作簿副本独立标注**,标注完成前不得交流、
-  不得互相查看对方的列。汇合前建议各自把副本重命名为
-  `dual_review_workbook_raterA.xlsx` / `dual_review_workbook_raterB.xlsx` 存档。
-- 判读依据仅为:topic label、top keywords、3 篇代表专利节选;如需更多上下文,
-  可按 `rep*_patent` 的公开号检索原文,但两人须遵循相同的查阅规则
-  (建议:先看节选,不足时再查原文,并在 note 中注明"查了原文")。
+- The workbook does **not** contain the DeepSeek frozen labels (`llm_safety_labels.csv`);
+  raters must not consult that file at any point, nor the author labels of the 20
+  topics already reviewed in P1.
+- Rater A and Rater B **each keep their own copy of the workbook and annotate
+  independently**; they must not communicate or view each other's columns before
+  annotation is complete. Before reconciliation, each rater is advised to rename
+  their copy to `dual_review_workbook_raterA.xlsx` / `dual_review_workbook_raterB.xlsx`
+  for archiving.
+- Judgments are based solely on the topic label, top keywords, and the 3 representative
+  patent excerpts; if more context is needed, the full text can be retrieved via the
+  publication number in `rep*_patent`, but both raters must follow the same lookup
+  rule (recommended: read the excerpt first; consult the full text only if
+  insufficient, and note "consulted full text" in the note field).
 
-## 3. 标注流程
+## 3. Annotation Procedure
 
-1. **独立标注**(Rater A、B 并行,互不可见):
-   - 通读 `label_definitions.md`;
-   - 逐行判读 77 个 topic,六个字段全部填写,**不留空**(无范围限制时
-     `scope_limitation` 填"无";拿不准用 `UNCLEAR` 并在 note 写明原因);
-   - 每行给出 `confidence`(HIGH/MEDIUM/LOW)。
-2. **汇合比对**:两人把各自的列回填进同一份工作簿(A 列块 / B 列块),
-   运行 `scripts/compute_dual_review_kappa.py` 得到逐字段 kappa 与
-   二值化(candidate = DIRECT/PARTIAL)总体 kappa。
-3. **分歧裁决**:
-   - 先由两位评审逐条讨论分歧 topic,参考代表专利原文,能达成一致的直接
-     记录为最终标签(共识优先);
-   - 讨论后仍不一致的,由第三位作者仲裁,仲裁结果为最终标签;
-   - 任何一方原为 `UNCLEAR` 的分歧,裁决时**必须**给出非 UNCLEAR 的最终标签
-     (除非三位评审一致认为证据确实不足,此时保留 UNCLEAR 并在 note 说明);
-   - 裁决结果写入最终数据集(另存 adjudicated 列或单独 CSV),不得覆盖
-     工作簿中 A/B 的原始独立标注。
+1. **Independent annotation** (Raters A and B in parallel, not visible to each other):
+   - Read `label_definitions.md` thoroughly;
+   - Review each of the 77 topics row by row, filling in all six fields with **no
+     blanks** (if there is no scope limitation, enter "None" in `scope_limitation`;
+     when uncertain, use `UNCLEAR` and state the reason in the note);
+   - Provide a `confidence` rating (HIGH/MEDIUM/LOW) for every row.
+2. **Reconciliation and comparison**: the two raters merge their columns back into a
+   single workbook (the A column block / the B column block), then run
+   `scripts/compute_dual_review_kappa.py` to obtain the per-field kappa and the
+   binarized (candidate = DIRECT/PARTIAL) overall kappa.
+3. **Disagreement adjudication**:
+   - First, the two raters discuss each disagreeing topic one by one, referring to the
+     full text of the representative patents; cases where agreement is reached are
+     recorded directly as the final label (consensus takes priority);
+   - Cases still in disagreement after discussion are adjudicated by a third author,
+     whose ruling becomes the final label;
+   - For any disagreement where either side originally marked `UNCLEAR`, the
+     adjudication **must** produce a non-UNCLEAR final label (unless all three raters
+     agree that the evidence is genuinely insufficient, in which case UNCLEAR is
+     retained with an explanation in the note);
+   - Adjudication results are written to the final dataset (saved as separate
+     adjudicated columns or a separate CSV) and must not overwrite the original
+     independent annotations of A/B in the workbook.
 
-## 4. 预计工时
+## 4. Estimated Effort
 
-77 题 × 每题约 3–4 分钟 ≈ 每人 4–5 小时;汇合与裁决约 1 小时。
-两人一下午(各自独立)+ 一次短会即可完成,与审稿意见中的估计一致。
+77 topics × roughly 3–4 minutes per topic ≈ 4–5 hours per person; reconciliation and
+adjudication take about 1 hour. The task can be completed by the two raters in one
+afternoon (working independently) plus one short meeting, consistent with the estimate
+in the reviewer comments.
 
-## 5. 回填与论文更新步骤
+## 5. Backfill and Paper Update Steps
 
-1. 两位评审完成标注 → 回填进 `dual_review_workbook.xlsx` 的 A/B 列块。
-2. 运行:
+1. Both raters complete annotation → backfill into the A/B column blocks of
+   `dual_review_workbook.xlsx`.
+2. Run:
    ```
    <python>/envs/<env>/python.exe -X utf8 scripts/compute_dual_review_kappa.py
    ```
-   生成 `output/dual_review/kappa_report.md`,确认所有字段 n = 77。
-3. 将报告中英文结果句模板(占位符已替换为实测值)粘入论文实验/验证章节,
-   并删除原稿中 "57 unadjudicated topics" 的局限表述,替换为
+   This generates `output/dual_review/kappa_report.md`; confirm that all fields have
+   n = 77.
+3. Paste the bilingual result-sentence templates from the report (with placeholders
+   replaced by the measured values) into the experiments/validation section of the
+   paper, and remove the original manuscript's limitation statement about
+   "57 unadjudicated topics", replacing it with
    "all 77 non-noise topics were independently adjudicated by two authors
-   (Cohen's κ = …)"。
-4. 最终裁决标签存档到 `output/dual_review/`(如 `adjudicated_labels.csv`),
-   供正文数字与附录引用。
+   (Cohen's κ = …)".
+4. Archive the final adjudicated labels to `output/dual_review/` (e.g.,
+   `adjudicated_labels.csv`) for citation in the main-text figures and the appendix.

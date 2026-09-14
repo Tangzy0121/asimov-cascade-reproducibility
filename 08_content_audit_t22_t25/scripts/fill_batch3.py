@@ -263,6 +263,65 @@ ROWS = {
     ],
 }
 
+# --- English glosses (NOT written to the workbook) ---
+# Each row above contains two Chinese strings that are audit data written
+# verbatim into 01_round1_blinded_review.xlsx; they are preserved unchanged so
+# this script reproduces the recorded blinded review exactly:
+#   - column W (quote): a verbatim quote from the original patent claim or
+#     abstract, mostly Chinese-language patent text, kept as audit evidence;
+#   - column X (reason): the reviewer's coding rationale, recorded in Chinese.
+# Faithful English translations are given below, keyed by worksheet row, so
+# that English-speaking reviewers can read the evidence and the rationale.
+# Quotes that are already in English in the data are not repeated.
+EN_GLOSS = {
+    26: {
+        "quote": "and when a human body is in the approach region, the output of the proximity sensor goes high, causing the robot controller to start moving the robot manipulator backward so as to avoid a collision.",
+        "reason": "Industrial-robot safety belt: three infrared proximity sensors detect the human body by distance zone, the microcontroller judges according to the zone, and when a person enters the approach region the manipulator moves backward to avoid a collision (RETREAT); complete mechanism chain, explicitly avoiding collision (harm=DIRECT).",
+    },
+    27: {
+        "quote": "when the sensor data indicates an external force exceeding a threshold force, stopping the motion of the at least one of the movable parts; and, in response to the measured speed exceeding a speed limit, stopping the motion of the at least one of the movable parts; Abstract: haptic warning and proximity sensing.",
+        "reason": "Same family as R008 in the material package (housing element): force-threshold stop + overspeed stop (claim); the abstract specifies haptic warning and proximity sensing, hence sensing=BOTH and action=MULTIPLE (STOP+WARNING). Complete mechanism chain; the human-injury path is plausible but not explicitly stated, harm=INDIRECT.",
+    },
+    28: {
+        "quote": "for measuring the distance (17) of one or more objects or body parts (12) ... and, on the basis of the combination of the distance information (17), the robot system (2) can be moved and guided through evaluation in the control system (9), in particular linearly or according to any desired characteristic curve.",
+        "reason": "Non-contact guidance in an MRK setting: multiple distance sensors measure the distances of body parts, the control system evaluates the signals, and the robot's motion is guided. The abstract states the goal of 'secure and effective' collaboration, but the main function is non-contact guidance (interaction convenience); safety is an important but not the sole component, PARTIAL. There is no slowdown/stop protective-action wording, response=NO; the hazard-blocking effect is not explicitly stated, barrier=UNCLEAR.",
+    },
+    29: {
+        "quote": "having elastic protrusions (12), and a robot sensor system for preventing accidents; Title/Abstract: A robot sensor for human-robot collision ... promote safety of a worker.",
+        "reason": "Human-robot collision sensor: a contact-sensing structure of elastic conductors + grooves + elastic protrusions, explicitly 'preventing accidents' and promoting worker safety (harm=DIRECT). The claim only describes the sensor's mechanical structure, with no threshold/judgment or protective-response step, decision=NO and response=NO. The detection purpose is explicitly accident prevention, barrier=YES.",
+    },
+    30: {
+        "quote": "a plurality of tactile sensors arranged on the robot body to detect contact ... determining a safety action based on the tactile data; and, in response to the detected contact, controlling the robot body to perform the safety action; Abstract: The safety action may comprise retracting the robot body away from a detected contact point.",
+        "reason": "Same family as R004 in the material package (tactile sensing system for safe HRI): tactile sensing detects contact, a safety action is determined, and the safety action is executed; the abstract's example is retracting away from the detected contact point (RETREAT), with the action magnitude adjustable according to the contact force. Complete mechanism chain, explicitly aimed at safe HRI.",
+    },
+    31: {
+        "quote": "generating a human safety zone (504) from sensing data and maintaining a robot safety zone (502) associated with the workspace of the robot arm; determining a degree of spatial overlap (508) between the human safety zone (504) and the robot safety zone (502); and adjusting an execution speed of a motion trajectory of the robot arm based on the determined spatial overlap.",
+        "reason": "Imaging perceives hand position/proximity, human and robot safety zones are generated, and the execution speed is adjusted according to the degree of spatial overlap (SLOW); the safety mechanism is explicit. But an equally central part of the claim is a neural network that ranks trajectories by a 'collaboration productivity score' (a non-safety main function), hence PARTIAL+MIXED. The human-injury path is plausible but not explicitly stated, harm=INDIRECT.",
+    },
+    32: {
+        "reason": "A fixing device for semiconductor grinding processing (rotating wheels + conveyor belt clamping the substrate); a purely mechanical fixture whose main subject is not a robot system (NON_ROBOT), with no safety mechanism at all.",
+    },
+    33: {
+        "quote": "for determining safety limit values for human-robot collaboration with the system, and configured to output ... limit values (V111, V124, V224) on the basis of ... a mechanically fixed relationship between the first and second parameters (V, M, A, K) and predetermined values.",
+        "reason": "A portable handheld device for determining safety limit values of an HRC system: it computes and outputs/displays limit values from fixed relationships between parameters; safety-limit determination is the main function (DIRECT). It is a computation/display tool rather than sensed detection (sensor=NO); deriving the limits is threshold determination (decision=YES); it performs no protective action itself (response=NO). The main subject is not a robot system, NON_ROBOT.",
+    },
+    34: {
+        "quote": "in the case where the external force detected by the external-force detection part is greater than a first threshold, instructing a retreat motion that moves the robot in the direction of decreasing the external force ... stopping the avoidance motion when the variation amplitude of the external force within a prescribed time is smaller than a second threshold.",
+        "reason": "Same family as R023 in the material package (avoidance by external force): external-force detection, exceeding the first threshold, then retreat in the direction that reduces the external force (RETREAT); an external-force-variation monitoring part stops the avoidance when the variation amplitude falls below the second threshold, so the robot retreats only when the person intentionally applies force. Complete mechanism chain, harm=INDIRECT.",
+    },
+    35: {
+        "reason": "The first claim is missing, so the coding rests on the abstract: unscheduled physical interventions by a person are detected (contact/grasping/blocking, via force profile + contact location + path occupancy, hence sensing=BOTH), intents are classified and privileges graded, and control authority is handed over differentially, with underprivileged entities limited to safety suspension (MULTIPLE=STOP + downgrade/isolation). Safety gating and productivity (avoiding unnecessary whole-line stoppages) are weighted equally, PARTIAL+MIXED; physical contact is explicit, harm=DIRECT. Affected degrees of freedom are isolated while the rest are maintained in parallel, a containment description, propagation=ABSENT.",
+    },
+    36: {
+        "quote": "a production station for human-robot collaboration, comprising ... a door movable between an open and a closed position ... through which access to a working space is gained ... closed; first, arranging in the working chamber a robot which, upon contact with an object, in particular a person (22 ... (original text truncated).",
+        "reason": "MRK production station: surrounding protective device + an openable/closable access door (ISOLATE); the robot in the working chamber acts 'upon contact with an object, in particular a person ...', but the original claim text is truncated exactly at the key mechanism, so how contact is detected and judged cannot be confirmed (sensor/decision=UNCLEAR); the isolation-type protection is explicit (response=YES, barrier=YES). The coding relies mainly on incomplete text, confidence LOW.",
+    },
+    37: {
+        "quote": "one or more force-controlled robot axes (I-VII) with an integrated sensing system (11) detecting the load acting on the respective robot axis, and wherein additionally, in the region of the machining tool (3), a personal-protection device (4) which, in the event of contact with the operator's body, permits a deflecting motion of the machining tool (3) or of the tool piece.",
+        "reason": "Same family as R009/R019 in the material package: force-controlled axes with integrated load detection (sensor=YES; force control implies a control condition, decision=YES); the personnel-protection device permits the machining tool to deflect and yield upon contact with the operator's body (a RETREAT-type protective action). Bodily contact is explicit, harm=DIRECT.",
+    },
+}
+
 wb = openpyxl.load_workbook(PATH)
 ws = wb["01_REVIEW"]
 for r, vals in ROWS.items():

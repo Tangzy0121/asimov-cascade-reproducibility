@@ -1,43 +1,43 @@
-# 预先冻结的分析计划
+# Pre-Frozen Analysis Plan
 
-## 分析集
+## Analysis Set
 
-- 全量内容集：Topic 22 的49个规范化专利族与 Topic 25 的38个规范化专利族。
-- `UNCLEAR` 不默认当作 `NO`；每个指标同时报告分母、UNCLEAR数量和完整案例比例。
+- Full content set: the 49 normalized patent families of Topic 22 and the 38 normalized patent families of Topic 25.
+- `UNCLEAR` is not treated as `NO` by default; for every metric we report the denominator, the number of `UNCLEAR` cases, and the complete-case proportion.
 
-## 主要描述性终点
+## Primary Descriptive Endpoints
 
-1. 直接安全纯度：`safety_relevance = DIRECT` 的比例。
-2. 接触安全机制：`contact_context` 属于 PHYSICAL_HRI / COLLISION_CONTACT / PROXIMITY_SEPARATION 的比例。
-3. 力/接近感知比例：`sensing_type` 属于 FORCE_TORQUE / PROXIMITY / BOTH。
-4. 完整机制链比例：sensor、decision、response 三项均为 YES。
-5. 明确 humanoid 比例：`humanoid_scope = EXPLICIT_HUMANOID`。
-6. 明确传播证据比例：`propagation_evidence = EXPLICIT_CROSS_SUBSYSTEM`。
-7. 主题偏离比例：`topic_scope = OFF_TOPIC`；另报告 MIXED。
+1. Direct safety purity: the proportion with `safety_relevance = DIRECT`.
+2. Contact safety mechanisms: the proportion whose `contact_context` is one of PHYSICAL_HRI / COLLISION_CONTACT / PROXIMITY_SEPARATION.
+3. Force/proximity sensing proportion: `sensing_type` is one of FORCE_TORQUE / PROXIMITY / BOTH.
+4. Complete mechanism chain proportion: sensor, decision, and response all coded YES.
+5. Explicit humanoid proportion: `humanoid_scope = EXPLICIT_HUMANOID`.
+6. Explicit propagation evidence proportion: `propagation_evidence = EXPLICIT_CROSS_SUBSYSTEM`.
+7. Off-topic proportion: `topic_scope = OFF_TOPIC`; MIXED is also reported separately.
 
-每个比例按 Topic 报告计数、分母、比例和 Wilson 95% CI。
+Each proportion is reported per Topic with the count, denominator, proportion, and Wilson 95% CI.
 
-## 比较分析
+## Comparative Analysis
 
-- Topic 22 与 Topic 25 的二分类差异使用 Fisher exact test，报告 odds ratio、精确 p 值和两组比例差。
-- 比较是探索性的；不以 p<0.05 作为“主题真实/虚假”的唯一标准。
-- 对7个主要比较同时报告 Benjamini–Hochberg q 值。
+- Binary differences between Topic 22 and Topic 25 are tested with Fisher's exact test, reporting the odds ratio, exact p-value, and the difference between the two proportions.
+- The comparisons are exploratory; p<0.05 is not used as the sole criterion for whether a topic is "genuine" or "spurious."
+- Benjamini–Hochberg q-values are reported alongside the seven primary comparisons.
 
-## 审查者内一致性
+## Intra-Rater Agreement
 
-- 18条延迟复审与第一轮配对。
-- 对分类字段报告原始一致率。
-- 对二分类派生终点报告 Cohen's kappa；类别退化导致 kappa 不可定义时如实标记 NA。
-- 该结果称为 `intra-rater agreement`，不得称为 `inter-rater agreement`。
+- The 18 delayed re-reviews are paired with the first-round coding.
+- Raw agreement rates are reported for categorical fields.
+- Cohen's kappa is reported for binary derived endpoints; when category degeneracy makes kappa undefined, it is honestly marked as NA.
+- This result is called `intra-rater agreement` and must not be called `inter-rater agreement`.
 
-## 缺失和偏差
+## Missingness and Bias
 
-- 未完成字段会阻止正式分析，不进行插补。
-- 单一作者审查存在观察者偏差；Topic盲化和延迟复审只能缓解，不能消除。
-- Publication No、标题、申请人可能让熟悉数据的作者猜到主题；因此是“盲化到Topic标签”，不是完全盲法。
+- Incomplete fields block the formal analysis; no imputation is performed.
+- Single-author review carries observer bias; topic blinding and delayed re-review can mitigate but not eliminate it.
+- Publication No, titles, and applicants may let an author familiar with the data guess the topic; the procedure is therefore "blinded to the Topic label," not fully blinded.
 
-## 结论升级规则
+## Claim Escalation Rules
 
-- 若 Topic 22 的直接安全纯度和完整机制链比例较高，可称其为“富集 force-aware HRI safety mechanisms 的模型生成文本簇”。
-- 即使明确传播证据比例较高，也只能称为“专利文本中的跨子系统传播披露”，不能据此宣称真实机器人 cascade 已验证。
-- 若 OFF_TOPIC/MIXED 较多，应下调 Topic 22 标签强度，并公开报告主题混杂。
+- If Topic 22 shows high direct safety purity and a high complete mechanism chain proportion, it may be described as "a model-generated text cluster enriched for force-aware HRI safety mechanisms."
+- Even if the explicit propagation evidence proportion is high, it may only be called "cross-subsystem propagation disclosure in patent texts"; it cannot be used to claim that a real-robot cascade has been validated.
+- If OFF_TOPIC/MIXED cases are numerous, the strength of the Topic 22 label should be downgraded, and the topic admixture should be reported openly.

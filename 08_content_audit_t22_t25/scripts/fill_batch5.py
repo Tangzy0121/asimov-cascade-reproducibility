@@ -8,6 +8,12 @@ import openpyxl
 PATH = "01_round1_blinded_review.xlsx"
 TODAY = datetime.date.today().isoformat()
 
+# Each value list: coding values and an evidence-source tag, then two free-text
+# fields: (1) a verbatim claim/abstract excerpt quoted from the source patent
+# record, kept in the original language exactly as exported for traceability, and
+# (2) the reviewer's rationale note in Chinese, with an English gloss in the
+# "# EN:" comment line directly beneath it. The trailing fields are confidence,
+# coding time (minutes), and coding date.
 ROWS = {
     50: [
         "COMPLETE",
@@ -26,6 +32,7 @@ ROWS = {
         "FIRST_CLAIM",
         "该机器人的控制系统是确定目标对象的作业种类的确定部……具有控制部，该控制部用于控制安装与由确定部确定的作业种类相对应的工具的操作，并且控制与作业种类相对应的操作",
         "与材料包中 R006 同族：按作业种类拆装工具并控制作业，无安全机制（OFF_TOPIC）。确定部→控制部为正常控制流，按校准口径记 PLAUSIBLE_ONLY。作业种类判定属分类判断，decision=YES。",
+        # EN: Same family as R006 in the source pack: tools are mounted/removed according to the work type and the work is controlled accordingly; no safety mechanism (OFF_TOPIC). The determination unit -> control unit flow is a normal control flow, coded PLAUSIBLE_ONLY per the calibration convention. Work-type determination is a classification judgment, so decision=YES.
         "HIGH",
         3,
         TODAY,
@@ -47,6 +54,7 @@ ROWS = {
         "FIRST_CLAIM",
         "A method for gluing an electronic component (13)…surrounding the electronic component (13) between a respective first element (11) and a second element (12) of the element of elastomeric material cut into dimensions",
         "电子元件点胶方法（弹性体材料包覆元件），纯工艺方法，主要对象非机器人系统（NON_ROBOT），无安全机制。",
+        # EN: Glue-dispensing method for electronic components (the component is encapsulated in elastomeric material); a pure process method whose main subject is not a robot system (NON_ROBOT); no safety mechanism.
         "HIGH",
         3,
         TODAY,
@@ -68,6 +76,7 @@ ROWS = {
         "FIRST_CLAIM",
         "机器人控制装置20监视从多个温度检测元件中的至少两个温度检测元件输出的检测温度的差是否超过第三阈值, 并在检测温度的差超过第三阈值时停止机器人10的操作",
         '人协作机器人：力传感器内置多温度元件，控制器监测温度差超第三阈值→停止机器人（STOP），即检测力传感子系统自身故障（温度漂移）并触发整机停机的故障响应（DIRECT）。文本明确"传感子系统错误状态→控制子系统停止响应"，按手册字面属明确跨子系统传播（误差/故障链），标 EXPLICIT_CROSS_SUBSYSTEM，供校准确认。',
+        # EN: Collaborative robot: multiple temperature elements are built into the force sensor; the controller monitors whether the temperature difference exceeds a third threshold and stops the robot (STOP) -- a fault response that detects a failure of the force-sensing subsystem itself (temperature drift) and shuts down the whole robot (DIRECT). The text explicitly states 'erroneous state of the sensing subsystem -> the control subsystem stops responding', which read literally per the codebook is explicit cross-subsystem propagation (an error/fault chain); coded EXPLICIT_CROSS_SUBSYSTEM, pending calibration confirmation.
         "MEDIUM",
         6,
         TODAY,
@@ -89,6 +98,7 @@ ROWS = {
         "FIRST_CLAIM",
         "检测物体(21)相对于危险点(19)的位置……确定由物体(21)理论上施加在危险点(19)上的虚拟斥力……根据所确定的虚拟斥力，调整运动顺序并控制运动机器(11)运行通过所调整的运动顺序，从而危险点(19)避开物体(21)",
         "具有危险点的运动机器安全运行：传感检测物体相对危险点位置→按势函数计算虚拟斥力→调整运动序列使危险点避开物体（避让型 RETREAT），并周期性按偏差更新规划轨迹。危险规避是主要功能（DIRECT）；物体为泛指（HRC 语境），harm=INDIRECT。",
+        # EN: Safe operation of a moving machine that has a danger point: sensing detects the object's position relative to the danger point -> a virtual repulsive force is computed from a potential function -> the motion sequence is adjusted so the danger point avoids the object (avoidance-type RETREAT), and the planned trajectory is periodically updated from the deviation. Hazard avoidance is the main function (DIRECT); the object is generic (in an HRC context), so harm=INDIRECT.
         "HIGH",
         5,
         TODAY,
@@ -110,6 +120,7 @@ ROWS = {
         "FIRST_CLAIM",
         "当所测量的速度超过速度限制时停止所述可移动部件的运动，并且当所测量的距离低于距离阈值时减慢或停止所述可移动部件的运动",
         "接近传感+关节位置传感→测速与测距→超速停止、距离低于阈值减速或停止（MULTIPLE=SLOW+STOP）。摘要明确用于 HRC 安全控制模块；物体未限定人，harm=INDIRECT。完整机制链。",
+        # EN: Proximity sensing + joint-position sensing -> speed and distance measurement -> stop on overspeed, slow down or stop when the distance falls below the threshold (MULTIPLE=SLOW+STOP). The abstract explicitly targets an HRC safety control module; the object is not restricted to humans, so harm=INDIRECT. Complete mechanism chain.
         "HIGH",
         4,
         TODAY,
@@ -131,6 +142,7 @@ ROWS = {
         "FIRST_CLAIM",
         "错误检测装置，用于检测人-机器人协作任务的执行中的错误；以及错误校正装置……确定错误校正计划……控制协作机器人以辅助人类操作员纠正所检测到的错误",
         '协作任务的错误检测与纠错（任务质量纠错，非安全防护），手册明确将"纠错"列为 OFF_TOPIC。错误检测为任务状态监控，非安全相关感知，sensor=NO；纠错计划确定属判断，decision=YES。',
+        # EN: Error detection and correction for collaborative tasks (task-quality correction, not safety protection); the codebook explicitly lists 'error correction' as OFF_TOPIC. Error detection is task-state monitoring, not safety-related sensing, so sensor=NO; determining the correction plan is a judgment, so decision=YES.
         "HIGH",
         4,
         TODAY,
@@ -152,6 +164,7 @@ ROWS = {
         "FIRST_CLAIM",
         "第一类危险区域(82)机器人运动时没有物体(1)被批准，并且第二类具有安全区域(102)其中可随时放置物体……机器人(12)由控制单元控制，取决于将安全相关信息划分为所述类别之一，并且取决于将执行的任务划分为所述协作级别之一",
         "HRC 安全分区+协作分级控制：传感器确定监视区域对象的安全相关信息→分类（危险区/安全区）→任务分四级协作（从空间分离到物理接触）→按类别与级别控制机器人（分区门控，记 OTHER）。明确危险区域与物理接触级别，harm=DIRECT。译文差但机制可辨，信心 MEDIUM。",
+        # EN: HRC safety zoning + collaboration-level control: sensors determine safety-relevant information about objects in the monitored zone -> classification (danger zone / safe zone) -> tasks are assigned to four collaboration levels (from spatial separation to physical contact) -> the robot is controlled according to category and level (zone gating, coded OTHER). Danger zones and a physical-contact level are explicit, so harm=DIRECT. The (machine) translation is poor but the mechanism is discernible; confidence MEDIUM.
         "MEDIUM",
         6,
         TODAY,
@@ -173,6 +186,7 @@ ROWS = {
         "FIRST_CLAIM",
         "A cooperative robot based on driving control integrated control system of torque sensor, wherein it comprises a central control unit and are respectively connected with the driving module, a sensing module, a communication module, a power supply module and an external equipment module",
         "基于力矩传感器的协作机器人驱控一体系统：claim 仅描述模块连接与信息传输架构，无安全功能、阈值或保护机制（NOT_SAFETY）。力矩传感为系统命名基础故 sensing=FORCE_TORQUE、sensor=YES、scope=MIXED；模块共存/互联不构成明确传播（手册边界示例），ABSENT。",
+        # EN: Torque-sensor-based integrated drive-and-control system for a collaborative robot: the claim only describes module interconnection and the information-transfer architecture, with no safety function, threshold, or protective mechanism (NOT_SAFETY). Torque sensing is the basis of the system's name, hence sensing=FORCE_TORQUE, sensor=YES, scope=MIXED; mere co-presence/interconnection of modules does not constitute explicit propagation (a boundary example in the codebook), so ABSENT.
         "MEDIUM",
         5,
         TODAY,
@@ -194,6 +208,7 @@ ROWS = {
         "FIRST_CLAIM",
         "配备了具有手腕和上述手腕上搭载的缠绕装置的机器人， 上述缠绕装置包括由电动机驱动的可绕轴旋转的缠绕轴",
         "卷轴开卷/处理单元（机器人搭载缠绕装置装卸卷轴），面向物料处理，无安全机制。",
+        # EN: Reel unwinding/handling unit (a robot-mounted winding device loads and unloads reels); aimed at material handling, with no safety mechanism.
         "HIGH",
         3,
         TODAY,
@@ -215,6 +230,7 @@ ROWS = {
         "FIRST_CLAIM",
         "一种自动化部件(14)的驱动单元，特别是在自动化部件的底座(12)壳体中或其上的抓取，夹紧，交替，直线或旋转单元(10)，以及一种驱动和控制单元……包括至少一个计算设备(20, 22)",
         "自动化部件（抓取/夹紧/旋转单元）的驱动单元，要点是控制单元含可用高级语言编程的计算设备，纯驱动/控制硬件，主要对象非机器人系统（NON_ROBOT），无安全机制。",
+        # EN: Drive unit for automation components (gripping/clamping/rotary units); the point of the invention is a control unit containing a computing device programmable in a high-level language. Pure drive/control hardware whose main subject is not a robot system (NON_ROBOT); no safety mechanism.
         "HIGH",
         3,
         TODAY,
@@ -236,6 +252,7 @@ ROWS = {
         "FIRST_CLAIM",
         "A sensing device for human and robot safety interaction, wherein The flexible touch sensing array is composed of…; the upper surface of the surface layer (6) is fixedly arranged with an ultrasonic sensor (7), a first type of hair sensor (8) and a second type of hair sensor (9)",
         "人机安全交互传感装置：柔性触觉传感阵列（力/接触）+超声传感+两类毛发传感器（接近）复合结构，sensing=BOTH。明确以人机安全交互为用途（DIRECT），权利要求仅描述器件结构，无判断/响应环节。主对象为传感器件而非机器人系统，NON_ROBOT；安全检测用途明确，barrier=YES。",
+        # EN: Sensing device for safe human-robot interaction: a composite structure of a flexible tactile sensing array (force/contact) + ultrasonic sensing + two types of hair-like sensors (proximity), so sensing=BOTH. Explicitly intended for safe human-robot interaction (DIRECT); the claim only describes the device structure, with no judgment/response stage. The main subject is a sensor device rather than a robot system, so NON_ROBOT; the safety-detection purpose is explicit, so barrier=YES.
         "MEDIUM",
         5,
         TODAY,
@@ -257,6 +274,7 @@ ROWS = {
         "FIRST_CLAIM",
         "用于确定用于与所述系统协作的人-机器人的安全限值，并且被配置为基于……第一和第二参数(V，M，A，K)与预定值……之间的固定关系……输出第二参数，特别是显示",
         "与材料包中 R032 claim 文本相同（同族）：确定 HRC 系统安全限值的便携式手持装置，基于参数固定关系计算并输出/显示极限值（DIRECT）。计算/显示工具无传感检测（sensor=NO），限值推导属阈值确定（decision=YES），NON_ROBOT。",
+        # EN: Identical claim text to R032 in the source pack (same family): a portable handheld device for determining safety limits of an HRC system, computing and outputting/displaying limit values from fixed parameter relationships (DIRECT). A computing/display tool with no sensing (sensor=NO); deriving the limits is threshold determination (decision=YES); NON_ROBOT.
         "MEDIUM",
         3,
         TODAY,

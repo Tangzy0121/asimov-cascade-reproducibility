@@ -1,57 +1,62 @@
-# 双人标注标签定义(label schema)
+# Dual-Review Label Definitions (label schema)
 
-本文件定义 `dual_review_workbook.xlsx` 中 Rater A / Rater B 两套标注列的取值含义。
-取值集合与 P1 试点标注(`output/subsystem_validation/human_review/P1_topic_safety_reviewed.csv`)
-完全一致,对应论文 Section IV-C 的安全级联判读框架。标注前请先通读本文件;遇到拿不准的
-topic,按协议记录在 `*_note` 列,不要留空。
+This file defines the allowed values for the Rater A / Rater B annotation columns in
+`dual_review_workbook.xlsx`. The value set is identical to the P1 pilot annotations
+(`output/subsystem_validation/human_review/P1_topic_safety_reviewed.csv`) and corresponds
+to the safety-cascade interpretation framework in Section IV-C of the paper. Please read
+this file in full before annotating; for any topic you are unsure about, record your
+concern in the `*_note` column per the protocol — do not leave it blank.
 
-## 1. safety_judgment(主题安全相关性判定)
+## 1. safety_judgment (safety relevance of the topic)
 
-| 取值 | 定义 |
+| Value | Definition |
 | ---- | ---- |
-| `DIRECT` | 主题内专利**明示**以保护人员/防止人体伤害为目的,或直接描述人形机器人对人员的安全风险及对应机制。 |
-| `PARTIAL` | 主题包含明确的安全机制(如平衡恢复、安全制动、碰撞监测),但安全并非主题内多数专利的主要贡献,或主题明显混杂安全与非安全内容。 |
-| `INCIDENTAL` | 安全内容仅作为附属条件或间接出现(如为完成测绘/作业任务而避障),发明目标不是人员保护。 |
-| `NOT_SAFETY` | 证据文本中没有实质安全机制;"安全"关键词只是背景或风格性措辞(如 human-like 指驾驶风格)。 |
-| `UNCLEAR` | 证据不足、或主题严重混杂(如夹持器/电极/测量混在一个 topic),无法给出可靠判定。 |
+| `DIRECT` | Patents within the topic **explicitly** state the protection of people / prevention of bodily harm as their purpose, or directly describe safety risks posed by humanoid robots to people and the corresponding mechanisms. |
+| `PARTIAL` | The topic contains explicit safety mechanisms (e.g., balance recovery, safe braking, collision monitoring), but safety is not the main contribution of most patents in the topic, or the topic clearly mixes safety and non-safety content. |
+| `INCIDENTAL` | Safety content appears only as an ancillary condition or indirectly (e.g., obstacle avoidance carried out to complete a surveying/inspection task); the invention goal is not the protection of people. |
+| `NOT_SAFETY` | There is no substantive safety mechanism in the evidence text; "safety" keywords are merely background or stylistic wording (e.g., human-like referring to a driving style). |
+| `UNCLEAR` | Evidence is insufficient, or the topic is severely mixed (e.g., grippers, electrodes, and measurement combined in one topic), so no reliable judgment can be made. |
 
-## 2. harm_link(与人体伤害的关联)
+## 2. harm_link (link to bodily harm)
 
-| 取值 | 定义 |
+| Value | Definition |
 | ---- | ---- |
-| `DIRECT` | 专利原文直接描述人员伤害、人体接触风险或人员保护对象(如夹伤手指、共享空间接触)。 |
-| `INDIRECT` | 人员伤害是从证据**跨场景推断**的(如四足/轮腿平台的跌倒可能波及附近人员),原文未直接报告人员受伤。 |
-| `UNCLEAR` | 无法确定伤害关联。 |
+| `DIRECT` | The patent text directly describes injuries to people, risks of contact with the human body, or the protection of people as an object (e.g., pinched fingers, contact in shared spaces). |
+| `INDIRECT` | Harm to people is **inferred across scenarios** from the evidence (e.g., a fall of a quadruped/wheeled-legged platform could endanger nearby people); the text does not directly report injuries to people. |
+| `UNCLEAR` | The link to harm cannot be determined. |
 
-## 3. cascade_role(主题在 Asimov Cascade 中的角色)
+## 3. cascade_role (role of the topic in the Asimov Cascade)
 
-| 取值 | 定义 |
+| Value | Definition |
 | ---- | ---- |
-| `SAFETY_BARRIER` | 主题是阻断或缓解级联失效的屏障(急停、安全制动、碰撞检测后停机、平衡恢复等)。 |
-| `PROPAGATION_NODE` | 主题描述感知→规划→控制→执行之间的信息/控制传递链,接口不一致可能沿链传播为失稳、碰撞等后果。 |
-| `CONTEXT_ONLY` | 安全仅是完成其他任务的背景条件,只能作为背景链条而非核心安全证据。 |
-| `OUT_OF_SCOPE` | 主题主体不属于人形机器人研究范围(如自动驾驶换道、烟草仓储设备),应从主分析中排除。 |
-| `UNCLEAR` | 角色无法判定。 |
+| `SAFETY_BARRIER` | The topic is a barrier that interrupts or mitigates cascading failure (emergency stop, safe braking, shutdown after collision detection, balance recovery, etc.). |
+| `PROPAGATION_NODE` | The topic describes the information/control transfer chain across perception → planning → control → actuation; interface mismatches may propagate along the chain into consequences such as instability or collision. |
+| `CONTEXT_ONLY` | Safety is merely a background condition for accomplishing other tasks, and can serve only as a contextual chain rather than core safety evidence. |
+| `OUT_OF_SCOPE` | The bulk of the topic does not belong to humanoid robot research (e.g., lane changing for autonomous driving, tobacco warehousing equipment) and should be excluded from the main analysis. |
+| `UNCLEAR` | The role cannot be determined. |
 
-## 4. scope_limitation(范围限制,自由文本)
+## 4. scope_limitation (scope limitation, free text)
 
-记录该主题证据的适用范围限制,无下拉、自由填写。常见写法(参照 P1 实际用法):
+Record the applicability limits of the topic's evidence; there is no dropdown — fill in
+freely. Common phrasings (following actual P1 usage):
 
-- 证据平台非人形:"证据均为轮腿/四足机器人,不是人形机器人;人员伤害仅为间接推断。"
-- 主题混杂:"主题混合 X、Y 与少量人形机器人专利。"
-- 证据性质:"专利描述的是风险预防方法,并非真实事故记录。"
+- Evidence platform is not humanoid: "The evidence all comes from wheeled-legged/quadruped robots, not humanoid robots; harm to people is only indirectly inferred."
+- Mixed topic: "The topic mixes X and Y with a small number of humanoid robot patents."
+- Nature of the evidence: "The patent describes a risk-prevention method, not a record of an actual accident."
 
-无范围问题时填 `无` 或留简短说明,**不要留空**。
+If there is no scope issue, write `无` (none) or a brief note — **do not leave it blank**.
 
-## 5. confidence(标注置信度)
+## 5. confidence (annotation confidence)
 
-| 取值 | 定义 |
+| Value | Definition |
 | ---- | ---- |
-| `HIGH` | 证据直接、判定依据明确(如原文明示人员接触与停机机制)。 |
-| `MEDIUM` | 判定依据成立但需跨场景推断,或主题有一定混杂。 |
-| `LOW` | 证据稀薄或主题严重混杂,判定仅供裁决参考。 |
+| `HIGH` | The evidence is direct and the basis for the judgment is explicit (e.g., the text explicitly states human contact and a shutdown mechanism). |
+| `MEDIUM` | The basis for the judgment holds but requires cross-scenario inference, or the topic is somewhat mixed. |
+| `LOW` | The evidence is thin or the topic is severely mixed; the judgment is provided only as a reference for adjudication. |
 
-## 6. note(标注备注,自由文本)
+## 6. note (annotation remarks, free text)
 
-记录判定理由、可疑点、建议(如"建议拆分该主题")。可与 scope_limitation 互补:
-scope_limitation 写"证据能外推到什么范围",note 写"我为什么这么判"。
+Record the reasoning behind the judgment, suspicious points, and suggestions (e.g.,
+"recommend splitting this topic"). This can complement scope_limitation:
+scope_limitation states "how far the evidence can be extrapolated"; note states "why I
+judged it this way".

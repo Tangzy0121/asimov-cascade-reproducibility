@@ -1,30 +1,30 @@
-# 双人标注一致性报告(kappa report)
+# Dual-Coder Agreement Report (kappa report)
 
-- 工作簿 topic 行数:77
-- 一致性度量:Cohen's kappa(Rater A vs Rater B,逐字段);解释分档按 Landis & Koch (1977)。
-- 总体指标:safety_judgment 二值化 —— candidate = {DIRECT, PARTIAL},其余(NOT_SAFETY / INCIDENTAL / UNCLEAR)为 not-candidate。
+- Workbook topic rows: 77
+- Agreement metric: Cohen's kappa (Rater A vs Rater B, per field); interpretation bands follow Landis & Koch (1977).
+- Headline metric: safety_judgment binarized — candidate = {DIRECT, PARTIAL}; all others (NOT_SAFETY / INCIDENTAL / UNCLEAR) are not-candidate.
 
-## 逐字段结果
+## Per-Field Results
 
-| 字段 | 双人已填 n | 一致率 | Cohen's kappa | 分档 |
-| ---- | ---------- | ------ | ------------- | ---- |
+| Field | Dual-coded n | Agreement rate | Cohen's kappa | Band |
+| ----- | ------------ | -------------- | ------------- | ---- |
 | safety_judgment | 0 | [—] | [—] | waiting for human fill-in |
 | harm_link | 0 | [—] | [—] | waiting for human fill-in |
 | cascade_role | 0 | [—] | [—] | waiting for human fill-in |
 | scope_limitation | 0 | [—] | [—] | waiting for human fill-in |
 | confidence | 0 | [—] | [—] | waiting for human fill-in |
-| **binary candidate (DIRECT/PARTIAL vs 其余)** | 0 | [—] | [—] | waiting for human fill-in |
+| **binary candidate (DIRECT/PARTIAL vs the rest)** | 0 | [—] | [—] | waiting for human fill-in |
 
-> 注:`scope_limitation` 为自由文本,kappa 按完全字符串一致计算,仅供完整性参考,论文中不报告。
+> Note: `scope_limitation` is free text; kappa is computed on exact string match and is shown for completeness only — it is not reported in the paper.
 
-## 可直接粘进论文的英文结果句(占位符在回填后自动替换)
+## English results sentence, ready to paste into the paper (placeholders auto-replaced after fill-in)
 
 ```text
 Two authors independently adjudicated all 77 non-noise topics using the label schema of Section IV-C. Inter-rater agreement was [substantial/almost perfect]: Cohen's kappa was [κ_safety] for the five-way safety judgment, [κ_harm] for the harm link, [κ_role] for the cascade role, and [κ_conf] for reviewer confidence. On the headline binary decision (candidate = DIRECT or PARTIAL, n = [N]), the two raters agreed on [agreement] of topics (kappa = [κ_binary]). Disagreements were resolved by discussion, with a third author arbitrating the remaining cases.
 ```
 
-## 待办
+## To-do
 
-- [ ] Rater A / B 完成独立标注并回填 workbook
-- [ ] 重跑本脚本,确认所有字段 n = 77
-- [ ] 将英文结果句中的占位符替换为实测值后粘入论文,并删除 "57 unadjudicated topics" 局限表述
+- [ ] Rater A / B complete their independent coding and fill the workbook back in
+- [ ] Re-run this script and confirm n = 77 for every field
+- [ ] Replace the placeholders in the English results sentence with the measured values, paste it into the paper, and delete the "57 unadjudicated topics" limitation statement

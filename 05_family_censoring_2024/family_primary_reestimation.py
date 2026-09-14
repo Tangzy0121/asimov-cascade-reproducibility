@@ -10,7 +10,7 @@ model is run, summarizes held-out STM and cross-model gates.
 
 Usage (from Cascade/BERT_Python):
   <python>/python.exe -X utf8 scripts/family_primary_reestimation.py
-  E:/R-4.6.0/bin/Rscript.exe ../STM_R/run_stm_family_primary.R
+  Rscript ../STM_R/run_stm_family_primary.R
   <python>/python.exe -X utf8 scripts/family_primary_reestimation.py --post-stm-only
 """
 
@@ -63,6 +63,7 @@ def normalize_identifier(values: pd.Series) -> pd.Series:
 
 
 def load_joined_data() -> tuple[pd.DataFrame, pd.DataFrame]:
+    # "简单同族ID" = simple family ID — incoPat export column name, matched verbatim
     patent = pd.read_excel(
         DATA_XLSX,
         usecols=["Publication No", "Application Date", "简单同族ID"],

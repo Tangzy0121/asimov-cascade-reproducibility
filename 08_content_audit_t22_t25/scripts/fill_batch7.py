@@ -8,6 +8,12 @@ import openpyxl
 PATH = "01_round1_blinded_review.xlsx"
 TODAY = datetime.date.today().isoformat()
 
+# Each value list: coding values and an evidence-source tag, then two free-text
+# fields: (1) a verbatim claim/abstract excerpt quoted from the source patent
+# record, kept in the original language exactly as exported for traceability, and
+# (2) the reviewer's rationale note in Chinese, with an English gloss in the
+# "# EN:" comment line directly beneath it. The trailing fields are confidence,
+# coding time (minutes), and coding date.
 ROWS = {
     74: [
         "COMPLETE",
@@ -26,6 +32,7 @@ ROWS = {
         "FIRST_CLAIM",
         "其中机器人(2)一个或多个功率控制或力控制的机器人轴线(I-VII)和相关联的负载作用检测传感器(11)，并且其中工作流体供应(4)包括……可供电模块(19)……所述电源模块(19)在机器人的底部区域(2)设置",
         "工作装置发明点为工具工作流体供应模块布置在机器人底部，力控轴+负载传感仅为背景特征，安全相关性 INCIDENTAL、OFF_TOPIC。有力控轴故 sensor/decision=YES，无保护响应。",
+        # EN: The invention point of the work apparatus is the arrangement of the tool's working-fluid supply module at the robot base; force-controlled axes + load sensing are merely background features, so safety relevance is INCIDENTAL and OFF_TOPIC. Because force-controlled axes exist, sensor/decision=YES; there is no protective response.
         "MEDIUM",
         4,
         TODAY,
@@ -47,6 +54,7 @@ ROWS = {
         "FIRST_CLAIM",
         "at least one imaging device comprises aiming the cooperation work space, to individually track position of the several human body part…wherein the controller is configured to, based on the respective locations of a plurality of tracked body part, indicating at least one robot to move the at least one robot operation",
         "与材料包中 R013/R041 同族（英文 claim）：成像跟踪人体构件位置→引导机器人运动，接近监测型 HRI 机制但无安全用语，PARTIAL；无保护动作文字 response=NO，barrier=UNCLEAR。",
+        # EN: Same family as R013/R041 in the source pack (English claim): imaging tracks the positions of human body parts -> guides robot motion; a proximity-monitoring HRI mechanism but with no safety language, so PARTIAL; no protective-action wording, so response=NO and barrier=UNCLEAR.
         "MEDIUM",
         4,
         TODAY,
@@ -68,6 +76,7 @@ ROWS = {
         "FIRST_CLAIM",
         "两个定位机器人以及两个接合机器人……机器人在机器人关节的配合下……由工厂操作员自动操纵……在控制台中程序和控制",
         "超大型重型钢构件制造装置：定位/接合机器人+龙门+提升装置的机-机协作与人工控制台校正，面向工件加工，无安全机制。译文极差，信心 MEDIUM。",
+        # EN: Manufacturing apparatus for ultra-large heavy steel members: machine-machine collaboration among positioning/joining robots + gantry + lifting device, with manual correction from a control console; aimed at workpiece machining, with no safety mechanism. The translation is extremely poor; confidence MEDIUM.
         "MEDIUM",
         4,
         TODAY,
@@ -89,6 +98,7 @@ ROWS = {
         "FIRST_CLAIM",
         "一种与机器人一起使用的备份系统……其中来自网络的空间和时间信息适合于作为环境的备份系统以信号调度MRK",
         '与材料包中 R020 同族（"Protector"安全系统）：将 MRK 轨迹规划的空间/时间信息以信号通知环境（WARNING 型保护，response=YES）。信息来自轨迹规划而非传感检测，sensor=NO、decision=NO。claim 极短且译文差，信心 MEDIUM。',
+        # EN: Same family as R020 in the source pack (the 'Protector' safety system): spatial/temporal information from MRK trajectory planning is signaled to the environment (WARNING-type protection, response=YES). The information comes from trajectory planning rather than sensing, so sensor=NO and decision=NO. The claim is very short and the translation is poor; confidence MEDIUM.
         "MEDIUM",
         4,
         TODAY,
@@ -110,6 +120,7 @@ ROWS = {
         "FIRST_CLAIM",
         "当所述致动装置从操作位置自动地调整到故障保险位置时，所述致动装置被激活……形成的固定装置(18)相对于基架(19)……从操作位置自动地调整到故障保险位置",
         "MRK 工作站夹具：控制器触发致动装置将固定工件/工具的夹紧装置从操作位置自动调整到故障保险位置（fail-safe），故障响应/退回安全位是主要安全功能（DIRECT），action=ISOLATE_OR_FALLBACK。触发条件细节未明，decision=YES（控制器触发属控制条件），译文差，信心 MEDIUM。",
+        # EN: MRK workstation fixture: the controller triggers an actuating device that automatically moves the clamping device holding the workpiece/tool from the operating position to a fail-safe position; fault response / retreat to a safe position is the main safety function (DIRECT), action=ISOLATE_OR_FALLBACK. Trigger-condition details are unclear; decision=YES (controller triggering counts as a control condition). The translation is poor; confidence MEDIUM.
         "MEDIUM",
         5,
         TODAY,
@@ -131,6 +142,7 @@ ROWS = {
         "FIRST_CLAIM",
         "支撑框架(3)用于可编程工业机器人(2)，其特征在于，支撑框架(3)脚部(5)和一个臂状的多轴可调支架(4)具有",
         "工业机器人支撑框架（脚部+多轴可调支架），纯机械支撑结构，主要对象非机器人系统（NON_ROBOT），无安全机制。",
+        # EN: Support frame for an industrial robot (feet + a multi-axis adjustable bracket); a purely mechanical support structure whose main subject is not a robot system (NON_ROBOT); no safety mechanism.
         "HIGH",
         3,
         TODAY,
@@ -152,6 +164,7 @@ ROWS = {
         "MULTIPLE",
         "当所述传感器数据指示超过阈值力的力时，停止所述可移动部件中的所述至少一个的运动，以及响应于所测量的速度超过速度限制，停止所述可移动部件中的所述至少一个的运动；Abstract: haptic warning and proximity sensing",
         "与材料包中 R008/R026 同族（传感壳体元件）：力阈值停止+超速停止（claim），摘要明确触觉振动告警与接近感知，sensing=BOTH、action=MULTIPLE(STOP+WARNING)。完整机制链，harm=INDIRECT。",
+        # EN: Same family as R008/R026 in the source pack (sensor housing element): force-threshold stop + overspeed stop (claim); the abstract explicitly mentions haptic vibration warning and proximity sensing, so sensing=BOTH and action=MULTIPLE(STOP+WARNING). Complete mechanism chain; harm=INDIRECT.
         "HIGH",
         3,
         TODAY,
@@ -173,6 +186,7 @@ ROWS = {
         "FIRST_CLAIM",
         "机器人之间的距离(d)……小于计算得到的机器人的制动距离且所计算的损伤裕度大于预定义的损伤极限……启动所述停止装置和所述触发装置……触发至少一个内置安全气囊(7, 8)",
         "机器人安全装置：位置检测→计算制动距离与潜在损伤量→距离小于制动距离且损伤量超极限时停止机器人并触发机载安全气囊（MULTIPLE=STOP+气囊缓冲）。碰撞对象未限定人，harm=INDIRECT。完整机制链。",
+        # EN: Robot safety device: position detection -> computation of braking distance and potential injury magnitude -> when the distance is smaller than the braking distance and the injury magnitude exceeds the limit, the robot is stopped and on-board airbags are triggered (MULTIPLE=STOP+airbag cushioning). The collision object is not restricted to humans, so harm=INDIRECT. Complete mechanism chain.
         "HIGH",
         5,
         TODAY,
@@ -194,6 +208,7 @@ ROWS = {
         "FIRST_CLAIM",
         "其中，加工工具(3)带有一个装置(15)连接在工件(4)上运动以及机器人和工具可以被固定",
         'HRC 触觉工业机器人加工装置，发明点为加工工具经装置与工件连接运动并可固定，属装夹/加工内容（OFF_TOPIC）。"触觉"表明力/接触感知存在（sensing=FORCE_TORQUE, sensor=YES），无安全用语，INCIDENTAL。译文差，信心 MEDIUM。',
+        # EN: HRC haptic industrial-robot machining apparatus; the invention point is that the machining tool moves while connected to the workpiece via a device and can be fixed -- clamping/machining content (OFF_TOPIC). 'Haptic' indicates that force/contact sensing exists (sensing=FORCE_TORQUE, sensor=YES); there is no safety language, so INCIDENTAL. The translation is poor; confidence MEDIUM.
         "MEDIUM",
         4,
         TODAY,
@@ -215,6 +230,7 @@ ROWS = {
         "FIRST_CLAIM",
         "在所述支承台设置所述传感器，所述传感器检测人侵入机器人的作业范围",
         "与材料包中 R022 同族：可移动支撑台载机器人，传感器检测人侵入机器人作业范围为区别特征（DIRECT）；文本止于检测环节，response=NO，barrier=UNCLEAR。",
+        # EN: Same family as R022 in the source pack: a movable support table carries the robot, and a sensor detecting human intrusion into the robot's working range is the distinguishing feature (DIRECT); the text stops at the detection stage, so response=NO and barrier=UNCLEAR.
         "MEDIUM",
         3,
         TODAY,
@@ -236,6 +252,7 @@ ROWS = {
         "FIRST_CLAIM",
         "具有检测人类接近机器人信息的接近信息检测部, 将上述接近信息发送给其他机器人的发送部, 以及基于上述接近信息设定动作或停止动作模式的动作模式设定部的第1机器人……根据上述接近信息设定停止或动作的动作模式的动作模式设定部的第2机器人",
         '机器人群系统：第1机器人检测人接近→将接近信息发送给其他机器人→各机器人据此设定停止/动作模式（STOP）。摘要明确"确保人的安全"，harm=DIRECT。文本明确一个机器人的检测输出改变其他机器人的动作条件并产生停止响应，按手册字面属明确跨子系统传播，标 EXPLICIT_CROSS_SUBSYSTEM，供校准确认。',
+        # EN: Multi-robot fleet system: robot 1 detects human approach -> sends the proximity information to the other robots -> each robot sets its stop/operate mode accordingly (STOP). The abstract explicitly states 'ensuring human safety', so harm=DIRECT. The text explicitly states that one robot's detection output changes the other robots' operating conditions and produces a stop response, which read literally per the codebook is explicit cross-subsystem propagation; coded EXPLICIT_CROSS_SUBSYSTEM, pending calibration confirmation.
         "MEDIUM",
         5,
         TODAY,
@@ -257,6 +274,7 @@ ROWS = {
         "FIRST_CLAIM",
         "基于来自力或扭矩的传感元件的读数，计算可移动部件的动态模型，以生成至少施加在工具端部上的估计外力，响应于所估计的外力超过设定极限而停止所述可移动部件……响应于所述测量距离下降到所述距离阈值以下，将速度监测点减慢到设定速度",
         "与材料包中 R063 claim 文本相同（同族）：接近传感+关节测速+力/力矩传感经动态模型估计外力，距离阈值→减速、外力/速度超限→停止，sensing=BOTH、action=MULTIPLE(SLOW+STOP)。完整机制链，harm=INDIRECT。",
+        # EN: Identical claim text to R063 in the source pack (same family): proximity sensing + joint speed measurement + force/torque sensing estimating external force via a dynamic model; distance below threshold -> slow down, external force/speed over limit -> stop; sensing=BOTH, action=MULTIPLE(SLOW+STOP). Complete mechanism chain; harm=INDIRECT.
         "HIGH",
         3,
         TODAY,

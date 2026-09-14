@@ -263,6 +263,64 @@ ROWS = {
     ],
 }
 
+# --- English glosses (NOT written to the workbook) ---
+# Each row above contains two Chinese strings that are audit data written
+# verbatim into 01_round1_blinded_review.xlsx; they are preserved unchanged so
+# this script reproduces the recorded blinded review exactly:
+#   - column W (quote): a verbatim quote from the original patent claim or
+#     abstract, mostly Chinese-language patent text, kept as audit evidence;
+#   - column X (reason): the reviewer's coding rationale, recorded in Chinese.
+# Faithful English translations are given below, keyed by worksheet row, so
+# that English-speaking reviewers can read the evidence and the rationale.
+# Quotes that are already in English in the data are not repeated.
+EN_GLOSS = {
+    38: {
+        "quote": "generating a plurality of control signals on the basis of the input signals to control the movement of the mobile base and of at least one other movable element, so as to achieve the desired movement by optimizing a predetermined scalar function of the movements and positions of the movable element and the mobile base.",
+        "reason": "Coordinated motion-optimization control of a mobile base + manipulator (scalar-function optimization); a pure motion-control method with no safety mechanism and no contact/proximity context. Solving the optimization for the control signals is a control-condition judgment, decision=YES.",
+    },
+    39: {
+        "quote": "executing a graph network configured to encode information associated with resources and tasks; and executing a recursive decoder ... determining a schedule while taking into account one or more spatiotemporal constraints established by the graph network ... the schedule being used to control or monitor one or more robot systems.",
+        "reason": "Learning-based task scheduling for human-robot teams with a heterogeneous graph network + recursive decoder; this is scheduling/AI (a scheduling category the codebook lists as OFF_TOPIC), with no safety mechanism and no physical-perception step. Schedule determination is judgment, decision=YES.",
+    },
+    40: {
+        "reason": "Stopping when a person contacts the robot (STOP) + limiting the speed below a predetermined limit speed when the drive-axis position variable lies in the range in which a person is pinched by the robot/tool (SLOW), hence MULTIPLE. Human contact and the pinched state are explicit, harm=DIRECT. The translation quality is poor but the mechanism chain is discernible, confidence MEDIUM.",
+    },
+    41: {
+        "quote": "allocating at least one protection zone that is detected by detection elements interacting with the robot ... which is designed to change and/or be variable in its extent and function according to the robot's activity and/or working position.",
+        "reason": "Metallurgy/rolling-mill automation: a protection zone is allocated to the robot and detected by detection elements, and the protection zone varies with the robot's activity/position; the HRI operating mode adapts to the degree of automation and the human-robot positioning, targeting hot/hazardous areas (abstract: hot and/or danger zone, safer). Detection and adaptation are explicit (sensor/decision=YES), but the protective action cannot be confirmed because the translation is fragmentary (response/action=UNCLEAR).",
+    },
+    42: {
+        "quote": "at least one imaging device directed at the collaborative workspace for individually tracking the position of a human body member within the collaborative workspace; wherein the controller is configured to guide, based on the individually tracked position of the body member performing the at least one manually performed operation, the motion of the at least one robot performing the at least one robot operation.",
+        "reason": "Identical claim text to R013 in the material package (same family; titled Safe assembly cell): imaging tracks the body member's position and the robot's motion is guided; a proximity-monitoring HRI mechanism but with no safety language, PARTIAL; no protective-action wording, response=NO; barrier=UNCLEAR.",
+    },
+    43: {
+        "quote": "detecting, by the proximity sensor, that a person has intruded into the first zone ... making the motion speeds of the human-cooperative robot and of the parts of the mobile device relative to the floor not exceed a prescribed cooperative-motion speed at which a person can work cooperatively ... when detected, the system controls the mobile human-collaborative robot to stop or to avoid contact with the person.",
+        "reason": "Dual-zone protection for a mobile human-cooperative robot: first-zone proximity sensing limits the speed below the cooperative-motion speed (SLOW); a second-zone human-presence sensor detects contact and the robot stops or avoids contact (STOP). sensing=BOTH, action=MULTIPLE, human-contact avoidance explicit, harm=DIRECT, complete mechanism chain.",
+    },
+    44: {
+        "quote": "executing a graph network configured to encode information associated with resources and tasks; and executing a recursive decoder ... determining a schedule while taking into account one or more spatiotemporal constraints established by the graph network.",
+        "reason": "Identical claim text to R038 in the material package (same family): task-scheduling learning with a graph network + recursive decoder, OFF_TOPIC, no safety mechanism. Schedule determination is judgment, decision=YES.",
+    },
+    45: {
+        "reason": "HRC parts-assembly method: the claim translation is garbled (teaching-position storage + peg-in-hole correction); the abstract explicitly informs the operator of excessive contact force via a monitoring device (WARNING) and has the robot controller control the contact force (LIMIT_FORCE) to prevent work accidents, hence MULTIPLE. Assembly is the main function with safety an important component, PARTIAL; accident prevention and contact force are explicit, harm=DIRECT.",
+    },
+    46: {
+        "reason": "A safety-interactive human-robot collaborative robot: it recognizes the robot's spatial position, generates an 'operation warning range' from the maximum envelope of the historical execution-instruction set, compares the commanded working range with the warning range to obtain an execution value A (0/1), and the execution module judges whether to work based on A (command gating, coded OTHER). Safety-range gating is the main function (DIRECT); the human-injury path is plausible but not explicitly stated, harm=INDIRECT.",
+    },
+    47: {
+        "quote": "at least one pod frame configured to accommodate one or more dual-arm robots ... the pod frame being modular and reconfigurable to support a plurality of spatial configurations for accommodating different numbers of robots within the workspace.",
+        "reason": "A modular robot pod system: frame + linear rails + rotating platform accommodating dual-arm robots with a reconfigurable layout; pure equipment arrangement/logistics, no safety mechanism.",
+    },
+    48: {
+        "quote": "a multi-axis, programmable robot support device (26), and a multi-axis and haptic device (27) of the programmable robot, the support robot (26) being mounted to the robot arm (37).",
+        "reason": "A workpiece-handling device: a haptic industrial robot mounted on a handling robot arm, oriented to workpiece handling, with no safety language (NOT_SAFETY). 'Haptic' indicates that force/contact-type perception is present (sensing=FORCE_TORQUE, sensor=YES); no judgment or protection step.",
+    },
+    49: {
+        "quote": "a workpiece gripper (2) whose frame (8) is fitted with movable and lockable guides (10) ... enlarging its working area through operation of the control and locking device.",
+        "reason": "Machining-process control: an adjustable, lockable workpiece gripper + industrial-robot operation to enlarge the working area; oriented to workpiece clamping, with no safety mechanism.",
+    },
+}
+
 wb = openpyxl.load_workbook(PATH)
 ws = wb["01_REVIEW"]
 for r, vals in ROWS.items():

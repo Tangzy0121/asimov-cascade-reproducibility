@@ -119,24 +119,25 @@ def build_report(rows: list[dict]) -> str:
     n_total = len(rows)
 
     lines = []
-    lines.append("# 双人标注一致性报告(kappa report)\n")
-    lines.append(f"- 工作簿 topic 行数:{n_total}")
-    lines.append("- 一致性度量:Cohen's kappa(Rater A vs Rater B,逐字段);"
-                 "解释分档按 Landis & Koch (1977)。")
-    lines.append("- 总体指标:safety_judgment 二值化 —— candidate = {DIRECT, PARTIAL},"
-                 "其余(NOT_SAFETY / INCIDENTAL / UNCLEAR)为 not-candidate。\n")
+    lines.append("# Dual-Rater Agreement Report (kappa report)\n")
+    lines.append(f"- Topic rows in workbook: {n_total}")
+    lines.append("- Agreement measure: Cohen's kappa (Rater A vs Rater B, per field); "
+                 "interpretation bands follow Landis & Koch (1977).")
+    lines.append("- Headline metric: binarized safety_judgment — candidate = {DIRECT, PARTIAL}; "
+                 "all others (NOT_SAFETY / INCIDENTAL / UNCLEAR) are not-candidate.\n")
 
-    lines.append("## 逐字段结果\n")
-    lines.append("| 字段 | 双人已填 n | 一致率 | Cohen's kappa | 分档 |")
-    lines.append("| ---- | ---------- | ------ | ------------- | ---- |")
+    lines.append("## Per-field results\n")
+    lines.append("| Field | Both-filled n | Agreement | Cohen's kappa | Band |")
+    lines.append("| ----- | ------------- | --------- | ------------- | ---- |")
     for s in stats:
         lines.append(f"| {s['field']} | {s['n']} | "
                      f"{fmt(s['agree'])} | {fmt(s['kappa'])} | {s['band']} |")
-    lines.append(f"| **binary candidate (DIRECT/PARTIAL vs 其余)** | {binary['n']} | "
+    lines.append(f"| **binary candidate (DIRECT/PARTIAL vs others)** | {binary['n']} | "
                  f"{fmt(binary['agree'])} | {fmt(binary['kappa'])} | {binary['band']} |")
     lines.append("")
-    lines.append("> 注:`scope_limitation` 为自由文本,kappa 按完全字符串一致计算,"
-                 "仅供完整性参考,论文中不报告。")
+    lines.append("> Note: `scope_limitation` is free text; its kappa is computed as "
+                 "exact-string-match agreement and is shown for completeness only — "
+                 "it is not reported in the paper.")
     lines.append("")
 
     # English result sentences — placeholders until the workbook is filled
@@ -152,7 +153,8 @@ def build_report(rows: list[dict]) -> str:
     n_bin = binary['n'] if binary['n'] else "[N]"
     agr_bin = fmt(binary['agree'], digits=3, placeholder="[agreement]")
 
-    lines.append("## 可直接粘进论文的英文结果句(占位符在回填后自动替换)\n")
+    lines.append("## English result sentences ready to paste into the paper "
+                 "(placeholders are auto-replaced once the workbook is filled)\n")
     lines.append("```text")
     lines.append(
         f"Two authors independently adjudicated all {n_total} non-noise topics "
@@ -167,11 +169,12 @@ def build_report(rows: list[dict]) -> str:
     )
     lines.append("```")
     lines.append("")
-    lines.append("## 待办\n")
-    lines.append("- [ ] Rater A / B 完成独立标注并回填 workbook")
-    lines.append("- [ ] 重跑本脚本,确认所有字段 n = 77")
-    lines.append("- [ ] 将英文结果句中的占位符替换为实测值后粘入论文,"
-                 "并删除 \"57 unadjudicated topics\" 局限表述")
+    lines.append("## To-do\n")
+    lines.append("- [ ] Rater A / B complete their independent coding and fill in the workbook")
+    lines.append("- [ ] Re-run this script and confirm n = 77 for every field")
+    lines.append("- [ ] Replace the placeholders in the English result sentences with the "
+                 "measured values, paste them into the paper, and remove the "
+                 "\"57 unadjudicated topics\" limitation statement")
     return "\n".join(lines) + "\n"
 
 

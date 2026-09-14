@@ -1,62 +1,62 @@
-# Negative Audit 双人盲审 — 审核说明(P0-5 / 安全筛查召回率估计)
+# Negative Audit Blinded Dual Review — Reviewer Instructions (P0-5 / Safety Screening Recall Estimation)
 
-## 1. 这个包是什么
+## 1. What this package is
 
-自动安全筛查把 77 个非噪声主题分成 20 个阳性(已审)和 57 个阴性(从未人工核查)。
-为估计筛查的 recall / specificity / F1,从 57 个阴性里分层抽了 18 个
-(抽样方案:`../negative_audit_sampling_plan.md`,seed=20260728)。
+The automated safety screening split 77 non-noise topics into 20 positives (already reviewed) and 57 negatives (never manually checked).
+To estimate the screening recall / specificity / F1, we drew a stratified sample of 18 from the 57 negatives
+(sampling plan: `../negative_audit_sampling_plan.md`, seed=20260728).
 
-**本包把这 18 个阴性样本和 20 个已审阳性混在一起**(共 38 个主题),洗乱后交给
-两位审核员独立重判——你拿到的文件里**没有任何列能区分阴性与阳性**,
-也看不到机器分数和 LLM 理由。对照关系只存在于 `admin_keys.csv`
-(仅管理员持有,审核结束前不要打开)。
+**This package mixes these 18 negative samples with the 20 already-reviewed positives** (38 topics in total), shuffles them, and hands them to
+two reviewers for independent re-adjudication — **no column in the files you receive can distinguish negatives from positives**,
+and neither the machine scores nor the LLM rationales are visible. The mapping exists only in `admin_keys.csv`
+(held by the administrator only; do not open it before the review is finished).
 
-## 2. 文件清单
+## 2. File inventory
 
-- `blind_review_reviewerA.csv` / `blind_review_reviewerB.csv` — 两份审核表,各 38 行。
-  内容相同,仅行序不同(A 种子 20260808,B 种子 20260809)。
-  **Reviewer A 只填 A 文件,Reviewer B 只填 B 文件,审核期间互不交流、互不看对方文件。**
-- `admin_keys.csv` — 管理员键(topic_id, is_negative_sample, safety_score, stratum,
-  ht_weight, original_judgment)。审核员勿开。
-- 本文件。
+- `blind_review_reviewerA.csv` / `blind_review_reviewerB.csv` — two review sheets, 38 rows each.
+  Identical content, only the row order differs (A seed 20260808, B seed 20260809).
+  **Reviewer A fills in only the A file, Reviewer B fills in only the B file; during the review, do not communicate with each other or look at each other's files.**
+- `admin_keys.csv` — administrator key (topic_id, is_negative_sample, safety_score, stratum,
+  ht_weight, original_judgment). Reviewers must not open it.
+- This file.
 
-## 3. 填写规范(每行)
+## 3. How to fill in each row
 
-判断标准与 P1 主题安全审核完全一致
-(`../human_review/P1_human_review_protocol.md` §3.1–3.1d),只看表内给出的
-主题标签 + 代表专利号/标题/摘要摘录,不凭主题名猜。
+The judgment criteria are exactly the same as for the P1 topic safety review
+(`../human_review/P1_human_review_protocol.md` §3.1–3.1d): rely only on the
+topic label plus the representative patent number / title / abstract excerpt given in the sheet; do not guess from the topic name alone.
 
-| 列 | 取值 | 说明 |
+| Column | Values | Description |
 |----|------|------|
-| `human_safety_judgment` | DIRECT / PARTIAL / INCIDENTAL / NOT_SAFETY / UNCLEAR | 该主题是否真涉机器人安全(必填) |
-| `human_harm_link` | DIRECT / INDIRECT / NONE / UNCLEAR | 机制与人身伤害的可追溯链路(必填) |
-| `cascade_role` | HAZARD_ENDPOINT / PROPAGATION_NODE / SAFETY_BARRIER / CONTEXT_ONLY / OUT_OF_SCOPE / UNCLEAR | 在 Cascade 传播链中的位置(必填) |
-| `plausible_cascade_path` | 自由文本 | 可检验的传播假设;非因果断言,格式见 protocol §3.1c |
-| `scope_limitation` | 自由文本 | 证据边界(非人形、间接推断、主题混杂等) |
-| `reviewer_confidence` | HIGH / MEDIUM / LOW | 必填 |
-| `reviewer_note` | 自由文本 | 疑难行留痕 |
+| `human_safety_judgment` | DIRECT / PARTIAL / INCIDENTAL / NOT_SAFETY / UNCLEAR | Whether the topic genuinely concerns robot safety (required) |
+| `human_harm_link` | DIRECT / INDIRECT / NONE / UNCLEAR | Traceable link from the mechanism to bodily harm (required) |
+| `cascade_role` | HAZARD_ENDPOINT / PROPAGATION_NODE / SAFETY_BARRIER / CONTEXT_ONLY / OUT_OF_SCOPE / UNCLEAR | Position in the Cascade propagation chain (required) |
+| `plausible_cascade_path` | Free text | A testable propagation hypothesis; not a causal claim — see protocol §3.1c for the format |
+| `scope_limitation` | Free text | Boundaries of the evidence (non-humanoid, indirect inference, mixed topics, etc.) |
+| `reviewer_confidence` | HIGH / MEDIUM / LOW | Required |
+| `reviewer_note` | Free text | Leave a note for difficult rows |
 
-**红线**:不要修改 `item_no / topic_id / topic_label / rep_*` 等已有列;不要增删行;
-不要与他人核对答案;拿不准填 UNCLEAR,优于硬猜。
+**Red lines**: do not modify the existing columns `item_no / topic_id / topic_label / rep_*`; do not add or delete rows;
+do not check answers with anyone else; when unsure, mark UNCLEAR — that is better than forcing a guess.
 
-## 4. 回收后计算(管理员)
+## 4. Computation after collection (administrator)
 
-两位审核员把填好的文件放回本目录(文件名不变)。计算内容:
+Both reviewers place their completed files back in this directory (file names unchanged). The computation covers:
 
-1. **A/B 一致性**:Cohen's κ(先把 DIRECT/PARTIAL 并为 S+、INCIDENTAL/NOT_SAFETY
-   并为 S−,UNCLEAR 在仲裁后定);分歧讨论仲裁后锁定标签。
-2. **复测一致性**:38 题中 20 题与首次批准结果
-   (`../human_review/P1_topic_safety_reviewed.csv`)对照,报告一致率。
-3. **假阴率与指标**:按抽样方案 §6,HT 加权 p̂_FN → recall / specificity / F1,
-   区间由分层 bootstrap 给出。
+1. **A/B agreement**: Cohen's κ (first collapse DIRECT/PARTIAL into S+ and INCIDENTAL/NOT_SAFETY
+   into S−; UNCLEAR is resolved after adjudication); disagreements are discussed and adjudicated, then labels are locked.
+2. **Test–retest agreement**: of the 38 items, 20 are compared against the first-pass approval results
+   (`../human_review/P1_topic_safety_reviewed.csv`); report the agreement rate.
+3. **False-negative rate and metrics**: per the sampling plan §6, HT-weighted p̂_FN → recall / specificity / F1,
+   with intervals from a stratified bootstrap.
 
-(计算脚本待 W4 编写,见 `HelpCC/validation-sprint/tasks.md`。)
+(The computation script is to be written in a later work package; see the validation-sprint task list.)
 
-## 5. 复现本包(如需)
+## 5. Reproducing this package (if needed)
 
 ```bash
 cd <project>/PatSense/Cascade/BERT_Python
 <python>/python.exe -X utf8 scripts/build_negative_blind_review.py
 ```
 
-只读取 `negative_audit_package.csv` 与 `P1_topic_safety_reviewed.csv`,绝不修改输入。
+It reads only `negative_audit_package.csv` and `P1_topic_safety_reviewed.csv`, and never modifies its inputs.

@@ -13,6 +13,7 @@ import pandas as pd
 SRC_GLOB = "<exports>/2026-07-18*.xlsx"
 OUT_PATH = Path("<project>/PatSense/Cascade/data/humanoid_safety_patents_v5_20260718.xlsx")
 EXPECTED_ROWS = 9710
+# incoPat export column names, matched verbatim against the raw export
 ID_COL = "公开（公告）号"
 SEQ_COL = "序号"
 
@@ -26,7 +27,9 @@ QUERY_V5 = (
     '"shutdown" OR "fall" OR "drop" OR "adaptability"))'
 )
 
-# 关键字段覆盖率对照(口径来自 v1 214列盘点, 仅作量级 sanity check)
+# Key-field coverage check (field list taken from the v1 214-column inventory;
+# order-of-magnitude sanity check only). Column names below match the raw
+# incoPat export verbatim and are kept in Chinese for that reason.
 COVERAGE_FIELDS = [
     "标题 (英文)", "摘要 (英文)", "首权翻译", "申请日", "公开（公告）日",
     "最早优先权日", "授权公告日", "实质审查生效日", "预估到期日", "首次公开日",
@@ -38,9 +41,9 @@ COVERAGE_FIELDS = [
 
 def main() -> int:
     files = sorted(glob.glob(SRC_GLOB))
-    print(f"[1/5] 批次文件: {len(files)} 个")
+    print(f"[1/5] batch files: {len(files)}")
     if not files:
-        print("ERROR: 未找到批次文件"); return 1
+        print("ERROR: no batch files found"); return 1
 
     frames = []
     for f in files:
@@ -48,50 +51,54 @@ def main() -> int:
         df["__src"] = Path(f).name
         frames.append(df)
     raw = pd.concat(frames, ignore_index=True)
-    print(f"      原始总行数: {len(raw)}")
+    print(f"      raw total rows: {len(raw)}")
 
-    # [2] 按序号去重(重复段 5501-6000 只留先出现的批次)
+    # [2] dedup by sequence number (for the duplicated 5501-6000 range, keep
+    # the batch in which it appears first)
     raw[SEQ_COL] = pd.to_numeric(raw[SEQ_COL], errors="coerce")
     before = len(raw)
     merged = raw.drop_duplicates(subset=SEQ_COL, keep="first").copy()
-    print(f"[2/5] 序号去重: {before} -> {len(merged)} (去掉 {before - len(merged)} 行重复)")
+    print(f"[2/5] sequence-number dedup: {before} -> {len(merged)} "
+          f"({before - len(merged)} duplicate rows removed)")
 
-    # [3] 断言
+    # [3] assertions
     n = len(merged)
     n_id = merged[ID_COL].astype(str).nunique()
     seqs = set(merged[SEQ_COL].astype(int))
     missing_seq = sorted(set(range(1, EXPECTED_ROWS + 1)) - seqs)
-    print(f"[3/5] 断言: 行数={n} (期望 {EXPECTED_ROWS}), 唯一公开号={n_id}, "
-          f"缺号={len(missing_seq)}")
-    assert n == EXPECTED_ROWS, f"行数 {n} != {EXPECTED_ROWS}"
-    assert n_id == EXPECTED_ROWS, f"公开号有重复: 唯一值 {n_id}"
-    assert not missing_seq, f"序号缺号: {missing_seq[:10]}..."
+    print(f"[3/5] assertions: rows={n} (expected {EXPECTED_ROWS}), "
+          f"unique publication numbers={n_id}, missing sequence numbers={len(missing_seq)}")
+    assert n == EXPECTED_ROWS, f"row count {n} != {EXPECTED_ROWS}"
+    assert n_id == EXPECTED_ROWS, f"duplicate publication numbers: {n_id} unique values"
+    assert not missing_seq, f"missing sequence numbers: {missing_seq[:10]}..."
     dup_src = merged["__src"].value_counts()
-    assert (dup_src <= 500).all(), "某批次贡献超过 500 行,异常"
+    assert (dup_src <= 500).all(), "a single batch contributes more than 500 rows; anomalous"
 
-    # [4] 排序输出
+    # [4] sort and write
     merged = merged.sort_values(SEQ_COL).drop(columns="__src")
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     merged.to_excel(OUT_PATH, index=False)
-    print(f"[4/5] 已写出: {OUT_PATH} ({OUT_PATH.stat().st_size / 1e6:.1f} MB, "
-          f"{len(merged.columns)} 列)")
+    print(f"[4/5] written: {OUT_PATH} ({OUT_PATH.stat().st_size / 1e6:.1f} MB, "
+          f"{len(merged.columns)} columns)")
 
-    # [5] sanity 报告
-    print("[5/5] Sanity 报告")
-    print(f"      检索式: {QUERY_V5[:60]}...")
+    # [5] sanity report
+    print("[5/5] sanity report")
+    print(f"      retrieval query: {QUERY_V5[:60]}...")
+    # "申请人国家/地区" (applicant country/region) is an incoPat export column
+    # name and "中国" a raw cell value; both are matched verbatim
     country = merged["申请人国家/地区"].astype(str)
     cn_share = (country.str.contains("CN") | country.str.contains("中国")).mean()
-    print(f"      CN 申请人占比: {cn_share:.1%} (v1 为 78%)")
+    print(f"      CN applicant share: {cn_share:.1%} (v1: 78%)")
     years = pd.to_datetime(merged["申请日"], errors="coerce").dt.year
-    print(f"      申请年范围: {int(years.min())} - {int(years.max())}")
-    print("      关键字段覆盖率:")
+    print(f"      application-year range: {int(years.min())} - {int(years.max())}")
+    print("      key-field coverage:")
     for c in COVERAGE_FIELDS:
         if c in merged.columns:
             cov = merged[c].notna().mean()
             print(f"        {c:<14} {cov:.1%}")
         else:
-            print(f"        {c:<14} **列缺失**")
-    print("OK — 全部断言通过")
+            print(f"        {c:<14} **column missing**")
+    print("OK — all assertions passed")
     return 0
 
 
