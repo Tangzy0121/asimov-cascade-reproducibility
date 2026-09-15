@@ -15,5 +15,7 @@
     "A": 22025,
     "B": 25025
   },
-  "status": "awaiting_two_independent_human_reviews"
+  "status": "reviewed_and_scored_with_insufficient_pairs",
+  "n_complete_pairs": 6,
+  "note": "Both reviewer files cover all 18 frozen pairs and scoring succeeded; complete pairs are those where neither reviewer used INSUFFICIENT. See results.json for all metrics."
 }

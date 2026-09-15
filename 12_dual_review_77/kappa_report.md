@@ -8,23 +8,18 @@
 
 | Field | Dual-coded n | Agreement rate | Cohen's kappa | Band |
 | ----- | ------------ | -------------- | ------------- | ---- |
-| safety_judgment | 0 | [—] | [—] | waiting for human fill-in |
-| harm_link | 0 | [—] | [—] | waiting for human fill-in |
-| cascade_role | 0 | [—] | [—] | waiting for human fill-in |
-| scope_limitation | 0 | [—] | [—] | waiting for human fill-in |
-| confidence | 0 | [—] | [—] | waiting for human fill-in |
-| **binary candidate (DIRECT/PARTIAL vs the rest)** | 0 | [—] | [—] | waiting for human fill-in |
+| safety_judgment | 77 | 0.701 | 0.467 | moderate |
+| harm_link | 77 | 0.688 | 0.371 | fair |
+| cascade_role | 77 | 0.455 | 0.244 | fair |
+| scope_limitation | 77 | 0.000 | 0.000 | slight |
+| confidence | 77 | 0.623 | 0.297 | fair |
+| **binary candidate (DIRECT/PARTIAL vs the rest)** | 77 | 0.896 | 0.606 | moderate |
 
 > Note: `scope_limitation` is free text; kappa is computed on exact string match and is shown for completeness only — it is not reported in the paper.
 
-## English results sentence, ready to paste into the paper (placeholders auto-replaced after fill-in)
+## Status
 
-```text
-Two authors independently adjudicated all 77 non-noise topics using the label schema of Section IV-C. Inter-rater agreement was [substantial/almost perfect]: Cohen's kappa was [κ_safety] for the five-way safety judgment, [κ_harm] for the harm link, [κ_role] for the cascade role, and [κ_conf] for reviewer confidence. On the headline binary decision (candidate = DIRECT or PARTIAL, n = [N]), the two raters agreed on [agreement] of topics (kappa = [κ_binary]). Disagreements were resolved by discussion, with a third author arbitrating the remaining cases.
-```
-
-## To-do
-
-- [ ] Rater A / B complete their independent coding and fill the workbook back in
-- [ ] Re-run this script and confirm n = 77 for every field
-- [ ] Replace the placeholders in the English results sentence with the measured values, paste it into the paper, and delete the "57 unadjudicated topics" limitation statement
+- Raters A and B completed independent coding of all 77 non-noise topics; both rating sheets are archived here as `raterA_workbook.xlsx` and `raterB_workbook.xlsx`.
+- `compute_dual_review_kappa.py` was re-run over the filled workbooks; every key field reports n = 77.
+- `final_labels_77.csv` archives the adjudicated labels for all 77 topics; `adjudication_sheet.csv` archives the 33 rows sent to arbitration (see `adjudication_notes.md`).
+- The manuscript reports these measured kappa values and the adjudicated-label counts (Table II).

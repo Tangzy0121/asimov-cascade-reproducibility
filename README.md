@@ -25,9 +25,9 @@ not redistributable under its database license; see "Corpus access" below.
 | Content-audit codebook and results (IV-G, V-E) | `08_content_audit_t22_t25/` (`CODEBOOK.md`, `audit_results.md`/`.xlsx`, `duplicate_text_sensitivity.xlsx`) |
 | Simulation pilot preregistration, trial table, audit report (IV-I, V-F) | `09_simulation_pilot/` (`config/preregistered.yaml`, `outputs/raw_trials.csv`, `AUDIT_REPORT.md`, `final_manifest.json`) |
 | Human review of 20 candidates (V-A, Table II) | `10_human_review/` (`P1_topic_safety_reviewed.csv`) |
-| 57 negative blind-audit records (Table IV) | `10_human_review/negative_audit_blind/` (admin keys not included) |
-| ISO 18-pair dual blind review (VI-C) | `11_iso_standards_review/` (scoring script included; admin key not included) |
-| 77-topic dual adjudication (Limitations) | `12_dual_review_77/` |
+| Negative blind-audit review sheets (38 records per reviewer) | `10_human_review/negative_audit_blind/` (admin keys not included) |
+| ISO 18-pair dual blind review (VI-C) | `11_iso_standards_review/` (filled reviewer sheets, scored pairs without the admin key, scoring script) |
+| 77-topic dual coding and adjudication (V-A, Limitations) | `12_dual_review_77/` (rater workbooks, final labels, kappa report, arbitration sheet) |
 | Frozen paper numbers (Tables I/IV provenance) | `paper_numbers.json`, `paper_numbers_v5.json`, `01_manuscript_snapshot/check_tex_numbers_v26.py` |
 | Manuscript snapshot | `01_manuscript_snapshot/main.tex` (author block removed) + `figures/` |
 
@@ -76,7 +76,13 @@ your checkout of this repository before running.
   is kept in full so every statistic can be recomputed.
 - Frozen review records (CSV/JSON) keep the reviewers' original free-text
   notes verbatim, including some Chinese; all labels, codebooks, protocols,
-  and reports are in English.
+  and reports are in English. Some frozen pipeline assets (scripts and CSVs)
+  also retain Chinese strings that are part of the original data pipeline —
+  incoPat export column names, category labels, and reviewer notes — matched
+  verbatim at runtime and deliberately left untranslated.
+- Reviewer comment fields are the reviewers' own records; in a few cases the
+  initial wording of a comment was drafted with AI assistance and reviewed by
+  the reviewer before the record was frozen.
 
 ## License
 

@@ -1,0 +1,13 @@
+{
+  "n_frozen_pairs": 18,
+  "n_complete_pairs": 6,
+  "raw_agreement_four_class": 1.0,
+  "cohen_kappa_four_class": 1.0,
+  "raw_agreement_binary": 1.0,
+  "cohen_kappa_binary": 1.0,
+  "applicable_pair_coverage_consensus": 1.0,
+  "mechanism_standard_coverage_consensus": 1.0,
+  "decoy_false_mapping_rate_reviewer_A": 0.0,
+  "decoy_false_mapping_rate_reviewer_B": 0.0,
+  "decoy_false_mapping_rate_consensus": 0.0
+}
