@@ -12,7 +12,7 @@ not redistributable under its database license; see "Corpus access" below.
 
 | Manuscript claim (section) | Location |
 |---|---|
-| Verbatim Boolean query (IV-A) | `02_corpus_scripts/query.txt` (also embedded in `merge_v5_dataset.py`) |
+| Verbatim Boolean query and its construction history (IV-A) | `02_corpus_scripts/query.txt` + `02_corpus_scripts/QUERY_CONSTRUCTION.md` (also embedded in `merge_v5_dataset.py`) |
 | Cleaning / family-normalization scripts (IV-A) | `02_corpus_scripts/clean_v5_dataset.py`, `05_family_censoring_2024/family_primary_reestimation.py` |
 | Frozen screening prompt, settings, seeds (IV-C) | `03_screening/llm_safety_classify.py`, `03_screening/llm_safety_seeds.json` |
 | Frozen screening labels + multi-run raw responses (IV-C, V-A) | `03_screening/llm_safety_labels.csv`, `03_screening/multirun_stability/{deepseek,kimi}/run_*/raw_responses.jsonl` |
