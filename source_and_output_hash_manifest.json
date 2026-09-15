@@ -11,7 +11,7 @@
     },
     {
       "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\overleaf_snapshot\\ASIMOV_Overleaf_v26_latest.zip",
-      "role": "Overleaf project 6a94191458f7c7e7822bcee1 zip, fetched 2026-09-02 21:30 UTC+8",
+      "role": "Overleaf project <overleaf-project-id> zip, fetched 2026-09-02 21:30 UTC+8",
       "sha256": "70d629ba60f05237b38d6b24fc85013df341f7729a8c2bd2af65bc3dde336ae2",
       "size": 607603,
       "mtime": "2026-09-02T21:28:15+0800"
