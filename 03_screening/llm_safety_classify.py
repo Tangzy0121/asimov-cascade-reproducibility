@@ -53,7 +53,7 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 
-PROJECT_ROOT = Path(r"<project>/PatSense\Cascade\BERT_Python")
+PROJECT_ROOT = Path(r"<project>/Cascade\BERT_Python")
 TOPIC_SUMMARY = PROJECT_ROOT / "output" / "time_analysis" / "04_bertopic_time" / "topic_summary.csv"
 OUTPUT_DIR = PROJECT_ROOT / "output" / "time_analysis" / "10_cascade"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)

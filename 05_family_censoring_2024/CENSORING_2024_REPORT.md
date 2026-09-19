@@ -80,7 +80,7 @@ the HIGH cluster.
 
 ## Number backfill map (paper old -> new -> main.tex location)
 
-main.tex: `<project>/<project>/\work\overleaf_v26\src\main.tex` (READ-ONLY; not modified by this run).
+main.tex: `<project>/<project>/\work\manuscript_v26\src\main.tex` (READ-ONLY; not modified by this run).
 
 | # | Quantity | Paper value | New value | main.tex location |
 |---|---|---|---|---|

@@ -51,7 +51,7 @@ set_style(font_scale=1.1)
 CANDY = CANDY_PALETTE
 
 # ---- Paths ----
-PROJECT = Path(r'<project>/PatSense\Cascade\BERT_Python')
+PROJECT = Path(r'<project>/Cascade\BERT_Python')
 OUT_BASE = PROJECT / 'output' / 'time_analysis'
 STM_DIR = OUT_BASE / '04_stm'
 BERTOPIC_DIR = OUT_BASE / '04_bertopic_time'

@@ -36,7 +36,7 @@ set_style(font_scale=1.1)
 
 OUT = Path('output/time_analysis/04_stm')
 OUT.mkdir(parents=True, exist_ok=True)
-STM_R = Path(r'<project>/PatSense/Cascade/STM_R/run_stm_phase3.R')
+STM_R = Path(r'<project>/Cascade/STM_R/run_stm_phase3.R')
 RSCRIPT = 'Rscript'  # assumes Rscript is on PATH; set an absolute path here if needed
 
 

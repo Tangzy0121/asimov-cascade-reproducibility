@@ -1,17 +1,17 @@
 {
   "created": "2026-09-02T22:27:08+0800",
-  "note": "Live Overleaf project was NOT modified. All writes under HelpCC/asimov_paper_audit_sim_revision/.",
+  "note": "Live manuscript project was NOT modified. All writes under the internal work area.",
   "inputs": [
     {
-      "path": "<project>/PatSense\\PaperWork\\sync_2026_08_09\\03_Revision\\v2.5_ASIMOV_Cascade_ICRA_manuscript.docx",
+      "path": "<project>/PaperWork\\sync_2026_08_09\\03_Revision\\v2.5_ASIMOV_Cascade_ICRA_manuscript.docx",
       "role": "designated v2.5 docx input (untouched)",
       "sha256": "e3c807d5f07a0e39e0f8512e7dc4f7482b9a08ba9864b6ee5cd475d2c43f7334",
       "size": 5796517,
       "mtime": "2026-08-22T19:38:27+0800"
     },
     {
-      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\overleaf_snapshot\\ASIMOV_Overleaf_v26_latest.zip",
-      "role": "Overleaf project <overleaf-project-id> zip, fetched 2026-09-02 21:30 UTC+8",
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\manuscript_snapshot\\ASIMOV_v26_latest.zip",
+      "role": "Manuscript project snapshot zip, fetched 2026-09-02 21:30 UTC+8",
       "sha256": "70d629ba60f05237b38d6b24fc85013df341f7729a8c2bd2af65bc3dde336ae2",
       "size": 607603,
       "mtime": "2026-09-02T21:28:15+0800"
@@ -131,28 +131,28 @@
   ],
   "outputs": [
     {
-      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\overleaf_v26\\src\\main.tex",
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\manuscript_v26\\src\\main.tex",
       "role": "revised manuscript LaTeX (final, 8 pages incl refs)",
       "sha256": "aa48451af15d5b64d903f3d8076d625b1517dbf4476ee6507fcb5305a4ea02c2",
       "size": 65482,
       "mtime": "2026-09-03T01:49:35+0800"
     },
     {
-      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\overleaf_v26\\src\\main.pdf",
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\manuscript_v26\\src\\main.pdf",
       "role": "compiled PDF preview, 8 pages, ICRA 2027 compliant",
       "sha256": "9f5c9bf7c305da60b5aeb1624e491b6af0728b53bc9303828bde1bbdb04ee41f",
       "size": 747925,
       "mtime": "2026-09-03T01:49:36+0800"
     },
     {
-      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\overleaf_v26\\src\\figures\\fig10_layers.pdf",
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\manuscript_v26\\src\\figures\\fig10_layers.pdf",
       "role": "five-layer validation figure (GPT drawio, candy)",
       "sha256": "67b9c11955a6f074a8d053722eaed56c8326a2b51f5f376f153b0707d21284de",
       "size": 58654,
       "mtime": "2026-09-02T23:43:08+0800"
     },
     {
-      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\overleaf_v26\\src\\figures\\fig11_sim_heatmap.pdf",
+      "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\manuscript_v26\\src\\figures\\fig11_sim_heatmap.pdf",
       "role": "simulation heatmap (candy, footer stripped)",
       "sha256": "d1a068e978350aa06798be4e9bb547d4d50299f4a359aa048f833209e5d061de",
       "size": 19977,
@@ -237,7 +237,7 @@
     },
     {
       "path": "<project>/HelpCC\\asimov_paper_audit_sim_revision\\work\\ASIMOV_v26_update_package.zip",
-      "role": "Overleaf update package (final)",
+      "role": "Manuscript update package (final)",
       "sha256": "95da27d19417c981e4156c37b41c58d377a59c66880341c2a08729031955cdc8",
       "size": 811709,
       "mtime": "2026-09-03T01:58:40+0800"
@@ -303,8 +303,8 @@
   ],
   "updated": "2026-09-03T01:59:05+0800",
   "round3_2026_09_03": {
-    "sha256:overleaf_v26/src/main.tex": "e2d15761d9be68f204fe3908ad835bed1abe1d00170febfe4dff742daf6c8cf4",
-    "sha256:overleaf_v26/src/main.pdf": "c0fe5c74b5f22212c1940633316847604c7c5ef1b9b67a9aada7c70ad9247364",
+    "sha256:manuscript_v26/src/main.tex": "e2d15761d9be68f204fe3908ad835bed1abe1d00170febfe4dff742daf6c8cf4",
+    "sha256:manuscript_v26/src/main.pdf": "c0fe5c74b5f22212c1940633316847604c7c5ef1b9b67a9aada7c70ad9247364",
     "sha256:ASIMOV_v26_update_package.zip": "a31b29172276748829f126fb8bfeb2973a38600724b466b17fd952c65c75b89b",
     "sha256:REVISION_REPORT.md": "c147686d3413aaf944b8aae199e46c801441ec8ee7d42040dfc752c34504a020",
     "sha256:PAGE_BUDGET_REPORT.md": "0f6e1c6cece91f64ec829f9f617f03799678a6c43e9243d7f6a4b114e9d696be",

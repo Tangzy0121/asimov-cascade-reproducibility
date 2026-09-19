@@ -8,7 +8,7 @@ import os
 import re
 from collections import defaultdict
 
-BASE = r"<project>/PatSense\Cascade\BERT_Python\output\subsystem_validation"
+BASE = r"<project>/Cascade\BERT_Python\output\subsystem_validation"
 OUT = os.path.join(BASE, "human_review")
 
 # --- helpers ---

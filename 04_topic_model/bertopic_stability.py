@@ -31,8 +31,8 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 # --- Dataset: baseline run used v5 (verified: 8,928 docs, patent_number order
 # --- identical to document_topic_assignment.csv). Pin it before engine import.
 os.environ.setdefault(
-    'PATSENSE_DATASET',
-    r'<project>/PatSense\Cascade\data\humanoid_safety_patents_v5_clean.xlsx')
+    'CASCADE_DATASET',
+    r'<project>/Cascade\data\humanoid_safety_patents_v5_clean.xlsx')
 sys.path.insert(0, '.')
 
 import numpy as np
@@ -41,7 +41,7 @@ from pathlib import Path
 
 np.random.seed(42)
 
-BASE = Path(r'<project>/PatSense\Cascade\BERT_Python')
+BASE = Path(r'<project>/Cascade\BERT_Python')
 OUT = BASE / 'output' / 'time_analysis' / '13_stability'
 CACHE = OUT / 'cache'
 RUNS = OUT / 'runs'
@@ -134,7 +134,7 @@ def main():
     from engine.data import load_and_prepare
     df, documents, _ = load_and_prepare()
     patent_numbers = df['patent_number'].tolist()
-    print(f'Documents: {len(documents)} (dataset: {os.environ["PATSENSE_DATASET"]})')
+    print(f'Documents: {len(documents)} (dataset: {os.environ["CASCADE_DATASET"]})')
 
     # --- Frozen baseline assignments (READ ONLY) ---
     base_assign = pd.read_csv(FROZEN / 'document_topic_assignment.csv')
@@ -242,7 +242,7 @@ def main():
                   encoding='utf-8-sig')
 
     meta = {'configs': CONFIGS, 'jaccard_match_threshold': JACCARD_MATCH_THRESHOLD,
-            'dataset': os.environ['PATSENSE_DATASET'],
+            'dataset': os.environ['CASCADE_DATASET'],
             'baseline': {'n_topics': len(base_topics), 'n_noise': n_base_noise,
                          'noise_rate': round(n_base_noise/len(base_topic), 4)},
             'total_runtime_sec': round(time.time() - t_start, 1)}

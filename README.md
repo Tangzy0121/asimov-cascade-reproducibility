@@ -29,7 +29,7 @@ not redistributable under its database license; see "Corpus access" below.
 | ISO 18-pair dual blind review (VI-C) | `11_iso_standards_review/` (filled reviewer sheets, scored pairs without the admin key, scoring script) |
 | 77-topic dual coding and adjudication (V-A, Limitations) | `12_dual_review_77/` (rater workbooks, final labels, kappa report, arbitration sheet) |
 | Frozen paper numbers (Tables I/IV provenance) | `paper_numbers.json`, `paper_numbers_v5.json`, `01_manuscript_snapshot/check_tex_numbers_v26.py` |
-| Manuscript snapshot (anonymous clean version; author block redacted during review, restored upon acceptance) | `01_manuscript_snapshot/` (`main.tex`, compiled `main.pdf`, the 11 figure PDFs, `ieeeconf.cls` for offline compilation) |
+| Manuscript snapshot (anonymous clean version; author block redacted during review, restored upon acceptance) | `01_manuscript_snapshot/` (`main.tex`, the 11 figure PDFs, `ieeeconf.cls` for offline compilation) |
 
 ## Corpus access
 

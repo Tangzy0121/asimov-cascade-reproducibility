@@ -55,7 +55,7 @@ Both reviewers place their completed files back in this directory (file names un
 ## 5. Reproducing this package (if needed)
 
 ```bash
-cd <project>/PatSense/Cascade/BERT_Python
+cd <project>/Cascade/BERT_Python
 <python>/python.exe -X utf8 scripts/build_negative_blind_review.py
 ```
 

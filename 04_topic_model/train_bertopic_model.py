@@ -27,7 +27,7 @@ from pathlib import Path
 
 from engine.data import load_and_prepare
 
-OUT = Path(r'<project>/PatSense\Cascade\BERT_Python\output\time_analysis\04_bertopic_time')
+OUT = Path(r'<project>/Cascade\BERT_Python\output\time_analysis\04_bertopic_time')
 OUT.mkdir(parents=True, exist_ok=True)
 MODEL_CACHE = OUT / 'bertopic_model.pkl'
 TOPICS_CACHE = OUT / 'topic_assignments.json'
