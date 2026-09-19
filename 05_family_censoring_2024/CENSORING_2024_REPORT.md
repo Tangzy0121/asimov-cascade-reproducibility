@@ -1,8 +1,8 @@
 # Censoring re-analysis: both 2025 and 2026 right-censored (primary series ends 2024)
 
-Reviewer concern: retrieval was 2026-07-18; under the 18-month
+Retrieval was 2026-07-18; under the 18-month
 publication-lag rule, 2025 is as incomplete as 2026 outside the CN fast
-channel, yet the manuscript censored only 2026. The 5-state HMM on 21 annual
+channel, so the primary series censors both 2025 and 2026 rather than 2026 alone. The 5-state HMM on 21 annual
 points reads the censored right edge as decline; four HIGH labels flipped
 under recent-year perturbation. This run truncates the family-normalized
 annual series at 2024 and re-estimates D_j (5-state Gaussian HMM), L_j
@@ -80,7 +80,7 @@ the HIGH cluster.
 
 ## Number backfill map (paper old -> new -> main.tex location)
 
-main.tex: `<project>/<project>/\work\manuscript_v26\src\main.tex` (READ-ONLY; not modified by this run).
+main.tex: `<manuscript>/main.tex` (READ-ONLY; not modified by this run).
 
 | # | Quantity | Paper value | New value | main.tex location |
 |---|---|---|---|---|

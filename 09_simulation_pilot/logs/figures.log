@@ -5,11 +5,11 @@ command: python src/make_figures.py
 F1 done
 F2 done
 Traceback (most recent call last):
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 274, in <module>
+  File "<work>\src\make_figures.py", line 274, in <module>
     main()
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 265, in main
+  File "<work>\src\make_figures.py", line 265, in main
     f3_condition_rates(desc)
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 144, in f3_condition_rates
+  File "<work>\src\make_figures.py", line 144, in f3_condition_rates
     props, plo, phi, ofs, oflo, ofhi = [], [], [], [], [], [], []
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: too many values to unpack (expected 6)
@@ -21,11 +21,11 @@ command: python src/make_figures.py
 F1 done
 F2 done
 Traceback (most recent call last):
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 274, in <module>
+  File "<work>\src\make_figures.py", line 274, in <module>
     main()
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 265, in main
+  File "<work>\src\make_figures.py", line 265, in main
     f3_condition_rates(desc)
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\make_figures.py", line 157, in f3_condition_rates
+  File "<work>\src\make_figures.py", line 157, in f3_condition_rates
     ax.errorbar(x - 0.12, props, yerr=[plo, phi], fmt="o", ms=11, color=VERM,
   File "<python>/envs/<env>/Lib\site-packages\matplotlib\_api\deprecation.py", line 453, in wrapper
     return func(*args, **kwargs)

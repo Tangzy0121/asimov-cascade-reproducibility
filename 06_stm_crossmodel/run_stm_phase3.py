@@ -18,7 +18,6 @@ Usage: python scripts/run_stm_phase3.py
 import sys, io, os, subprocess
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 sys.path.insert(0, '.')
-sys.path.insert(0, r'<project>/.claude\skills\scientific-visualization\scripts')
 from style_presets import apply_publication_style
 apply_publication_style('default')
 
@@ -36,7 +35,7 @@ set_style(font_scale=1.1)
 
 OUT = Path('output/time_analysis/04_stm')
 OUT.mkdir(parents=True, exist_ok=True)
-STM_R = Path(r'<project>/Cascade/STM_R/run_stm_phase3.R')
+STM_R = Path(r'<project>/<stm>/run_stm_phase3.R')
 RSCRIPT = 'Rscript'  # assumes Rscript is on PATH; set an absolute path here if needed
 
 

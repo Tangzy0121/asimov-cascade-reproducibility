@@ -8,7 +8,7 @@ record, with application year and original row order as deterministic tie
 breakers.  It also prepares the family-normalized STM input and, after the R
 model is run, summarizes held-out STM and cross-model gates.
 
-Usage (from Cascade/BERT_Python):
+Usage (from <pipeline>):
   <python>/python.exe -X utf8 scripts/family_primary_reestimation.py
   Rscript ../STM_R/run_stm_family_primary.R
   <python>/python.exe -X utf8 scripts/family_primary_reestimation.py --post-stm-only

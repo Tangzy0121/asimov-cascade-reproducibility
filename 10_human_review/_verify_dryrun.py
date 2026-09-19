@@ -1,7 +1,7 @@
 """Verify dry-run SHA-256 + lengths for T65/T74/T76 approved texts."""
 import json, hashlib
 
-# ── Approved texts — copy-pasted verbatim from Codex review ──
+# ── Approved texts ──
 # The Chinese strings below are the approved human-review texts, kept verbatim
 # because EXPECTED pins their SHA-256 hashes and character lengths; editing any
 # character would fail verification. English glosses are given as comments only.

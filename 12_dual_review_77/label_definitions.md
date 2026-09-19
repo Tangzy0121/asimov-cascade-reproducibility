@@ -44,7 +44,7 @@ freely. Common phrasings (following actual P1 usage):
 - Mixed topic: "The topic mixes X and Y with a small number of humanoid robot patents."
 - Nature of the evidence: "The patent describes a risk-prevention method, not a record of an actual accident."
 
-If there is no scope issue, write `无` (none) or a brief note — **do not leave it blank**.
+If there is no scope issue, write `none` or a brief note — **do not leave it blank**.
 
 ## 5. confidence (annotation confidence)
 

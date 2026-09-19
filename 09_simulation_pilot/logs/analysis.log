@@ -2,9 +2,9 @@
 timestamp_utc: 2026-09-02T04:06:01Z
 command: python src/export_f2_trio.py
 Traceback (most recent call last):
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\export_f2_trio.py", line 80, in <module>
+  File "<work>\src\export_f2_trio.py", line 80, in <module>
     main()
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\export_f2_trio.py", line 62, in main
+  File "<work>\src\export_f2_trio.py", line 62, in main
     assert row["min_margin_m"] == stored.iloc[0]["min_margin_m"], "replay mismatch"
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: replay mismatch

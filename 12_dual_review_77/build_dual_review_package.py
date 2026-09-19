@@ -259,7 +259,7 @@ and the entry is free-form. Common phrasings (following actual P1 usage):
 - Mixed topic: "The topic mixes X, Y, and a small number of humanoid-robot patents."
 - Nature of the evidence: "The patents describe risk-prevention methods, not records of real accidents."
 
-If there is no scope issue, enter `无` ("none") or a brief note — **do not
+If there is no scope issue, enter `none` or a brief note — **do not
 leave the cell blank**.
 
 ## 5. confidence (coding confidence)

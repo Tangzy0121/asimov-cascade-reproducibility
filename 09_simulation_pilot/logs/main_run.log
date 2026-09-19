@@ -3,9 +3,9 @@ timestamp_utc: 2026-09-02T04:00:01Z
 command: python src/run_experiment.py
 [phase0] trial table: 3300 trials, sha256=526dc9b8a3e654b3c4bfe0facb562696c9a7cfad2d83a610623f657c76e130d4
 Traceback (most recent call last):
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\run_experiment.py", line 224, in <module>
+  File "<work>\src\run_experiment.py", line 224, in <module>
     main()
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\run_experiment.py", line 131, in main
+  File "<work>\src\run_experiment.py", line 131, in main
     spec_by_id = table.set_index("trial_id")[key_cols].to_dict("index")
                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
   File "<python>/envs/<env>/Lib\site-packages\pandas\core\frame.py", line 4384, in __getitem__
@@ -49,9 +49,9 @@ C3         ORDINARY_FAILURE     150
 C4         CONTAINED           1500
 [phase3] 66 representative traces, deterministic replay verified for 66
 Traceback (most recent call last):
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\run_experiment.py", line 224, in <module>
+  File "<work>\src\run_experiment.py", line 224, in <module>
     main()
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\run_experiment.py", line 215, in main
+  File "<work>\src\run_experiment.py", line 215, in main
     assert row["min_margin_m"] == s["min_margin_m"], tid
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError: T0000

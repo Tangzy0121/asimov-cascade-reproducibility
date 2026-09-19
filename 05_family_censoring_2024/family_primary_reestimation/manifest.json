@@ -1,9 +1,9 @@
 {
   "source_hashes": {
-    "<project>/Cascade\\data\\humanoid_safety_patents_v5_clean.xlsx": "721ebbc30a8915bc64ffce2cefe6cf645ee109379a97c9cc41d96fb3331131ca",
-    "<project>/Cascade\\BERT_Python\\output\\time_analysis\\04_bertopic_time\\document_topic_assignment.csv": "50236752c45f88bc6cdc260bf6a0d901c5228af8beb9c1f16b378c9f25904699",
-    "<project>/Cascade\\BERT_Python\\output\\time_analysis\\04_stm\\stm_input.csv": "c3f01e3979426a7ee3be3a9717b4eff03dff63a85d94beff74ae87aca2b182ed",
-    "<project>/Cascade\\BERT_Python\\output\\time_analysis\\10_cascade\\llm_safety_labels.csv": "cfc22b9e53fef74efb1384aeac6939a393ff8323be575be4220f1323e9042e2e"
+    "<project>/<corpus>/data\\humanoid_safety_patents_v5_clean.xlsx": "721ebbc30a8915bc64ffce2cefe6cf645ee109379a97c9cc41d96fb3331131ca",
+    "<project>/<pipeline>\\output\\time_analysis\\04_bertopic_time\\document_topic_assignment.csv": "50236752c45f88bc6cdc260bf6a0d901c5228af8beb9c1f16b378c9f25904699",
+    "<project>/<pipeline>\\output\\time_analysis\\04_stm\\stm_input.csv": "c3f01e3979426a7ee3be3a9717b4eff03dff63a85d94beff74ae87aca2b182ed",
+    "<project>/<pipeline>\\output\\time_analysis\\10_cascade\\llm_safety_labels.csv": "cfc22b9e53fef74efb1384aeac6939a393ff8323be575be4220f1323e9042e2e"
   },
   "representative_stats": {
     "n_publications": 8928,

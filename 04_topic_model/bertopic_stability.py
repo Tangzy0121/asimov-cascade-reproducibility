@@ -32,7 +32,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 # --- identical to document_topic_assignment.csv). Pin it before engine import.
 os.environ.setdefault(
     'CASCADE_DATASET',
-    r'<project>/Cascade\data\humanoid_safety_patents_v5_clean.xlsx')
+    r'<project>/<corpus>/data\humanoid_safety_patents_v5_clean.xlsx')
 sys.path.insert(0, '.')
 
 import numpy as np
@@ -41,7 +41,7 @@ from pathlib import Path
 
 np.random.seed(42)
 
-BASE = Path(r'<project>/Cascade\BERT_Python')
+BASE = Path(r'<project>/<pipeline>')
 OUT = BASE / 'output' / 'time_analysis' / '13_stability'
 CACHE = OUT / 'cache'
 RUNS = OUT / 'runs'

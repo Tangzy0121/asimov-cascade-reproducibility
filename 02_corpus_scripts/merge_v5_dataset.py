@@ -11,7 +11,7 @@ from pathlib import Path
 import pandas as pd
 
 SRC_GLOB = "<exports>/2026-07-18*.xlsx"
-OUT_PATH = Path("<project>/Cascade/data/humanoid_safety_patents_v5_20260718.xlsx")
+OUT_PATH = Path("<project>/<corpus>/data/humanoid_safety_patents_v5_20260718.xlsx")
 EXPECTED_ROWS = 9710
 # incoPat export column names, matched verbatim against the raw export
 ID_COL = "公开（公告）号"

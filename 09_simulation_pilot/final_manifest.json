@@ -11,10 +11,6 @@
       "sha256": "276ec74de8a3fe44666f12715eb988898802a91c2629d8c48b645e1606997eed",
       "bytes": 891
     },
-    "checklist.md": {
-      "sha256": "cc0b0e938fedea626466db5d36bb78f5b69906b2d2f89e3cd0bb32cdc273345b",
-      "bytes": 2301
-    },
     "claim_impact_matrix.csv": {
       "sha256": "559d5792de0d0621c1a5550d45c7301468e35d68d98d37c25f7bfd571a0f26e4",
       "bytes": 1863
@@ -30,10 +26,6 @@
     "source_manifest.json": {
       "sha256": "c9624b016d6de864d4bd2e489998b0b912da5c8b2e86abe0f7f180fef366a23c",
       "bytes": 404
-    },
-    "tasks.md": {
-      "sha256": "e9aa7d5ba07d45b256ae877c5daca7bb0f080fc7530e7dda0909f0952e32c005",
-      "bytes": 1542
     },
     "config/preregistered.sha256": {
       "sha256": "2209de7b0d0ff4c255e3e39e67b6853b73809566ae93a53ea34f4b055cea510c",

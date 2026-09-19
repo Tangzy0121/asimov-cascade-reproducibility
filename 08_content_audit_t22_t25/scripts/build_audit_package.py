@@ -13,11 +13,11 @@ from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 
 
-ROOT = Path(r"<project>/audit_workspace/topic22_25_single_reviewer_audit")
+ROOT = Path(r"<project>/<workspace>/topic22_25_single_reviewer_audit")
 REPRESENTATIVES = Path(
-    r"<project>/audit_workspace/family_id_audit/work/corrected/family_representatives.csv"
+    r"<project>/<workspace>/family_id_audit/work/corrected/family_representatives.csv"
 )
-SOURCE = Path(r"<project>/Cascade\data\humanoid_safety_patents_v5_clean.xlsx")
+SOURCE = Path(r"<project>/<corpus>/data\humanoid_safety_patents_v5_clean.xlsx")
 SEED = 20260902
 RETEST_N = 18
 

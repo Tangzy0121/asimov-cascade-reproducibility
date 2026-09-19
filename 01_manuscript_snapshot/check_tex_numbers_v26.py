@@ -6,7 +6,7 @@
 #           (censoring_2024 manifest, family manifest, ASIMOV reports,
 #            content-audit results, simulation payload).
 #           Catches stale v5-era numbers (the old check_tex_numbers.py target
-#           was <project>/PaperWork\icra_latex\asimov_cascade.tex,
+#           was <project>/icra_latex\asimov_cascade.tex,
 #           which no longer reflects the current paper).
 # Usage   : python scripts/check_tex_numbers_v26.py
 # Exit    : 0 = all PASS, 1 = any FAIL
@@ -17,9 +17,9 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 from pathlib import Path
 
-BASE = Path(r'<project>/Projects\Cascade\BERT_Python')
+BASE = Path(r'<project>/<pipeline>')
 HELP = Path(r'<project>/Help')
-TEX = Path(r'<project>/<project>/\work\manuscript_v26\src\main.tex')
+TEX = Path(r'<manuscript>/main.tex')
 
 tex = TEX.read_text(encoding='utf-8')
 tex = re.sub(r'(?<!\\)%.*', '', tex)          # strip comments

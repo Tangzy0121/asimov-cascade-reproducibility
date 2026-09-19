@@ -121,7 +121,7 @@ def main() -> int:
     #   输入 / 输出 = input / output
     #   步骤 | 剩余 | 本步剔除 | 备注 = step | remaining | dropped in this step | note
     #   漏斗守恒校验 = funnel conservation check
-    #   重复口径(按拍板:全保留,只报告) = duplicate criteria (per decision: keep all, report only)
+    #   重复口径(全保留,只报告) = duplicate criteria (keep all, report only)
     #   申请号重复(同案申请+授权双公开) = application-number duplicates (application and
     #     grant publications of the same case)
     #   简单同族成员数 >1 = records whose simple-family member count is > 1
@@ -145,7 +145,7 @@ def main() -> int:
         f"**漏斗守恒校验**: {total_in} == {total_out} + {total_removed_steps} "
         f"→ {'✓' if total_in == total_out + total_removed_steps else '✗'}",
         "",
-        "## 重复口径(按拍板:全保留,只报告)",
+        "## 重复口径(全保留,只报告)",
         "",
         f"- 申请号重复(同案申请+授权双公开): {n_appno_dup} 条",
         f"- 简单同族成员数 >1: {n_family_multi} 条",

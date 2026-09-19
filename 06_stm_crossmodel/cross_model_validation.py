@@ -32,7 +32,6 @@ Usage: <python>/envs/<env>/python.exe scripts/cross_model_validation.py
 import sys, io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 sys.path.insert(0, '.')
-sys.path.insert(0, r'<project>/.claude\skills\scientific-visualization\scripts')
 from style_presets import apply_publication_style
 apply_publication_style('default')
 
@@ -51,7 +50,7 @@ set_style(font_scale=1.1)
 CANDY = CANDY_PALETTE
 
 # ---- Paths ----
-PROJECT = Path(r'<project>/Cascade\BERT_Python')
+PROJECT = Path(r'<project>/<pipeline>')
 OUT_BASE = PROJECT / 'output' / 'time_analysis'
 STM_DIR = OUT_BASE / '04_stm'
 BERTOPIC_DIR = OUT_BASE / '04_bertopic_time'

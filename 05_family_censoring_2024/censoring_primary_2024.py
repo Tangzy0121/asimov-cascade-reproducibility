@@ -19,7 +19,7 @@
 #           output/family_primary_reestimation/ for the baseline check.
 # Output  : output/censoring_2024/*.csv, manifest.json, CENSORING_2024_REPORT.md
 # Usage   : <python>/envs/<env>/python.exe -X utf8 scripts/censoring_primary_2024.py
-#           (run from Cascade/BERT_Python)
+#           (run from <pipeline>)
 # Asimov Cascade humanoid-safety patent pipeline
 # ----------------------------------------------------------------------------
 # Design notes:
@@ -344,9 +344,9 @@ def write_report(summary, comparison, safety, retention, dist, cand_c24, n_famil
 
     text = f"""# Censoring re-analysis: both 2025 and 2026 right-censored (primary series ends 2024)
 
-Reviewer concern: retrieval was 2026-07-18; under the 18-month
+Retrieval was 2026-07-18; under the 18-month
 publication-lag rule, 2025 is as incomplete as 2026 outside the CN fast
-channel, yet the manuscript censored only 2026. The 5-state HMM on 21 annual
+channel, so the primary series censors both 2025 and 2026 rather than 2026 alone. The 5-state HMM on 21 annual
 points reads the censored right edge as decline; four HIGH labels flipped
 under recent-year perturbation. This run truncates the family-normalized
 annual series at 2024 and re-estimates D_j (5-state Gaussian HMM), L_j

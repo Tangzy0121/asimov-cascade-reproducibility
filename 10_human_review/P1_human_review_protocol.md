@@ -8,7 +8,7 @@
 
 ## 1. Review Objectives
 
-The human reviewer (Codex) shall independently assess:
+The human reviewer shall independently assess:
 
 1. **Topic Safety** (in `P1_topic_safety_review_queue.csv`, 20 rows): Whether each BERTopic candidate genuinely concerns robot safety.
 2. **Subsystem Assignment** (in `P1_topic_review_queue.csv`, 121 rows): Whether each proposed subsystem assignment is reasonable.

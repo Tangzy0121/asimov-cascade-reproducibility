@@ -8,7 +8,7 @@ import os
 import re
 from collections import defaultdict
 
-BASE = r"<project>/Cascade\BERT_Python\output\subsystem_validation"
+BASE = r"<project>/<pipeline>\output\subsystem_validation"
 OUT = os.path.join(BASE, "human_review")
 
 # --- helpers ---
@@ -116,7 +116,7 @@ protocol_md = r"""# P1 Human Review Protocol — ASIMOV Cascade Subsystem Taxono
 
 ## 1. Review Objectives
 
-The human reviewer (Codex) shall independently assess:
+The human reviewer shall independently assess:
 
 1. **Topic Safety**: Whether each of the 20 BERTopic candidates genuinely concerns robot safety, using only the provided patent excerpts and original patent numbers.
 2. **Subsystem Assignment**: Whether each proposed subsystem assignment is reasonable given the patent evidence.

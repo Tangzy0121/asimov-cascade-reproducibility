@@ -1,6 +1,5 @@
 === environment.log ===
 timestamp_utc: 2026-09-02T03:18:09Z
-timestamp_local: 2026-09-02T11:18:09+0800
 command: mkdir -p work/{config,src,tests,outputs/calibration,figures,logs}
 exit_code: 0
 command: write config/preregistered.yaml (values verbatim from PREREGISTERED_PARAMETERS.md)

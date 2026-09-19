@@ -1,11 +1,10 @@
-# Protocol for Dual Human Screening and Annotation of the 77 Topics (ICRA 2027 revision)
+# Protocol for Dual Human Screening and Annotation of the 77 Topics
 
 ## 0. Purpose
 
-Response to the reviewer comments: after the frozen screening, the corpus contains
+After the frozen screening, the corpus contains
 only 77 non-noise BERTopic topics, all of which are independently reviewed by two
-authors, with Cohen's kappa reported; this replaces the original manuscript's
-limitation statement about "57 unadjudicated topics". The annotation label scheme
+authors, with Cohen's kappa reported. The annotation label scheme
 follows the P1 pilot (`output/subsystem_validation/human_review/P1_topic_safety_reviewed.csv`)
 and the framework of Section IV-C of the paper; the value definitions are given in
 `label_definitions.md` in the same directory.
@@ -69,8 +68,7 @@ have dropdowns configured (the enumerated values are consistent with the P1 sche
 
 77 topics × roughly 3–4 minutes per topic ≈ 4–5 hours per person; reconciliation and
 adjudication take about 1 hour. The task can be completed by the two raters in one
-afternoon (working independently) plus one short meeting, consistent with the estimate
-in the reviewer comments.
+afternoon (working independently) plus one short meeting.
 
 ## 5. Backfill and Paper Update Steps
 

@@ -14,9 +14,9 @@ KeyError: 'numeric_unstable'
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\calibrate.py", line 70, in <module>
+  File "<work>\src\calibrate.py", line 70, in <module>
     main()
-  File "<project>/HelpCC\topic22_controlled_propagation_sim\work\src\calibrate.py", line 41, in main
+  File "<work>\src\calibrate.py", line 41, in main
     "no_numeric_unstable": bool((~df["numeric_unstable"]).all()),
                                   ~~^^^^^^^^^^^^^^^^^^^^
   File "<python>/envs/<env>/Lib\site-packages\pandas\core\frame.py", line 4378, in __getitem__

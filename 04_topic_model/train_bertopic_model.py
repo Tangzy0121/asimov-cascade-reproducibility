@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 # ============================================================================
 # train_bertopic_model.py  |  Tier 1 (active)
 # Purpose : Train the BERTopic model (65 topics) over title+abstract+first-claim.
@@ -19,7 +19,6 @@ Usage: python scripts/train_bertopic_model.py [--legacy-embedding]
 import sys, io, os, json
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 sys.path.insert(0, '.')
-sys.path.insert(0, r'<project>/.claude\skills\scientific-visualization\scripts')
 
 import pandas as pd
 import numpy as np
@@ -27,7 +26,7 @@ from pathlib import Path
 
 from engine.data import load_and_prepare
 
-OUT = Path(r'<project>/Cascade\BERT_Python\output\time_analysis\04_bertopic_time')
+OUT = Path(r'<project>/<pipeline>\output\time_analysis\04_bertopic_time')
 OUT.mkdir(parents=True, exist_ok=True)
 MODEL_CACHE = OUT / 'bertopic_model.pkl'
 TOPICS_CACHE = OUT / 'topic_assignments.json'

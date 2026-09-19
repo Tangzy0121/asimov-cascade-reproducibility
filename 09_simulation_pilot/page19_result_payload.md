@@ -1,10 +1,8 @@
-# Page 19 Result Payload — Topic 22 Controlled Propagation Simulation
+# Result Payload — Topic 22 Controlled Propagation Simulation
 
 ## 1. Suggested title
 
 **"Controlled propagation pilot: bounded interface mismatch erodes safety margin while local contracts hold (1-D simulation)"**
-
-Chinese alternative: "受控传播仿真试验：局部契约全过下的有界接口失配侵蚀全局安全裕度"
 
 ## 2. Status label
 

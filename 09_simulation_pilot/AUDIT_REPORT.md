@@ -50,7 +50,7 @@ Determination evidence:
 
 ## 6. Compliance Confirmation
 
-- All writes were confined to `work/`; the upstream project, the existing paper, and the PPT were untouched.
+- All writes were confined to `work/`; no files outside the experiment workspace were touched.
 - Calibration used only C0 + seeds 1000–1009; calibration and formal seeds are disjoint; formal trials and inspection of C1/C2 began only after the hash was frozen.
 - PyBullet/MuJoCo were not installed; the main experiment is the lightweight state-space model specified in the plan.
 - TDD evidence (fail-first-then-pass) is preserved in full in `logs/tests.log`; the final clean-process run of the full suite passed 33/33.

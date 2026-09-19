@@ -50,12 +50,12 @@ Both reviewers place their completed files back in this directory (file names un
 3. **False-negative rate and metrics**: per the sampling plan §6, HT-weighted p̂_FN → recall / specificity / F1,
    with intervals from a stratified bootstrap.
 
-(The computation script is to be written in a later work package; see the validation-sprint task list.)
+(The computation script is to be written in a later work package.)
 
 ## 5. Reproducing this package (if needed)
 
 ```bash
-cd <project>/Cascade/BERT_Python
+cd <project>/<pipeline>
 <python>/python.exe -X utf8 scripts/build_negative_blind_review.py
 ```
 
